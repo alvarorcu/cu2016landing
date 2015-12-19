@@ -170,8 +170,8 @@
 
 /* Owl Testimonals */
 .owl-testimonials .owl-controls {
-  -webkit-transform:translateY(-1200%);
-  transform:translateY(-1200%);
+  -webkit-transform:translateY(-150%);
+  transform:translateY(-150%);
   position: absolute;
   right:20px;
 }
