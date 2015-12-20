@@ -527,7 +527,7 @@ section {
 	height: 250px;
 	padding-top: 60px;
 	opacity: 0;
-	background: rgba(0, 168, 255, 0.9);
+	background: rgba(224, 73, 70, 0.8);
 	-webkit-transition: opacity 0.45s ease;
 	transition: opacity 0.45s ease;
 }
@@ -545,7 +545,33 @@ section {
 
 .team .title {
 	margin: 50px 0;
+	padding: 0 15px;
 }
+
+.about {
+	margin: 80px 0 0;
+	padding: 20px 15px;
+	background: white;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.07);
+	border: 1px solid transparent;
+}
+
+.col-md-12 .about {
+	margin: 20px 0 60px;
+}
+
+.about:hover {
+	    border: 1px solid #dd4946;
+}
+
+.about .title {
+	margin: 50px 0;
+}
+
+.about button {
+	margin-bottom: 30px;
+}
+
 /* Pricing */
 
 #pricing {
@@ -644,7 +670,7 @@ section {
 }
 
 .pricings .pricing .box-main a.btn {
-	margin-top: 50px;
+	margin-top: 10px;
 }
 
 .owl-twitter i.icon {
@@ -655,7 +681,7 @@ section {
 /* Footer */
 
 footer {
-	padding: 140px 0 40px;
+	padding: 40px 0 20px;
 	background: url('../img/footer.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
@@ -698,10 +724,6 @@ footer .open-blink:before {
 
 footer .opening-hours {
 	margin-top: 60px;
-}
-
-footer .bottom-footer {
-	margin-top: 150px;
 }
 
 footer .social-footer {
