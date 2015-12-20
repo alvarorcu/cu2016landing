@@ -4389,7 +4389,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   }
   .navbar-nav > li {
     float: left;
-    margin-left:20px;
+    margin-left:16px;
   }
   .navbar-nav > li > a {
     padding:15px 25px;

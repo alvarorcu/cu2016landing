@@ -575,7 +575,7 @@ section {
 /* Pricing */
 
 #pricing {
-	background: #dd4946 url('../img/pricing1.jpg') no-repeat center center;
+	background: #dd4946 url('../img/hackspace.jpg') no-repeat center center;
 	-webkit-background-size: cover;
 	background-size: cover;
 	-webkit-transition: background-image 0.6s linear 0.3s;
@@ -1058,6 +1058,10 @@ footer .social-footer li:hover a {
 	margin-top: 150px;
 }
 
+#home-cards .container {
+		height: 70px;
+	}
+
 @media(max-width:992px) {
 	h1 {
 		font-size: 36px;
@@ -1080,10 +1084,22 @@ footer .social-footer li:hover a {
 	.section {
 		padding: 30px 0;
 	}
+	#home-cards .container {
+		height: auto;
+	}
 }
 
 /* Media Queries */
+@media(min-width:991px) and (max-width:1199px){
+	.intro-table-third .item .content {
+		position:relative;
+		top: 60px;
+	}
+	.intro-table-third .item .author {
+		margin-top: 25px;
+	}
 
+}
 @media(max-width:991px) {
 	.text-center-mobile {
 		text-align: center !important;
