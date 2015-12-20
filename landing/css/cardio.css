@@ -874,11 +874,12 @@ input[type="date"]::-webkit-inner-spin-button{
 
 .modal-popup {
 	position: relative;
-	padding: 45px 30px;
-	text-align: center;
-	background: url('../img/popup.jpg');
-	box-shadow: none;
-	border-radius: 2px;
+    padding: 45px 30px;
+    text-align: center;
+    background: center center url('../img/popup.jpg');
+    box-shadow: none;
+    background-size: cover;
+    border-radius: 2px;
 }
 
 .modal-popup a.close-link {
