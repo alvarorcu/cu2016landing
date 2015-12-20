@@ -791,6 +791,15 @@ footer .social-footer li:hover a {
 	background: rgba(255,255,255,0.2);
 }
 
+input.form-control[type="date"]{
+	line-height: 1.42857143;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator,
+input[type="date"]::-webkit-inner-spin-button{
+    display: none;
+}
+
 /* Popup */
 .modal {
 	padding: 0 25px !important;
@@ -870,7 +879,6 @@ footer .social-footer li:hover a {
 }
 
 /* Checkbox */
-
 .checkbox-holder {
 	white-space: nowrap;
 }
@@ -932,6 +940,15 @@ footer .social-footer li:hover a {
 	margin: 0 0 0 10px;
 	white-space: normal;
 	color: #fff;
+}
+
+
+.checkbox-group .checkbox-group-title{
+	margin-bottom: 20px;
+}
+
+.checkbox-group .checkbox-holder:last-child .checkbox{
+	margin-bottom: 0px;
 }
 
 .btn.btn-submit {
