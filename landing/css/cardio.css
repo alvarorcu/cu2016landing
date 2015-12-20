@@ -40,7 +40,7 @@ body {
 .preloader div {
 	display: none;
 	/* Preload the Second Pricing Image */
-	background: url(../img/pricing2.jpg) no-repeat 9999px 9999px;
+	background: url(../img/hackspace.jpg) no-repeat 9999px 9999px;
 	background-position: 9999px 9999px;
 }
 
@@ -678,14 +678,57 @@ section {
 	margin-bottom: 60px;
 	color: white;
 }
+
+/* Video */
+
+#video-resume h3 {
+	margin-bottom: 35px;
+}
+
+#video-resume {
+	padding-bottom: 80px;
+}
+
+#video-resume .col-md-12{
+	width: 640px;
+}
+
+.videoWrapper {
+	position: relative;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+.videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 90%;
+}
+
+/* Ayuda */
+
+#ayuda {
+	margin-bottom: 50px;
+}
+
+#ayuda h2 {
+	margin: 30px 0;
+}
+
 /* Footer */
 
 footer {
-	padding: 40px 0 20px;
+	padding: 140px 0 40px;
 	background: url('../img/footer.jpg');
 	-webkit-background-size: cover;
 	background-size: cover;
 }
+
+footer .bottom-footer {
+ 	margin-top: 150px;
+ }
 
 footer .trial-button {
 	overflow: hidden !important;
@@ -1159,6 +1202,9 @@ input[type="date"]::-webkit-inner-spin-button{
 		position: relative;
 		padding-right: 30px;
 		padding-left: 30px;
+	}
+	#video-resume{
+	    padding: 40px 0 70px;
 	}
 }
 
