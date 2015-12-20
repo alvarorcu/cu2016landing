@@ -1139,12 +1139,6 @@ input[type="date"]::-webkit-inner-spin-button{
 	h4 {
 		font-size: 20px;
 	}
-	h5 {
-		font-size: 16px;
-	}
-	h6 {
-		font-size: 12px;
-	}
 	.section {
 		padding: 30px 0;
 	}
@@ -1161,6 +1155,13 @@ input[type="date"]::-webkit-inner-spin-button{
 	}
 	.intro-table-third .item .author {
 		margin-top: 25px;
+	}
+	.pricings .pricing .box-second {
+		padding-top: 20px;
+	}
+
+	.pricings .pricing h5 {
+		font-size: 16px;
 	}
 
 }
@@ -1182,7 +1183,6 @@ input[type="date"]::-webkit-inner-spin-button{
 		left: 0;
 		width: 100%;
 		padding: 50px 50px 0;
-		text-align: left;
 		background: #dd4946;
 	}
 	.pricings .pricing .box-main.active {
@@ -1191,9 +1191,13 @@ input[type="date"]::-webkit-inner-spin-button{
 		-ms-transform: translateX(0%);
 		transform: translateX(0%);
 	}
+	.pricings .pricing .box-main h5 {
+		line-height: 130%;
+	}
 	.pricings .pricing .box-second {
 		position: relative;
 		opacity: 1;
+		padding-top: 15px;
 	}
 	.popup-form {
 		width: 100%;
@@ -1210,14 +1214,21 @@ input[type="date"]::-webkit-inner-spin-button{
 	#video-resume{
 	    padding: 40px 0 70px;
 	}
+	ul.white-list li {
+	 margin: 0 0 27px;
+	}
 }
 
 @media(max-width: 400px) {
 	header .typed-cursor {
 		display: none;
 	}
-	.pricings .pricing .box-second {
-		padding-top: 0;
+
+	h5 {
+		font-size: 16px;
+	}
+	h6 {
+		font-size: 12px;
 	}
 }
 
