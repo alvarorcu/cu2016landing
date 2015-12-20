@@ -165,12 +165,12 @@ jQuery(function($) {
 	});
 
 	// Birthdate input type events
- 	$("#idBirth").on('focus', function(event) {
+ 	$("#idBirthday").on('focus', function(event) {
  		event.preventDefault();
  		this.type='date'
  	});
 
-	$("#idBirth").on('focusout', function(event) {
+	$("#idBirthday").on('focusout', function(event) {
  		event.preventDefault();
  		if(this.value === ""){
  			this.type='text'

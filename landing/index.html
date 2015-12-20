@@ -323,41 +323,42 @@
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
 				<h3 class="white">Sign Up</h3>
-				<form action="" class="popup-form">
-					<input type="text" id="idFName" class="form-control form-white" placeholder="Nombre completo">
-					<input type="text" id="idEMail" class="form-control form-white" placeholder="Correo electrónico">
-					<input type="text" id="idBirth" class="form-control form-white" placeholder="Fecha de nacimiento">
+				<form id="cuRegistration" name="RegistrationForm" action="." method="GET" class="popup-form">
+					<input type="text"     id="idFullName" name="field-fullname" data-content="nombre"               class="form-control form-white"       required="required" placeholder="Nombre completo">
+					<input type="text"     id="idBirthday" name="field-birthday" data-content="fecha de nacimiento"  class="form-control form-white"       required="required" placeholder="Fecha de nacimiento">
+					<input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control form-white email" required="required" placeholder="Correo electrónico">
+					<input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control form-white"       required="required" placeholder="Contraseña">
 					<div class="checkbox-group form-control form-white">
 						<div class="checkbox-group-title text-left">
 							Áreas de interés
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idFrontend" name="nmFrontend" />
+								<input type="checkbox" value="None" id="idFrontend" name="field-frontend" />
 								<label for="idFrontend"><span>Frontend</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idBackend" name="nmBackend" />
+								<input type="checkbox" value="None" id="idBackend" name="field-backend" />
 								<label for="idBackend"><span>Backend</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idElectrónica" name="nmElectrónica" />
+								<input type="checkbox" value="None" id="idElectrónica" name="field-electrónica" />
 								<label for="idElectrónica"><span>Electrónica</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idAlgoritmos" name="nmAlgoritmos" />
+								<input type="checkbox" value="None" id="idAlgoritmos" name="field-algoritmos" />
 								<label for="idAlgoritmos"><span>Algoritmos</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idAndroid" name="nmAndroid" />
+								<input type="checkbox" value="None" id="idAndroid" name="field-android" />
 								<label for="idAndroid"><span>Android</span></label>
 							</div>
 						</div>
@@ -368,7 +369,7 @@
 							<label for="squaredOne"><span>I Agree to the <strong>Terms &amp; Conditions</strong></span></label>
 						</div>
 					</div -->
-					<button type="submit" class="btn btn-submit">Submit</button>
+					<button id="cuRegistrationSubmit" type="submit" class="btn btn-submit">Submit</button>
 				</form>
 			</div>
 		</div>
@@ -397,6 +398,8 @@
 	</div>
 	<!-- Scripts -->
 	<script src="js/jquery-1.11.1.min.js"></script>
+	<script src="js/firebase.js"></script>
+	<script src="js/registration.js"></script>
 	<script src="js/owl.carousel.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
 	<script src="js/wow.min.js"></script>
