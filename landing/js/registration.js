@@ -1,49 +1,37 @@
 (function() {
     "use strict";
+
     var firebase = new Firebase("https://cu2016.firebaseio.com");
 
-    function createUser(code, email, pass) {
+    function UserRegistration(data) {
         firebase.createUser({
-                email: email,
-                password: pass
+                email: data.email,
+                password: data.password
             }, function(error, userData) {
                 if (error) {
                     switch (error.code) {
                         case "EMAIL_TAKEN":
-                            console.log("The new user account cannot be created because the email is already in use.");
-                            $("#email").parent().append('<span class="error">Este correo electrónico ya está siendo utilizado</span>');
-                            $("#email").parent().addClass('inputError');
-                            break;
+                          $("#idEmail").parent().prepend( '<span class="error">Este correo electrónico ya está siendo utilizado</span>' );
+                          $("#idEmail").parent().addClass( 'inputError' );
+                          break;
                         case "INVALID_EMAIL":
-                            console.log("The specified email is not a valid email.");
-                            break;
+                          $("#idEmail").parent().prepend( '<span class="error">The specified email is not a valid email.</span>' );
+                          $("#idEmail").parent().addClass( 'inputError' );
+                          break;
                         default:
-                            console.log("Error creating user:", error);
+                          $("#idEmail").parent().prepend( '<span class="error">Algo salió mal durante su registro. Por favor, complete el formulario nuevamente. Disculpe las molestias.</span>' );
+                          break;
                     }
                 } else {
-                    console.log("Successfully created user account with uid:", userData.uid);
-                    coderef.set(false);
-                    var email = $('#email').val();
-                    var pass = $('#password').val();
-                    var name = $('#name').val();
-                    var alias = $('#alias').val();
-                    var date = $('#date').val();
                     var dataRef = firebase.child("data");
-                    dataRef.child(userData.uid).set({
-                        full_name: name,
-                        email: email,
-                        born_date: date,
-                        alias: alias
-                    });
-                    window.location.href = "login.html";
+                    dataRef.child(userData.uid).set(data);
+                    window.location.href = "index.html";
                 }
             }
-
         );
     };
 
     $('#cuRegistration').submit(function() {
-        console.log("summiting");
         $(this).find('.error').remove();
         $('.inputError').removeClass('inputError');
         var hasError = false;
@@ -51,24 +39,36 @@
         $(this).find("input[required]").each(function() {
             if ($.trim($(this).val()) == '') {
                 var labelText = $(this).data("content");
-                console.log(labelText);
-                $(this).parent().append('<span class="error">Por favor, ingrese su ' + labelText + '</span>');
+                $(this).parent().prepend('<span class="error">Por favor, ingrese su ' + labelText + '</span>');
                 $(this).parent().addClass('inputError');
                 hasError = true;
             } else if ($(this).data('content') == "e-mail") {
-                console.log('mail weona');
                 var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
                 if (!emailReg.test($.trim($(this).val()))) {
                     var labelText = $(this).prev('label').text();
-                    $(this).parent().append('<span class="error">Ha ingresado un ' + labelText + ' inválido</span>');
+                    $(this).parent().prepend('<span class="error">Ha ingresado un ' + labelText + ' inválido</span>');
                     $(this).parent().addClass('inputError');
                     hasError = true;
                 }
             }
         });
 
+        if(!hasError) {
+            var formularyData = {
+                name: $("#idName").val(),
+                lastname: $("#idLastname").val(),
+                birthday: $("#idBirthday").val(),
+                email: $("#idEmail").val(),
+                password: $("#idPassword").val(),
+                frontend: $("#idFrontend").is(":checked"),
+                backend: $("#idBackend").is(":checked"),
+                electronics: $("#idElectronica").is(":checked"),
+                algorithms: $("#idAlgoritmos").is(":checked"),
+                android: $("#idAndroid").is(":checked")
+            };
 
-        window.location.href = "index.html";
+            UserRegistration(formularyData);
+        }
         return false;
     });
 })();
