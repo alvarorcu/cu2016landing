@@ -902,7 +902,7 @@ input[type="date"]::-webkit-inner-spin-button{
 .popup-form {
 	width: 90%;
 	max-width: 375px;
-	margin: 60px auto;
+	margin: 45px auto 30px;
 }
 
 .popup-form .form-control {
