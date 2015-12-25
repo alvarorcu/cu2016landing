@@ -352,48 +352,49 @@
 		<div class="modal-dialog">
 			<div class="modal-content modal-popup">
 				<a href="#" class="close-link"><i class="icon_close_alt2"></i></a>
-				<h3 class="white">Formulario de Inscripción</h3>
+				<h3 class="white">Inscríbete</h3>
 				<form id="cuRegistration" name="RegistrationForm" action="." method="GET" class="popup-form">
-					<input type="text"     id="idFullName" name="field-fullname" data-content="nombre"               class="form-control form-white"       required="required" placeholder="Nombre completo">
-					<input type="text"     id="idBirthday" name="field-birthday" data-content="fecha de nacimiento"  class="form-control form-white"       required="required" placeholder="Fecha de nacimiento">
-					<input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control form-white email" required="required" placeholder="Correo electrónico">
-					<input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control form-white"       required="required" placeholder="Contraseña">
+					<input type="text"     id="idName"     name="field-fullname" data-content="nombre"               class="form-control form-white" required="required" placeholder="Nombres">
+					<input type="text"     id="idLastname" name="field-fullname" data-content="apellido"             class="form-control form-white" required="required" placeholder="Apellidos">
+					<input type="text"     id="idBirthday" name="field-birthday" data-content="fecha de nacimiento"  class="form-control form-white" required="required" placeholder="Fecha de nacimiento">
+					<input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control form-white" required="required" placeholder="Correo electrónico">
+					<input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control form-white" required="required" placeholder="Contraseña">
 					<div class="checkbox-group form-control form-white">
 						<div class="checkbox-group-title text-left">
 							Áreas de interés
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idFrontend" name="field-frontend" />
+								<input type="checkbox" id="idFrontend" name="field-frontend" />
 								<label for="idFrontend"><span>Frontend</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idBackend" name="field-backend" />
+								<input type="checkbox" id="idBackend" name="field-backend" />
 								<label for="idBackend"><span>Backend</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idElectrónica" name="field-electrónica" />
-								<label for="idElectrónica"><span>Electrónica</span></label>
+								<input type="checkbox" id="idElectronica" name="field-electrónica" />
+								<label for="idElectronica"><span>Electrónica</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idAlgoritmos" name="field-algoritmos" />
+								<input type="checkbox" id="idAlgoritmos" name="field-algoritmos" />
 								<label for="idAlgoritmos"><span>Algoritmos</span></label>
 							</div>
 						</div>
 						<div class="checkbox-holder text-left">
 							<div class="checkbox">
-								<input type="checkbox" value="None" id="idAndroid" name="field-android" />
+								<input type="checkbox" id="idAndroid" name="field-android" />
 								<label for="idAndroid"><span>Android</span></label>
 							</div>
 						</div>
 					</div>
-					<button id="cuRegistrationSubmit" type="submit" class="btn btn-submit">Inscribirme</button>
+					<button id="cuRegistrationSubmit" type="submit" class="btn btn-submit">¡Inscribirme!</button>
 				</form>
 			</div>
 		</div>

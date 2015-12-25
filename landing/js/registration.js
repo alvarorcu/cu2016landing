@@ -15,7 +15,7 @@
                           $("#idEmail").parent().addClass( 'inputError' );
                           break;
                         case "INVALID_EMAIL":
-                          $("#idEmail").parent().prepend( '<span class="error">The specified email is not a valid email.</span>' );
+                          $("#idEmail").parent().prepend( '<span class="error">El correo electrónico especificano es inválido.</span>' );
                           $("#idEmail").parent().addClass( 'inputError' );
                           break;
                         default:
@@ -25,6 +25,7 @@
                 } else {
                     var dataRef = firebase.child("data");
                     dataRef.child(userData.uid).set(data);
+                    $("#cuRegistration").prepend( '<span class="form-control">Tus datos han sido ingresados exitosamente. Desde el 09 de enero podrás iniciar sesión y acceder a nuestro material.</span>' );
                     window.location.href = "index.html";
                 }
             }
