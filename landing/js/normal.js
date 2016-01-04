@@ -53,8 +53,6 @@ jQuery(function($) {
 
 	});
 
-	window.addEventListener('scroll', onScroll, false);
-
 	// Window Resize
 	$(window).resize(function() {
 		$('header').height($(window).height());

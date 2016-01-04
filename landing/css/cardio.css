@@ -186,6 +186,10 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	color: #bbb;
 }
 
+.navbar {
+	top: 50px;
+}
+
 .icon-bar {
 	background: #bbb;
 }
@@ -259,10 +263,6 @@ nav.navbar-fixed-top .navbar-nav > li > a:not(.btn) {
 	height: 50px;
 	height: 5vh;
 	margin: 0 10px;
-}
-
-.navbar {
-	top: 50px;
 }
 
 .container {
