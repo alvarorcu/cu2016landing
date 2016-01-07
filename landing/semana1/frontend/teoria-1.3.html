@@ -93,7 +93,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.3.html">
                                         <h6>Teoría</h6>
@@ -167,47 +167,29 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Ejemplos</strong>Introducción práctica para entender los fundamentos de Frontend.</h3>
+                <h3><strong>Teoría</strong>HTML: Empezando un documento HTML y conociendo las etiquetas.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
                             <div class="attachments">
-                                <a href="#"><i class="icon md-paperclip"></i>F-Ejemplos-1.2.zip ( 3mb )</a>
+                                <a href="#"><i class="icon md-paperclip"></i>F-Teoria-1.3.zip ( 3mb )</a>
                             </div>
-                            <h3 class="md">Configurando el entorno</h4>
-                            <p>Antes de empezar, debemos tener las herramientas necesarias para visualizar correctamente y entender mejor qué es lo que sucede en una página web.</p>
-                            <p>Estas son las herramientas que necesitaremos:</p>
-                            <ul class="list-disc">
-                                <li>En Windows/Linux/MAC </li>
-                                <ol>
-                                    <li><a href="">Google Chrome</a>: Descárgate este navegador (si aún no lo tienes), más adelante lo utilizaremos con mayor profundidad.</li>
-                                    <li><a href="">Sublime Text 2</a>: Este es uno de los mejores editores de texto gratuitos disponibles. Les servirá para poder abrir los archivos que les brindaremos, para revisarlos y editarlos en su computadora.</li>
-                                </ol>
-                            </ul>
-
-                            <br>
-                            <h3 class="md">Ejemplo 1</h3>
-                            <p>Ahora que ya tenemos los programas necesarios descargados, empecemos con un primer ejemplo simple de un archivo HTML sin CSS ni Javascript.</p>
-                            <p>Abre un nuevo archivo en Sublime Text 2 (el cual también descargaste anteriormente). Y escribe el siguiente código en ese documento:</p>
-
+                            <h3 class="md">Cómo comenzar un documento HTML</h4>
+                            <p>Lo primero que se declara siempre es el <code>&lt;!DOCTYPE&gt;</code>. Con esto definimos que versión de html usaremos. <code>&lt;!DOCTYPE html&gt;</code> define html5.</p>
+                            <p>Todo html sigue una estructura similar, primero se escribe la etiqueta <code>&lt;html&gt;&lt;/html&gt;</code> y dentro de el contiene una etiqueta <code>&lt;head&gt;&lt;/head&gt;</code> el cual define información del documento y otra <code>&lt;body&gt;&lt;/body&gt;</code> el cuál define información del cuerpo del documento:</p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 1&lt;/title&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;h1&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
+    &lt;!– As&#237; escribimos comentarios –&gt;
     &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-                            <p>Si guardas el archivo con la extención *.html y abres este archivo con Google Chrome verás lo siguiente:</p>
+                            <p>Generalmente las etiquetas de abren <code>&lt;etiqueta&gt;</code> y cierran <code>&lt;/etiqueta&gt;</code>, teniendo contenido por dentro, habiendo excepciones que no se cierran porque no tienen contenido, como <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code> o <code>&lt;base&gt;</code>. </p>
                             <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.1.png">
                             <p>Como verás, este es un archivo de HTML simplificado. Ahora seguiremos con el segundo ejemplo.</p>
 
