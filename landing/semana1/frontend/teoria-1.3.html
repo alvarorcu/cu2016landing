@@ -345,115 +345,236 @@ span {
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td><code>&lt;table&gt;</code></td>
-                                            <td>Define el título del documento.</td>
+                                            <td><code>&lt;b&gt;</code></td>
+                                            <td>Define un texto en negrita.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td><code>&lt;meta&gt;</code></td>
-                                            <td>Especifica una pareja propiedad/valor del documento.</td>
-                                            <td>name: Identifica un nombre de propiedad.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>http-equiv: Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>content: Este atributo especifica el valor de una propiedad.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>scheme: Proporciona a los agentes de usuario más contexto para la interpretación correcta de los datos.</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>&lt;link&gt;</code></td>
-                                            <td>Define un vínculo. Solo puede aparecer en la sección head de un documento.</td>
+                                            <td><code>&lt;h1&gt;</code>-<code>&lt;h6&gt;</code></td>
+                                            <td>Definen cabeceras de texto. Ordenadas de más a menos importante.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>charset: Especifica la codificación de caracteres.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>href: Especifica la localización de un recurso de la web.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>hreflang: Especifica el lenguaje de la URL</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>media: El medio para la información del estilo.</td>
-                                        </tr>
-                                        <tr>
-                                            <td></td>
-                                            <td></td>
-                                            <td>target: Indica donde abrir el URL.</td>
-                                        </tr>
-                                        <tr>
-                                            <td><code>&lt;style&gt;</code></td>
-                                            <td>Define el estilo de la información del documento html.</td>
+                                            <td><code>&lt;p&gt;</code></td>
+                                            <td>Define un párrafo.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
-                                            <td><code>&lt;base&gt;</code></td>
-                                            <td>Especifica la URL base que será usada para todos los vínculos de la página..</td>
+                                            <td><code>&lt;div&gt;</code></td>
+                                            <td>Define una división o sección.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;span&gt;</code></td>
+                                            <td>Permite agrupar varios elementos en línea seguidos dentro de un mismo bloque (por ejemplo, varias palabras seguidas en un párrafo), para después darles formato con la hoja de estilo. </td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;iframe&gt;</code></td>
+                                            <td>Inserta de manera embebida otro documento dentro del documento html actual.</td>
                                             <td></td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <p>Las etiquetas más comunes que encontramos son:</p>
-
-                            <p>Si abres este archivo con Google Chrome verás lo siguiente:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.2.png">
-
-                            <p>El mejor lugar para colocar la etiqueta <code>&lt;style&gt;</code> es el <code>&lt;head&gt;</code> ya que la página empezaría a renderizar el <code>&lt;body&gt;</code> ya con los estilos definidos.</p>
-                            <p>Por otro lado, en este ejemplo vemos cómo con el CSS estamos cambiando el color del Título. Ya demás, con el Javascript estamos añadiendo la funcionalidad que si haces clic en el botón ¡Hazme Clic! agregamos atributos CSS al Párrafo y este crece y cambia de color.</p>
-                            <p>Ya que entendemos mejor a qué nos referíamos cuando decíamos que el CSS cambia el estilo y el Javascript agrega funcionalidad, veremos un último ejemplo con estos archivos separados.</p>
-
-                            <br>
-                            <h3 class="md">Ejemplo 3</h3>
-                            <p>Debido a que cuando trabajamos en una web tenemos bastante código para trabajar, es preferible separar y organizar el HTML, CSS y Javascript en archivos y hasta carpetas diferentes. De esta manera, en el ejemplo anterior lo podemos realizar también de esta otra manera:</p>
-                            <ol class="list-disc">
-                                <li>Creamos los archivos ejemplo3.html, style.css y main.js, y los ponemos en una ubicación que conozcamos (en este caso los 3 están en una misma carpeta). Estos son los archivos HTML, CSS y Javascript respectivamente y pueden tener cualquier nombre que queramos pero con sus respectivas terminaciones.</li>
-                                <li>Abrimos el archivo HTML y vemos que en vez del código CSS y Javascript que había anteriormente, ahora hay un links dentro de la etiqueta <code>&lt;head&gt;</code> y la etiqueta <code>&lt;script&gt;</code> de Javascript con código que teníamos se redujo a un <code>src="main.js"</code></li>
-                                <li>Abrimos el archivo CSS llamado style.css y vemos el mismo código que teníamos dentro de <code>&lt;style type="text/css"&gt;</code>.</li>
-                                <li>Abrimos el archivo Javascript llamado main.js y copiamos el mismo código que teníamos dentro de <code>&lt;script type="text/javascript" src="static/template/themes/admin/layout.js"&gt;&lt;/script&gt;</code>.</li>
-                            </ol>
+                            <p>Veamos el ejemplo con estas etiquetas:</p>
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 3&lt;/title&gt;
-    &lt;link type=&quot;text/css&quot; href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;/head&gt;
     &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;main.js&quot;&gt;&lt;/script&gt;
+        &lt;div style=&quot;color:#0000FF&quot;&gt;
+          &lt;p&gt;&lt;b&gt;Semana 1:&lt;/b&gt;&lt;/p&gt;
+          &lt;h1&gt;HTML&lt;/h1&gt;
+          &lt;h2&gt;CSS&lt;/h2&gt;
+          &lt;h3&gt;Javascript&lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div style=&quot;color:#00FFFF&quot;&gt;
+          &lt;p&gt;&lt;b&gt;Semana 2:&lt;/b&gt;&lt;/p&gt;
+          &lt;h4&gt;Bootstrap/Foundations&lt;/h4&gt;
+          &lt;h5&gt;Firebase&lt;/h5&gt;
+          &lt;h6&gt;Nodejs&lt;/h6&gt;
+        &lt;/div&gt;
+        &lt;p&gt;La Semana 1 &lt;span style=&quot;color:#0000FF;font-weight:bold&quot;&gt;sera buena&lt;/span&gt;  y la Semana 2 &lt;span style=&quot;color:00FFFF;font-weight:bold&quot;&gt;aun mejor &lt;/span&gt; :).&lt;/p&gt;
+        &lt;br&gt;
+        &lt;iframe src=&quot;http://hackspace.la/#curricula&quot; /&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Introducción a JavaScript con la etiqueta <code>&lt;script&gt;</code><code>&lt;/script&gt;</code></h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;script&gt;</code></td>
+                                            <td>Coloca un script dentro del documento cuando está en head.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>src: Especifica la localización de un script externo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>type: Especifica el lenguaje de scripts de los contenidos del elemento.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Vamos a escribir JavaScript dentro de un elemento HTML con atributo id=”hackspace”:</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;script&gt;
+            function myFunction() {
+            document.getElementById(&quot;hackspace&quot;).innerHTML = &quot;Hola JavaScript!&quot;;
+            }
+        &lt;/script&gt;
+        &lt;p id=&quot;hackspace&quot;&gt;Antes de JavaScript&lt;/p&gt;
+        &lt;button type=&quot;button&quot; onclick=&quot;myFunction()&quot;&gt;Probar script&lt;/button&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                    <br>
+                    <h3 class="md">Tablas, Listas, Links e Imágenes</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;table&gt;</code></td>
+                                            <td>Define una tabla.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;td&gt;</code></td>
+                                            <td>Define una columna.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;th&gt;</code></td>
+                                            <td>Define las cabeceras.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;tr&gt;</code></td>
+                                            <td>Define una fila.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;li&gt;</code></td>
+                                            <td>Define un ítem de lista.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;ol&gt;</code></td>
+                                            <td>Define una lista ordenada.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;ul&gt;</code></td>
+                                            <td>Define una lista desordenada.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;a&gt;</code></td>
+                                            <td>Define un link.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>href: Url del link externo, id del link interno o email.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>target: Define si el link se abrirá en la misma o en una nueva ventana.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;a&gt;</code></td>
+                                            <td>Insertaimguna imagen.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>src: Origen de la imagen.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>align: Alinea la imagen dependiendo del valor que tome.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Veamos el ejemplo con estas etiquetas:</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+        &lt;p&gt;&lt;a href=&quot;hackspace.la&quot; target=&quot;_blank&quot;&gt;Lista ordenada:&lt;/a&gt;&lt;/p&gt;
+        &lt;img src=&quot;http://www.e-quipu.pe/dinamic/equipo/232x232/croppedImg_fVuvBfQyLW.jpeg&quot;&gt;
+        &lt;ol&gt;
+          &lt;li&gt;Frontend&lt;/li&gt;
+          &lt;li&gt;Backend&lt;/li&gt;
+          &lt;li&gt;Electronica&lt;/li&gt;
+        &lt;/ol&gt;
+        &lt;p&gt;&lt;a href=&quot;mailito:contacto@hackspace.pe&quot;&gt;Lista no ordenada:&lt;/a&gt;&lt;/p&gt;
+        &lt;ul&gt;
+          &lt;li&gt;Frontend&lt;/li&gt;
+          &lt;li&gt;Backend&lt;/li&gt;
+          &lt;li&gt;Electronica&lt;/li&gt;
+        &lt;/ul&gt;
+        &lt;br&gt;
+        Asi se veria en una tabla:&lt;br&gt;
+        &lt;table&gt;
+          &lt;tr&gt;
+            &lt;th&gt;Nro&lt;/th&gt;
+            &lt;th&gt;Curso&lt;/th&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;1&lt;/td&gt;
+            &lt;td&gt;Frontend&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;2&lt;/td&gt;
+            &lt;td&gt;Backend&lt;/td&gt;
+          &lt;/tr&gt;
+          &lt;tr&gt;
+            &lt;td&gt;3&lt;/td&gt;
+            &lt;td&gt;Electronica&lt;/td&gt;
+          &lt;/tr&gt;
+        &lt;/table&gt;
     &lt;/body&gt;
 &lt;/html&gt;
 </pre>
 
-                            <p>Si abres el archivo ejemplo3.html con Google Chrome verás que se ve exactamente igual que en el Ejemplo 2 y tiene la misma funcionalidad, pero la diferencia es que lo hemos organizado todo de una mejor manera:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.3.png">
+                        <p>Así se debería ver:</p>
+                        <img src="http://hackspace.la/img/ejemplos/ejemplo1.3.1.png">
 
-                            <p>Vale la pena aclarar que la intención de estos ejemplos no es que entiendas el código que estamos utilizando, ese será tema de las siguientes secciones. Pero si es que haz entendido mejor cómo es que los archivos HTML, CSS y Javascript interactúan, entonces estás listo para empezar a aprender a desarrollar con estos lenguajes.</p>
-                        </div>
                     </div>
                 </div>
             </div>
