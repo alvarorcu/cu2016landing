@@ -189,42 +189,231 @@
     &lt;/body&gt;
 &lt;/html&gt;
 </pre>
-                            <p>Generalmente las etiquetas de abren <code>&lt;etiqueta&gt;</code> y cierran <code>&lt;/etiqueta&gt;</code>, teniendo contenido por dentro, habiendo excepciones que no se cierran porque no tienen contenido, como <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code> o <code>&lt;base&gt;</code>. </p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.1.png">
-                            <p>Como verás, este es un archivo de HTML simplificado. Ahora seguiremos con el segundo ejemplo.</p>
+                            <p>Generalmente las etiquetas de abren <code>&lt;etiqueta&gt;</code> y cierran <code>&lt;/etiqueta&gt;</code>, teniendo contenido por dentro, habiendo excepciones que no se cierran porque no tienen contenido, como <code>&lt;img&gt;</code>, <code>&lt;br&gt;</code> o <code>&lt;base&gt;</code>.</p>
+                            <p>Otro concepto fundamental es entender que cada etiqueta tiene atributos y cada atributo asume un valor:</p>
+<pre>
+&lt;etiqueta atributo1=valor1 atributo2=valor2 .... atributon=valorn&gt;&lt;/etiqueta&gt;
+</pre>
+                            <p>El <b>atributo id</b> por ejemplo define un identificador único en todo el documento que servirá para asignarle estilos o scripts al componente de la etiqueta en que se encuentre gracias a los llamados <b>selectores</b>. Otro atributo que permite también acceder a elementos específicos es el <b>atributo class</b>. Para mayor detalle de los atributos se recomienda este  <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes">enlace</a>.</p>
+                            <p>Dentro del <b>head</b> y del <b>body</b> también encontramos otras etiquetas que ayudan a definir la información del documento y de su cuerpo, respectivamente.</p>
 
                             <br>
-                            <h3 class="md">Ejemplo 2</h3>
-                            <p>Continuaremos con un archivo HTML con CSS y Javascript incluido dentro de él.</p>
-                            <p>En este ejemplo añadimos dentro del <code>&lt;body&gt;</code> el estilo (CSS) y el script (Javascript), el orden en el que ha sido colocado influye en la funcionalidad que posee, pero ahora lo que nos interesa es solo ver que funciona.</p>
+                            <h3 class="md">Etiquetas principales del <code>&lt;head&gt;</code></h3>
+                            <p>Las etiquetas más comunes que encontramos son:</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;table&gt;</code></td>
+                                            <td>Define el título del documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;meta&gt;</code></td>
+                                            <td>Especifica una pareja propiedad/valor del documento.</td>
+                                            <td>name: Identifica un nombre de propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>http-equiv: Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>content: Este atributo especifica el valor de una propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>scheme: Proporciona a los agentes de usuario más contexto para la interpretación correcta de los datos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;link&gt;</code></td>
+                                            <td>Define un vínculo. Solo puede aparecer en la sección head de un documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>charset: Especifica la codificación de caracteres.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>href: Especifica la localización de un recurso de la web.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>hreflang: Especifica el lenguaje de la URL</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>media: El medio para la información del estilo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>target: Indica donde abrir el URL.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;style&gt;</code></td>
+                                            <td>Define el estilo de la información del documento html.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;base&gt;</code></td>
+                                            <td>Especifica la URL base que será usada para todos los vínculos de la página..</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Revisar este <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/head#See_also">link</a> para mayor profundidad.</p>
+
+                            <p>Definamos un archivo <b>head.html</b>:</p>
 
 <pre>
 &lt;!DOCTYPE html&gt;
 &lt;html&gt;
     &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 2&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-            .clase1 {
-                color: blue;
-            }
-    &lt;/style&gt;
+        &lt;title&gt;Mi primer titulo&lt;/title&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;meta name=&quot;description&quot; content=&quot;Core Upgrade 2015&quot;&gt;
+        &lt;meta name=&quot;keywords&quot; content=&quot;HTML,CSS,XML,JavaScript&quot;&gt;
+        &lt;meta name=&quot;author&quot; content=&quot;Hackspace&quot;&gt;
+        &lt;link rel=&quot;stylesheet&quot; type=&quot;text/css&quot; href=&quot;styles.css&quot;&gt;
+        &lt;style&gt;
+            h1 {color:red;}
+            p {color:blue;}
+        &lt;/style&gt;
     &lt;/head&gt;
     &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot;&gt;
-            function miFuncion() {
-                var x = document.getElementById(&quot;demo&quot;);
-                x.style.fontSize = &quot;25px&quot;;           
-                x.style.color = &quot;red&quot;; 
-            }
-        &lt;/script&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
+
+        &lt;h1&gt;Style rojo.&lt;/h1&gt;
+        &lt;p&gt;Style azul.&lt;/p&gt;
+
     &lt;/body&gt;
 &lt;/html&gt;
 </pre>
+                            <br>
+                            <p>Este será el archivo <b>styles.css</b>:</p>
+<pre>
+h1 {
+    color: green;
+    border: '1pt solid black'
+}
+
+p {
+    color: red;
+    background-color:#EFE7D6;
+    border: '1pt solid black'
+}
+
+div {
+    color: #FFFFFF;
+    background-color:#000000;
+}
+
+span {
+    color: #000000;
+    background-color:#FFFFFF;
+}
+</pre>
+
+                            <br>
+                            <h3 class="md">Etiquetas de texto y contenido</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;table&gt;</code></td>
+                                            <td>Define el título del documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;meta&gt;</code></td>
+                                            <td>Especifica una pareja propiedad/valor del documento.</td>
+                                            <td>name: Identifica un nombre de propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>http-equiv: Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>content: Este atributo especifica el valor de una propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>scheme: Proporciona a los agentes de usuario más contexto para la interpretación correcta de los datos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;link&gt;</code></td>
+                                            <td>Define un vínculo. Solo puede aparecer en la sección head de un documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>charset: Especifica la codificación de caracteres.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>href: Especifica la localización de un recurso de la web.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>hreflang: Especifica el lenguaje de la URL</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>media: El medio para la información del estilo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>target: Indica donde abrir el URL.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;style&gt;</code></td>
+                                            <td>Define el estilo de la información del documento html.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;base&gt;</code></td>
+                                            <td>Especifica la URL base que será usada para todos los vínculos de la página..</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Las etiquetas más comunes que encontramos son:</p>
 
                             <p>Si abres este archivo con Google Chrome verás lo siguiente:</p>
                             <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.2.png">
