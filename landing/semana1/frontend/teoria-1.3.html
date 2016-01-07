@@ -512,8 +512,8 @@ span {
                                             <td>target: Define si el link se abrirá en la misma o en una nueva ventana.</td>
                                         </tr>
                                         <tr>
-                                            <td><code>&lt;a&gt;</code></td>
-                                            <td>Insertaimguna imagen.</td>
+                                            <td><code>&lt;img&gt;</code></td>
+                                            <td>Inserta una imagen.</td>
                                             <td></td>
                                         </tr>
                                         <tr>
@@ -574,6 +574,216 @@ span {
 
                         <p>Así se debería ver:</p>
                         <img src="http://hackspace.la/img/ejemplos/ejemplo1.3.1.png">
+
+                        <br>
+                        <h3 class="md">Formularios</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;form&gt;</code></td>
+                                            <td>Esta etiqueta indica que se empezara a recolectar información del usuario.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;input&gt;</code></td>
+                                            <td>Genera un campo en el cual el usuario puede introducir información o contenido.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>required: Define que el campo es obligatorio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>type: Tipo de elemento input.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;select&gt;</code> y <code>&lt;option&gt;</code></td>
+                                            <td>Genera un input de lista desplegable.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;textarea&gt;</code></td>
+                                            <td>Genera un input tipo texto multilínea.</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Atributo</th>
+                                            <th>Valor</th>
+                                            <th>Descripcion</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>type</td>
+                                            <td>text</td>
+                                            <td>Define un input tipo texto.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>password</td>
+                                            <td>Define un input tipo password.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>radio button</td>
+                                            <td>Define un input tipo radio button.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>checkbox</td>
+                                            <td>Define un input tipo checkbox.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>file</td>
+                                            <td>Define un input tipo file.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>submit button</td>
+                                            <td>Define un input tipo submit button.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>image button</td>
+                                            <td>Define un input tipo image button.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>label</td>
+                                            <td>Define un input tipo etiqueta.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>date</td>
+                                            <td>Define un input tipo fecha.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>email</td>
+                                            <td>Define un input tipo email.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td>url</td>
+                                            <td>Define un input tipo url.</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+
+                            <p>Veamos el ejemplo con estas etiquetas:</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+
+        &lt;form action=&quot;/pagina&quot;&gt;
+            Elija un username: &lt;input type=&quot;text&quot; name=&quot;Username&quot; value=&quot;HackSpace&quot;&gt;&lt;br&gt;
+            Elija un password: &lt;input type=&quot;password&quot; id=&quot;Password&quot; value=&quot;123456789&quot;&gt;&lt;br&gt;
+            Nombres: &lt;input type=&quot;text&quot; name=&quot;FirstName&quot; value=&quot;Juan&quot;&gt;&lt;br&gt;
+            Apellidos: &lt;input type=&quot;text&quot; name=&quot;LastName&quot; value=&quot;Perez&quot;&gt;&lt;br&gt;
+            Foto de perfil: &lt;input type=&quot;file&quot; id=&quot;myFile&quot;&gt;&lt;br&gt;
+            Pais:
+
+            &lt;select&gt;
+              &lt;option value=&quot;peru&quot;&gt;Peru&lt;/option&gt;
+              &lt;option value=&quot;arge&quot;&gt;Argentina&lt;/option&gt;
+              &lt;option value=&quot;chil&quot;&gt;Chile&lt;/option&gt;
+              &lt;option value=&quot;bras&quot;&gt;Brasil&lt;/option&gt;
+            &lt;/select&gt;&lt;br&gt;
+
+            Fecha de nacimiento: &lt;input type=&quot;date&quot; id=&quot;myDate&quot; value=&quot;2015-01-05&quot;&gt;&lt;br&gt;
+            E-mail: &lt;input type=&quot;email&quot; id=&quot;myEmail&quot; value=&quot;contacto@hackspace.com&quot;&gt;&lt;br&gt;
+            Pagina web:&lt;input type=&quot;url&quot; id=&quot;myURL&quot; value=&quot;http://www.tuweb.com&quot;&gt;&lt;br&gt;
+            Sobre mi:&lt;br&gt;
+
+            &lt;textarea rows=&quot;4&quot; cols=&quot;50&quot;&gt;
+            Esta es mi descripcion. 
+            &lt;/textarea&gt;&lt;br&gt;
+
+            &lt;input type=&quot;checkbox&quot; id=&quot;myCheck&quot;&gt; He leido el acuerdo de seguridad 
+            &lt;br&gt;
+            &lt;input type=&quot;submit&quot; value=&quot;Enviar&quot;&gt;
+            &lt;input type=&quot;button&quot; id=&quot;Cancel&quot; onclick=&quot;cancelar()&quot; value=&quot;Cancel&quot;&gt;
+        &lt;/form&gt;
+
+        &lt;p&gt;El boton &quot;Enviar&quot; te llevara a &quot;/pagina&quot;.&lt;/p&gt;
+
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+
+                        <p>Así se debería ver:</p>
+                        <img src="http://hackspace.la/img/ejemplos/ejemplo1.3.2.png">
+
+                        <br>
+                        <h3 class="md">Otras etiquetas</h3>
+
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;audio&gt;</code></td>
+                                            <td>Define un elemento audio.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;sourcet&gt;</code></td>
+                                            <td>Define el origen del audio.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>src: Es el url del audio.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>type: Formato de audio.</td>
+                                        </tr>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+    &lt;body&gt;
+    &lt;audio controls&gt;
+      &lt;source src=&quot;http://www.w3schools.com/tags/horse.ogg&quot; type=&quot;audio/ogg&quot;&gt;
+      &lt;source src=&quot;http://www.w3schools.com/tags/horse.mp3&quot; type=&quot;audio/mpeg&quot;&gt;
+      Tu browser no soporta el elemento audio.
+    &lt;/audio&gt;
+    &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                                    </tbody>
+                                </table>
+                            </div>
 
                     </div>
                 </div>
