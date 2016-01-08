@@ -6132,16 +6132,6 @@ footer#footer.footer-style-2 {
   margin-top:0;
   text-align: center;
 }
-.learn-section .title-ct h3 {
-  font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  color: #262626;
-}
-.learn-section .limit-ct h3 strong {
-  display: inline-block;
-  font-weight: 700;
-  margin-right: 10px;
-}
 
 .learn-section .limit-ct h3 {
   font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
@@ -6153,6 +6143,18 @@ footer#footer.footer-style-2 {
   font-weight: 700;
   margin-right: 10px;
 }
+
+.learn-section .title-ct h3 {
+  font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #262626;
+}
+.learn-section .title-ct h3 strong {
+  display: inline-block;
+  font-weight: 700;
+  margin-right: 10px;
+}
+
 .learn-section .title-ct .skip {
   font-family: 'Roboto', 'Avenir Next', 'Helvetica Neue', 'Segoe UI', Helvetica, Arial, sans-serif;
   font-size: 16px;
