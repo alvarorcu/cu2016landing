@@ -65,8 +65,8 @@
         <h4 class="sm black bold">FRONTEND | Semana 1 : Fundamentos, HTML y CSS</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="video-1.1.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="teoria-1.3.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="ejercicio-1.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="ejercicio-1.6.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
@@ -93,7 +93,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.3.html">
                                         <h6>Teoría</h6>
@@ -103,7 +103,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="ejercicio-1.4.html">
                                         <h6>Ejercicios</h6>
@@ -113,7 +113,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.5.html">
                                         <h6>Teoría</h6>
@@ -157,127 +157,177 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Ejemplos</strong>Introducción práctica para entender los fundamentos de Frontend.</h3>
+                <h3><strong>Teoría</strong>HTML: Empezando un documento HTML y conociendo las etiquetas.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <div class="attachments">
-                                <a href="#"><i class="icon md-paperclip"></i>F-Ejemplos-1.2.zip ( 3mb )</a>
-                            </div>
-                            <h3 class="md">Configurando el entorno</h3>
-                            <p>Antes de empezar, debemos tener las herramientas necesarias para visualizar correctamente y entender mejor qué es lo que sucede en una página web.</p>
-                            <p>Estas son las herramientas que necesitaremos:</p>
+                            <h3 class="md">Como agregar CSS al HTML</h3>
+                             <ol class="list-disc">
+                                <li>Agregar un link a un archivo de CSS externo:</li>
+<pre>&lt;link rel="stylesheet" type="text/css" href="estilos.css" /&gt;</pre>
+                                <li>Agregar CSS directamente en la etiqueta <code>&lt;style&gt;</code> del HTML:</li>
+<pre>
+&lt;style type=&quot;text/css&quot;&gt;
+   p {
+      color:green
+   }
+&lt;/style&gt;
+</pre>
+                                <li>Agregar CSS en las etiquetas del HTML:</li>
+<pre>
+&lt;p style=&quot;color:white;background:green;&quot;&gt;Texto blanco fondo verde&lt;/p&gt;
+</pre>
+                                <li>Importando un archivo CSS:</li>
+                                <pre>@import "estilos.css"</pre>
+
+                            </ol>
+                            
+                            <br>
+                            <h3 class="md">Estructura básica</h3>
+<pre>
+selector { 
+propiedad1:valor; 
+propiedad2:valor; 
+propiedad3:valor; 
+}
+</pre> 
                             <ul class="list-disc">
-                                <li>En Windows/Linux/MAC </li>
-                                <ol>
-                                    <li><a href="">Google Chrome</a>: Descárgate este navegador (si aún no lo tienes), más adelante lo utilizaremos con mayor profundidad.</li>
-                                    <li><a href="">Sublime Text 2</a>: Este es uno de los mejores editores de texto gratuitos disponibles. Les servirá para poder abrir los archivos que les brindaremos, para revisarlos y editarlos en su computadora.</li>
-                                </ol>
+                                <li>El selector identifica los elementos del HTML a los cuales se aplicara la regla.</li>
+                                <li>Los pares propiedad-valor dentro de las llaves están separados por puntos y coma; y las propiedades están separadas de su respectivo valor por dos puntos.</li>
+                                <li>Las propiedades definen lo que quieres modificar a los elementos seleccionados, por ejemplo, cambiar la posición, el color, los márgenes, el color de fondo, entre otros.</li>
+                                <li>Los valores son los valores que quieres cambiar a cada propiedad de los elementos seleccionados. Los valores dependen de la propiedad, por ejemplo las propiedades que afectan al color pueden tomar nombres de color (en inglés) como <code>red</code>, <code>gray</code>, <code>yellow</code>, código del color en hexadecimal, como <code>009900</code># o valores RGB, como <code>rgb(34,142,28)</code>. Las propiedades que afectan el ancho, la altura, la posición, el margen, etc pueden tomar valores medidos en pixel, ems, porcentaje, centímetros u otras unidades.</li>
                             </ul>
 
-                            <br>
-                            <h3 class="md">Ejemplo 1</h3>
-                            <p>Ahora que ya tenemos los programas necesarios descargados, empecemos con un primer ejemplo simple de un archivo HTML sin CSS ni Javascript.</p>
-                            <p>Abre un nuevo archivo en Sublime Text 2 (el cual también descargaste anteriormente). Y escribe el siguiente código en ese documento:</p>
-
+                            <h5>Ejemplo</h5>
 <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 1&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-                            <p>Si guardas el archivo con la extención *.html y abres este archivo con Google Chrome verás lo siguiente:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.1.png">
-                            <p>Como verás, este es un archivo de HTML simplificado. Ahora seguiremos con el segundo ejemplo.</p>
-
-                            <br>
-                            <h3 class="md">Ejemplo 2</h3>
-                            <p>Continuaremos con un archivo HTML con CSS y Javascript incluido dentro de él.</p>
-                            <p>En este ejemplo añadimos dentro del <code>&lt;body&gt;</code> el estilo (CSS) y el script (Javascript), el orden en el que ha sido colocado influye en la funcionalidad que posee, pero ahora lo que nos interesa es solo ver que funciona.</p>
-
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 2&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-            .clase1 {
-                color: blue;
-            }
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot;&gt;
-            function miFuncion() {
-                var x = document.getElementById(&quot;demo&quot;);
-                x.style.fontSize = &quot;25px&quot;;           
-                x.style.color = &quot;red&quot;; 
-            }
-        &lt;/script&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
+h1 { 
+color: red; 
+font-family: Arial; 
+font-size: 30px; 
+} 
 </pre>
 
-                            <p>Si abres este archivo con Google Chrome verás lo siguiente:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.2.png">
-
-                            <p>El mejor lugar para colocar la etiqueta <code>&lt;style&gt;</code> es el <code>&lt;head&gt;</code> ya que la página empezaría a renderizar el <code>&lt;body&gt;</code> ya con los estilos definidos.</p>
-                            <p>Por otro lado, en este ejemplo vemos cómo con el CSS estamos cambiando el color del Título. Ya demás, con el Javascript estamos añadiendo la funcionalidad que si haces clic en el botón ¡Hazme Clic! agregamos atributos CSS al Párrafo y este crece y cambia de color.</p>
-                            <p>Ya que entendemos mejor a qué nos referíamos cuando decíamos que el CSS cambia el estilo y el Javascript agrega funcionalidad, veremos un último ejemplo con estos archivos separados.</p>
+                            <p>El selector h1 selecciona a todos los elementos <code>&lt;h1&lt;</code> en el documento HTML que usa este CSS para aplicar esta regla, a menos que existan selectores más específicos cuyas reglas sobrescribirán a esta.</p>
+                            <p>Las propiedades en esta regla son el color del texto, la fuente del texto, y el tamaño de la fuente.</p>
+                            <p>Los valores de estas propiedades son rojo, Arial, y 30 pixeles respectivamente.</p>
 
                             <br>
-                            <h3 class="md">Ejemplo 3</h3>
-                            <p>Debido a que cuando trabajamos en una web tenemos bastante código para trabajar, es preferible separar y organizar el HTML, CSS y Javascript en archivos y hasta carpetas diferentes. De esta manera, en el ejemplo anterior lo podemos realizar también de esta otra manera:</p>
+                            <h3 class="md">Selectores</h3>
+                            <p>Existen muchos tipos de selectores los tres más usados que vas a encontrar son:</p>
                             <ol class="list-disc">
-                                <li>Creamos los archivos ejemplo3.html, style.css y main.js, y los ponemos en una ubicación que conozcamos (en este caso los 3 están en una misma carpeta). Estos son los archivos HTML, CSS y Javascript respectivamente y pueden tener cualquier nombre que queramos pero con sus respectivas terminaciones.</li>
-                                <li>Abrimos el archivo HTML y vemos que en vez del código CSS y Javascript que había anteriormente, ahora hay un links dentro de la etiqueta <code>&lt;head&gt;</code> y la etiqueta <code>&lt;script&gt;</code> de Javascript con código que teníamos se redujo a un <code>src="main.js"</code></li>
-                                <li>Abrimos el archivo CSS llamado style.css y vemos el mismo código que teníamos dentro de <code>&lt;style type="text/css"&gt;</code>.</li>
-                                <li>Abrimos el archivo Javascript llamado main.js y copiamos el mismo código que teníamos dentro de <code>&lt;script type="text/javascript" src="static/template/themes/admin/layout.js"&gt;&lt;/script&gt;</code>.</li>
-                            </ol>
+                                <li>Tag name: Selecciona los elementos del HTML de la respectiva etiqueta:</li>
 <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 3&lt;/title&gt;
-    &lt;link type=&quot;text/css&quot; href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;main.js&quot;&gt;&lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
+p {
+color: red;
+}
+</pre>
+                                <li>Selector por clase: Selecciona los elementos del HTML que tienen un atributo class con el valor especificado:</li>
+<pre>
+&lt;h1 class=&quot;ejemplo&quot;&gt;Texto de ejemplo&lt;/p&gt;
+&lt;div class=&quot;ejemplo&quot;&gt;Contenido&lt;/div&gt;
+.ejemplo{
+ color: blue;
+}
+</pre>
+                                <li>Selector por id: Selecciona los elementos del HTML que tienen un atributo id con el valor especificado:</li>
+<pre>
+&lt;h1 id=&quot;myid&quot;&gt;Texto de ejemplo&lt;/p&gt;
+&lt;div id=&quot;myid&quot;&gt;Contenido&lt;/div&gt;
+
+#myid{
+ color: blue;
+}
+</pre>
+                            </ol>
+
+                            <p>Puedes unir varios selectores para definir reglas más específicas, por ejemplo:</p>
+<pre>
+p.importante : {
+ color: red;
+ font-size: 30px;
+}
 </pre>
 
-                            <p>Si abres el archivo ejemplo3.html con Google Chrome verás que se ve exactamente igual que en el Ejemplo 2 y tiene la misma funcionalidad, pero la diferencia es que lo hemos organizado todo de una mejor manera:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.3.png">
+                            <p>En el ejemplo anterior selecciona todos los elementos del HTML dentro de la etiqueta <code>&lt;p&lt;</code> cuyo valor <b>class</b> es importante</p>
 
-                            <p>Vale la pena aclarar que la intención de estos ejemplos no es que entiendas el código que estamos utilizando, ese será tema de las siguientes secciones. Pero si es que haz entendido mejor cómo es que los archivos HTML, CSS y Javascript interactúan, entonces estás listo para empezar a aprender a desarrollar con estos lenguajes.</p>
+                            <br>
+                            <h3 class="md">Agrupando selectores</h3>
+                            <p>Agrupando selectores</p>
+<pre>
+h1 { 
+color: blue; 
+font-size: 20px; 
+} 
+h2 { 
+color: blue; 
+font-size: 20px; 
+}
+</pre>
+                            <p>Donde los selectores <b>h1</b> y <b>h2</b> tienen el mismo estilo es posible agrupar los selectores separados por una coma:</p>   
+<pre>
+h1,h2 { 
+color: blue; 
+font-size: 20px; 
+}
+</pre>
+
+                            <br>
+                            <h3 class="md">Selectores universales</h3>
+
+                            <p>En CSS existe el selector universal * el cual selecciona todos los elementos de un tipo el cual no es muy usado ya que raras veces se desea que todos los elementos tengan el mismo estilo.</p>
+<pre>
+* {
+ margin: 0;
+ padding: 0;
+}
+</pre>
+
+                            <br>
+                            <h3 class="md">Selectores descendentes</h3>
+
+                            <p>En algunas ocasiones se requiere dar estilos diferentes a elementos de un solo tipo pero que se diferencia por el elemento que los contiene.</p>
+                            <p>Un elemento A es descendiente de otro elemento B si el elemento A esta incluido en el elemento B-</p>
+<pre>
+&lt;h1&gt;
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ &lt;p&gt;Praesent ac risus sed magna ornare pulvinar. &lt;/p&gt;
+&lt;/h1&gt;
+&lt;p&gt;Integer ex tortor, eleifend non porttitor eget, dictum eu elit.&lt;/p&gt;
+h1 p {
+ color: red;
+}
+</pre>
+                            <p>En el ejemplo anterior existen dos etiquetas <code>&lt;p&lt;</code> pero se aplica solamente a la primera ya que esta está contenida dentro de la etiqueta h1 como se especifica en el selector del CSS.</p>
+                            <p>Hay que resaltar que no necesariamente el elemento descendiente tiene que estar contenido inmediatamente dentro del elemento externo, es decir el elemento descendiente puede estar contenido dentro de otro elemento que a su vez este contenido en el elemento más externo.</p>
+
+<pre>
+&lt;h1&gt;
+ Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+ &lt;p&gt;Praesent ac risus sed &lt;strong&gt;magna&lt;/strong&gt; ornare pulvinar. &lt;/p&gt;
+&lt;/h1&gt;
+&lt;strong&gt;Integer ex tortor, eleifend non porttitor eget, dictum eu elit.&lt;/strong&gt;
+h1 span {
+ color: red;
+}
+</pre>
+
+                            <p>En el ejemplo anterior la etiqueta <code>&lt;strong&lt;</code>> en la que deseamos aplicar el estilo está contenida dentro de una etiqueta <code>&lt;p&lt;</code> la cual a su vez está contenida en una etiqueta <code>&lt;h1&lt;</code> por lo cual cumple la regla del selector del CSS.</p>
+                            <p>En general la estructura para seleccionar elementos descendientes es los selectores de cada elemento individual comenzando del más externo hasta el más interno separadas por un espacio:</p>
+<pre>
+selector1 selector2 selector3 {
+ ...
+}
+</pre>
+
 
                             <div class="text-center">
-                                <a href="teoria-1.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                <a href="ejercicio-1.6.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                 </a>
                             </div>
-                        </div>
+                            </div>
+
                     </div>
                 </div>
             </div>

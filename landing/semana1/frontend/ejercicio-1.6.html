@@ -65,8 +65,8 @@
         <h4 class="sm black bold">FRONTEND | Semana 1 : Fundamentos, HTML y CSS</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="video-1.1.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="teoria-1.3.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="teoria-1.5.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="reto1.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
@@ -75,7 +75,7 @@
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="video-1.1.html">
+                                    <a href="#">
                                         <h6>Video</h6>
                                         <p>Un corto video para introducirnos al mundo de Frontend y entender mejor los conceptos necesarios para empezar.</p>
                                     </a>
@@ -93,7 +93,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.3.html">
                                         <h6>Teoría</h6>
@@ -103,7 +103,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="ejercicio-1.4.html">
                                         <h6>Ejercicios</h6>
@@ -113,7 +113,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.5.html">
                                         <h6>Teoría</h6>
@@ -123,7 +123,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="ejercicio-1.6.html">
                                         <h6>Ejercicios</h6>
@@ -157,124 +157,63 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Ejemplos</strong>Introducción práctica para entender los fundamentos de Frontend.</h3>
+                <h3><strong>Ejercicios</strong>Hora de practicas CSS.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <div class="attachments">
-                                <a href="#"><i class="icon md-paperclip"></i>F-Ejemplos-1.2.zip ( 3mb )</a>
-                            </div>
-                            <h3 class="md">Configurando el entorno</h3>
-                            <p>Antes de empezar, debemos tener las herramientas necesarias para visualizar correctamente y entender mejor qué es lo que sucede en una página web.</p>
-                            <p>Estas son las herramientas que necesitaremos:</p>
+                            <h3 class="md">Ejercicio 1</h3>
                             <ul class="list-disc">
-                                <li>En Windows/Linux/MAC </li>
-                                <ol>
-                                    <li><a href="">Google Chrome</a>: Descárgate este navegador (si aún no lo tienes), más adelante lo utilizaremos con mayor profundidad.</li>
-                                    <li><a href="">Sublime Text 2</a>: Este es uno de los mejores editores de texto gratuitos disponibles. Les servirá para poder abrir los archivos que les brindaremos, para revisarlos y editarlos en su computadora.</li>
-                                </ol>
+                                <li>Agrega una hoja de estilos externa al documento HTLM en el cual apliques los siguientes estilos a todos los párrafos <code>&lt;p&lt;</code> del documento:</li>
+                                <ul>
+                                    <li>Color: Azul</li>
+                                    <li>Tamaño de fuente: 12px</li>
+                                    <li>Tipo de fuente: Times New Roman</li>
+                                </ul>
                             </ul>
-
-                            <br>
-                            <h3 class="md">Ejemplo 1</h3>
-                            <p>Ahora que ya tenemos los programas necesarios descargados, empecemos con un primer ejemplo simple de un archivo HTML sin CSS ni Javascript.</p>
-                            <p>Abre un nuevo archivo en Sublime Text 2 (el cual también descargaste anteriormente). Y escribe el siguiente código en ese documento:</p>
-
 <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 1&lt;/title&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</pre>
-                            <p>Si guardas el archivo con la extención *.html y abres este archivo con Google Chrome verás lo siguiente:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.1.png">
-                            <p>Como verás, este es un archivo de HTML simplificado. Ahora seguiremos con el segundo ejemplo.</p>
-
-                            <br>
-                            <h3 class="md">Ejemplo 2</h3>
-                            <p>Continuaremos con un archivo HTML con CSS y Javascript incluido dentro de él.</p>
-                            <p>En este ejemplo añadimos dentro del <code>&lt;body&gt;</code> el estilo (CSS) y el script (Javascript), el orden en el que ha sido colocado influye en la funcionalidad que posee, pero ahora lo que nos interesa es solo ver que funciona.</p>
-
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 2&lt;/title&gt;
-    &lt;style type=&quot;text/css&quot;&gt;
-            .clase1 {
-                color: blue;
-            }
-    &lt;/style&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;script type=&quot;text/javascript&quot;&gt;
-            function miFuncion() {
-                var x = document.getElementById(&quot;demo&quot;);
-                x.style.fontSize = &quot;25px&quot;;           
-                x.style.color = &quot;red&quot;; 
-            }
-        &lt;/script&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-    &lt;/body&gt;
+&lt;!doctype html&gt;
+&lt;html lang=&quot;es&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;/&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenido!&lt;/h1&gt;
+    &lt;a href=&quot;http://www.hackspace.la&quot;&gt;Visita la pagina&lt;/a&gt;
+    &lt;p&gt; Dolor sit amet, consectetur adipiscing elit. Praesent et tortor id turpis vestibulum vestibulum et quis magna. Praesent ac risus sed magna ornare pulvinar. Duis et aliquet nunc. In elit diam, elementum eu dictum quis, pharetra nec justo. Curabitur hendrerit fermentum nisl. Cras convallis gravida mollis. Nunc et feugiat sapien, eu ullamcorper lorem. &lt;/p&gt;
+    &lt;p&gt; Mauris faucibus tristique posuere. Nam vehicula quam at venenatis imperdiet. Vivamus mattis tortor eget est mollis tempor. Quisque nec eros libero. Suspendisse ultrices facilisis mi, eget bibendum libero auctor in. &lt;/p&gt;
 &lt;/html&gt;
 </pre>
 
-                            <p>Si abres este archivo con Google Chrome verás lo siguiente:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.2.png">
-
-                            <p>El mejor lugar para colocar la etiqueta <code>&lt;style&gt;</code> es el <code>&lt;head&gt;</code> ya que la página empezaría a renderizar el <code>&lt;body&gt;</code> ya con los estilos definidos.</p>
-                            <p>Por otro lado, en este ejemplo vemos cómo con el CSS estamos cambiando el color del Título. Ya demás, con el Javascript estamos añadiendo la funcionalidad que si haces clic en el botón ¡Hazme Clic! agregamos atributos CSS al Párrafo y este crece y cambia de color.</p>
-                            <p>Ya que entendemos mejor a qué nos referíamos cuando decíamos que el CSS cambia el estilo y el Javascript agrega funcionalidad, veremos un último ejemplo con estos archivos separados.</p>
-
                             <br>
-                            <h3 class="md">Ejemplo 3</h3>
-                            <p>Debido a que cuando trabajamos en una web tenemos bastante código para trabajar, es preferible separar y organizar el HTML, CSS y Javascript en archivos y hasta carpetas diferentes. De esta manera, en el ejemplo anterior lo podemos realizar también de esta otra manera:</p>
-                            <ol class="list-disc">
-                                <li>Creamos los archivos ejemplo3.html, style.css y main.js, y los ponemos en una ubicación que conozcamos (en este caso los 3 están en una misma carpeta). Estos son los archivos HTML, CSS y Javascript respectivamente y pueden tener cualquier nombre que queramos pero con sus respectivas terminaciones.</li>
-                                <li>Abrimos el archivo HTML y vemos que en vez del código CSS y Javascript que había anteriormente, ahora hay un links dentro de la etiqueta <code>&lt;head&gt;</code> y la etiqueta <code>&lt;script&gt;</code> de Javascript con código que teníamos se redujo a un <code>src="main.js"</code></li>
-                                <li>Abrimos el archivo CSS llamado style.css y vemos el mismo código que teníamos dentro de <code>&lt;style type="text/css"&gt;</code>.</li>
-                                <li>Abrimos el archivo Javascript llamado main.js y copiamos el mismo código que teníamos dentro de <code>&lt;script type="text/javascript" src="static/template/themes/admin/layout.js"&gt;&lt;/script&gt;</code>.</li>
-                            </ol>
+                            <h3 class="md">Ejercicio 2</h3>
+                            <ul class="list-disc">
+                                <li>Modificar el CSS para agregar los siguientes estilos al documento HTML:</li>
+                                <ul>
+                                    <li>El color del texto de todos los elementos del documento es verde.</li>
+                                    <li>Los elementos con id HS tienen un color de fondo negro.</li>
+                                    <li>Los elementos con clase CoreUp tienen borde solido de 2px y color de fondo con código rgb <code>rgb(224,224,224)</code>.</li>
+                                </ul>
+                            </ul>
 <pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 3&lt;/title&gt;
-    &lt;link type=&quot;text/css&quot; href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;main.js&quot;&gt;&lt;/script&gt;
-    &lt;/body&gt;
+&lt;!doctype html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+  &lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;/&gt;
+    &lt;title&gt;Document&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Bienvenido!&lt;/h1&gt;
+    &lt;a href=&quot;http://www.hackspace.la&quot;&gt;Visita la pagina&lt;/a&gt;
+    &lt;p&gt; Dolor sit amet, consectetur adipiscing elit. Praesent et tortor id turpis vestibulum vestibulum et quis magna. Praesent ac risus sed magna ornare pulvinar. Duis et aliquet nunc. In elit diam, elementum eu dictum quis, pharetra nec justo. Curabitur hendrerit fermentum nisl. Cras convallis gravida mollis. Nunc et feugiat sapien, eu ullamcorper lorem. &lt;/p&gt;
+    &lt;p&gt; Mauris faucibus tristique posuere. Nam vehicula quam at venenatis imperdiet. Vivamus mattis tortor eget est mollis tempor. Quisque nec eros libero. Suspendisse ultrices facilisis mi, eget bibendum libero auctor in. &lt;/p&gt;
 &lt;/html&gt;
 </pre>
-
-                            <p>Si abres el archivo ejemplo3.html con Google Chrome verás que se ve exactamente igual que en el Ejemplo 2 y tiene la misma funcionalidad, pero la diferencia es que lo hemos organizado todo de una mejor manera:</p>
-                            <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.3.png">
-
-                            <p>Vale la pena aclarar que la intención de estos ejemplos no es que entiendas el código que estamos utilizando, ese será tema de las siguientes secciones. Pero si es que haz entendido mejor cómo es que los archivos HTML, CSS y Javascript interactúan, entonces estás listo para empezar a aprender a desarrollar con estos lenguajes.</p>
 
                             <div class="text-center">
-                                <a href="teoria-1.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                <a href="reto1.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                 </a>
                             </div>
                         </div>
