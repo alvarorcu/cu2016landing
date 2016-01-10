@@ -240,11 +240,11 @@
                                 </table>
                             </div>
 
-                            <h3 class="md">Carpeta /app/src/main/java</h3>
+                            <h4 class="sm bold">Carpeta /app/src/main/java</h4>
                             <p>Esta carpeta contendrá todo el código fuente de la aplicación, clases auxiliares, etc. Inicialmente, Android Studio creará por nosotros el código básico de la pantalla (actividad o activity) principal de la aplicación, que recordemos que en nuestro caso era <strong>MainActivity</strong>, y siempre bajo la estructura del paquete java definido durante la creación del proyecto.</p>
                             <div class="text-center"><img src="http://hackspace.la/img/ejemplos/android1.2.12.png"></div>
 
-                            <h3 class="md">Carpeta /app/src/main/res/</h3>
+                            <h4 class="sm bold">Carpeta /app/src/main/res/</h4>
                             <p>Contiene todos los ficheros de recursos necesarios para el proyecto: imágenes, layouts, cadenas de texto, etc. Los diferentes tipos de recursos se pueden distribuir entre las siguientes subcarpetas.<p>
                             </p>No todas estas carpetas tienen por qué aparecer en cada proyecto Android, tan sólo las que se necesiten.</p>
                             <p>Como ejemplo, para un proyecto nuevo Android como el que hemos creado, tendremos por defecto los siguientes recursos para la aplicación:</p>
@@ -253,17 +253,17 @@
                             <p>Como se puede observar, existen algunas carpetas en cuyo nombre se incluye un sufijo adicional, como por ejemplo <code>values-w820dp</code>. Estos, y otros sufijos, se emplean para definir recursos independientes para determinados dispositivos según sus características. De esta forma, por ejemplo, los recursos incluidos en la carpeta <strong>values-w820dp</strong> se aplicarían sólo a pantallas con más de 820dp de ancho, o los incluidos en una carpeta llamada <strong>values-v11</strong> se aplicarían tan sólo a dispositivos cuya versión de Android sea la 3.0 (API 11) o superior. Al igual que estos sufijos <code>-w</code> y <code>–v</code> existen otros muchos para referirse a otras características del terminal.</p>
                             <p>Entre los recursos creados por defecto cabe destacar los <strong>layouts</strong>, en nuestro caso sólo tendremos por ahora el llamado <code>activity_main.xml</code>.</p>
 
-                            <h3 class="md">Fichero /app/src/main/AndroidManifest.xml</h3>
+                            <h4 class="sm bold">Fichero /app/src/main/AndroidManifest.xml</h4>
                             <p>Contiene la definición en XML de muchos de los aspectos principales de la aplicación, como por ejemplo su identificación (nombre, icono, etc.), sus componentes (pantallas, servicios, etc.), o los permisos necesarios para su ejecución.<p>
 
-                            <h3 class="md">Fichero /app/build.gradle</h3>
+                            <h4 class="sm bold">Fichero /app/build.gradle</h4>
                             <p>Contiene información necesaria para la compilación del proyecto, por ejemplo la versión del SDK de Android utilizada para compilar, la mínima versión de Android que soportará la aplicación, referencias a las librerías externas utilizadas, etc.<p>
                             <p>En un proyecto pueden existir varios ficheros build.gradle, para definir determinados parámetros a distintos niveles. Por ejemplo, en nuestro proyecto podemos ver que existe un fichero <code>build.gradle</code> a nivel de proyecto, y otro a nivel de módulo dentro de la carpeta <code>app</code>/. El primero de ellos definirá parámetros globales a todos los módulos del proyecto, y el segundo sólo tendrá efecto para cada módulo en particular.</p>
 
-                            <h3 class="md">Carpeta /app/libs</h3>
+                            <h4 class="sm bold">Carpeta /app/libs</h4>
                             <p>Puede contener las librerías java externas (ficheros <code>.jar</code>) que utilice nuestra aplicación. Normalmente no incluiremos directamente aquí ninguna librería, sino que haremos referencia a ellas en el fichero <code>build.gradle</code> descrito en el punto anterior, de forma que entren en el proceso de compilación de nuestra aplicación.<p>
 
-                            <h3 class="md">Carpeta /app/build/</h3>
+                            <h4 class="sm bold">Carpeta /app/build/</h4>    
                             <p>Contiene una serie de elementos de código generados automáticamente al compilar el proyecto. Cada vez que compilamos nuestro proyecto, la maquinaria de compilación de Android genera por nosotros una serie de ficheros fuente java dirigidos, entre otras muchas cosas, al control de los recursos de la aplicación. <strong>Importante</strong>: dado que estos ficheros se generan automáticamente tras cada compilación del proyecto es importante que no se modifiquen manualmente bajo ninguna circunstancia.<p>
 
                             <div class="text-center"><img src="http://hackspace.la/img/ejemplos/android1.2.14.png"></div>
