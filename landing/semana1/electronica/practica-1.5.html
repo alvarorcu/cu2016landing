@@ -65,8 +65,8 @@
         <h4 class="sm black bold">ELECTRÓNICA | Semana 1 : Fundamentos de la Electrónica</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="#"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="teoria-1.2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="teoria-1.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="reto1.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
@@ -75,7 +75,7 @@
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="#">
+                                    <a href="video-1.1.html">
                                         <h6>Video</h6>
                                         <p>Un corto video para introducirnos al mundo de la Electrónica y entender mejor los conceptos necesarios para empezar.</p>
                                     </a>
@@ -83,7 +83,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.2.html">
                                         <h6>Teoría</h6>
@@ -93,7 +93,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="practica-1.3.html">
                                         <h6>Practica</h6>
@@ -103,7 +103,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="teoria-1.4.html">
                                         <h6>Teoría</h6>
@@ -113,7 +113,7 @@
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
                                     <a href="practica-1.5.html">
                                         <h6>Práctica</h6>
@@ -141,25 +141,45 @@
                 <a href="../../electronica.html"><i class="icon md-close-1"></i></a>
             </li>
         </ul>
-        
     </div>
 
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Video</strong>Un corto video para introducirnos al mundo de la Electrónica y entender mejor los conceptos necesarios para empezar.</h3>
+                <h3><strong>Practica</strong>Manos a la obra!</h3>
             </div>
-            <div class="abc">
-                <div class="video embed-responsive embed-responsive-16by9">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/kqb0dxMp_Tc?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+            <div class="question-content-wrap">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="question-content">
+                            <h3 class="md">Por fin algo de acción</h3>
+                            <p>Como ya hemos mencionado, el Arduino puede leer datos de dos maneras, digital y analógica. Empezaremos con lo digital. <strong>¿Cuál es la manera correcta de darle un 1 o un 0?</strong> Si pensaste en botones y switchs, tienes el 50% de la respuesta correcta. El otro 50% radica en la forma de conectarlos. Tenemos entonces 2 formas (efectivamente, ponerle un cable directo también funciona, pero significaría tener que mover cables para cambiar el valor, y es riesgoso):</p>
+                            <p>Tenemos entonces 2 configuraciones para los pulsadores: <strong>pull-up y pull-down</strong></p> 
+                            <pre>Consideraciones: En los siguientes ejemplos emplearemos una especie de "pantallita" conocida técnicamente como multímetro. Esta nos permite observar valores como la corriente, el voltaje, y la resistencia. Cuando empecemos a usar el Arduino, la usaremos con menos frecuencia. Por el momento usamos el Arduino solo como una fuente de voltaje, no tiene nada programado.</pre>
+                            <p>Pull-up entrega constantemente al pin un "0" lógico, y cuando se presiona el pulsador, entrega un "1". Las conexiones son como se muestran:</p>
+                            <br/>
+                            <img src="https://github.com/HackSpacePeru/coreupgrade-static/raw/master/public/html/Semana1/Electronica/Imagenes/PullUp.JPG" class="img-responsive">
+                            <br/>
+                            <p>Pull-down entrega constantemente al pin un "1" lógico, y al presionar el pulsador, entrega un "0". Las conexiones son las siguientes:</p>
+                            <br/>
+                            <img src="https://github.com/HackSpacePeru/coreupgrade-static/raw/master/public/html/Semana1/Electronica/Imagenes/PullDown.JPG" class="img-responsive">
+                            <br/>
+                            <p>Y, <strong>¿Cómo entregamos un valor analógico?</strong> La respuesta está en el siguiente diagrama de conexión: se emplea un <strong>potenciómetro.</strong></p>
+                            <br/>
+                            <img src="https://github.com/HackSpacePeru/coreupgrade-static/raw/master/public/html/Semana1/Electronica/Imagenes/Analog.JPG" class="img-responsive">
+                            <br/>
+                            <p>Con esto ya estamos listos para un pequeño reto! Clickea en el botón de abajo.</p>
+
+                            <div class="text-center">
+                                <a href="reto1.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                </a>
+                            </div>
+                            </div>
+
+                    </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top:10px;">
-                <a href="teoria-1.2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                </a>
-            </div>
 
-        </div>
     </section>
 
 </div>
@@ -173,6 +193,5 @@
 <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
 <script type="text/javascript" src="../../js/scripts.js"></script>
-
 </body>
 </html>
