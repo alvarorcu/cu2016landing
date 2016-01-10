@@ -244,29 +244,87 @@
                             <br>
                             <h3 class="md">Ejemplo 3</h3>
                             <p>Debido a que cuando trabajamos en una web tenemos bastante código para trabajar, es preferible separar y organizar el HTML, CSS y Javascript en archivos y hasta carpetas diferentes. De esta manera, en el ejemplo anterior lo podemos realizar también de esta otra manera:</p>
-                            <ol class="list-disc">
-                                <li>Creamos los archivos ejemplo3.html, style.css y main.js, y los ponemos en una ubicación que conozcamos (en este caso los 3 están en una misma carpeta). Estos son los archivos HTML, CSS y Javascript respectivamente y pueden tener cualquier nombre que queramos pero con sus respectivas terminaciones.</li>
-                                <li>Abrimos el archivo HTML y vemos que en vez del código CSS y Javascript que había anteriormente, ahora hay un links dentro de la etiqueta <code>&lt;head&gt;</code> y la etiqueta <code>&lt;script&gt;</code> de Javascript con código que teníamos se redujo a un <code>src="main.js"</code></li>
-                                <li>Abrimos el archivo CSS llamado style.css y vemos el mismo código que teníamos dentro de <code>&lt;style type="text/css"&gt;</code>.</li>
-                                <li>Abrimos el archivo Javascript llamado main.js y copiamos el mismo código que teníamos dentro de <code>&lt;script type="text/javascript" src="static/template/themes/admin/layout.js"&gt;&lt;/script&gt;</code>.</li>
-                            </ol>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-    &lt;head&gt;
-    &lt;meta charset=&quot;utf-8&quot;&gt;
-    &lt;title&gt;P&#225;gina 3&lt;/title&gt;
-    &lt;link type=&quot;text/css&quot; href=&quot;style.css&quot; rel=&quot;stylesheet&quot;&gt;
-    &lt;/head&gt;
-    &lt;body&gt;
-        &lt;h1 class=&quot;clase1&quot;&gt;T&#237;tulo&lt;/h1&gt;
-        &lt;p id=&quot;demo&quot;&gt;P&#225;rrafo: Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laborum sequi optio ullam ad nihil dolores eum, officiis assumenda delectus ea.&lt;/p&gt;
-        &lt;img src=&quot;http://hackspace.la/img/ejemplos/logo-hs.png&quot; alt=&quot;HackSpace Per&#250;&quot;&gt;
-        &lt;button type=&quot;button&quot; onclick=&quot;miFuncion()&quot;&gt;&#161;Hazme clic!&lt;/button&gt;
-        &lt;script type=&quot;text/javascript&quot; src=&quot;main.js&quot;&gt;&lt;/script&gt;
-    &lt;/body&gt;
-&lt;/html&gt;
-</pre>
+                              <br>
+                            <h3 class="md">Etiquetas principales del <code>&lt;head&gt;</code></h3>
+                            <p>Las etiquetas más comunes que encontramos son:</p>
+                            <div class="table-responsive">
+                                <table class="table">
+                                    <thead>
+                                        <tr>
+                                            <th>Etiqueta</th>
+                                            <th>Descripción</th>
+                                            <th>Atributos</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td><code>&lt;title&gt;</code></td>
+                                            <td>Define el título del documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;meta&gt;</code></td>
+                                            <td>Especifica una pareja propiedad/valor del documento.</td>
+                                            <td>name: Identifica un nombre de propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>http-equiv: Los servidores HTTP utilizan este atributo para obtener información sobre los encabezados.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>content: Este atributo especifica el valor de una propiedad.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>scheme: Proporciona a los agentes de usuario más contexto para la interpretación correcta de los datos.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;link&gt;</code></td>
+                                            <td>Define un vínculo. Solo puede aparecer en la sección head de un documento.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>charset: Especifica la codificación de caracteres.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>href: Especifica la localización de un recurso de la web.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>hreflang: Especifica el lenguaje de la URL</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>media: El medio para la información del estilo.</td>
+                                        </tr>
+                                        <tr>
+                                            <td></td>
+                                            <td></td>
+                                            <td>target: Indica donde abrir el URL.</td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;style&gt;</code></td>
+                                            <td>Define el estilo de la información del documento html.</td>
+                                            <td></td>
+                                        </tr>
+                                        <tr>
+                                            <td><code>&lt;base&gt;</code></td>
+                                            <td>Especifica la URL base que será usada para todos los vínculos de la página..</td>
+                                            <td></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
 
                             <p>Si abres el archivo ejemplo3.html con Google Chrome verás que se ve exactamente igual que en el Ejemplo 2 y tiene la misma funcionalidad, pero la diferencia es que lo hemos organizado todo de una mejor manera:</p>
                             <img src="http://hackspace.la/img/ejemplos/ejemplo1.1.3.png">
