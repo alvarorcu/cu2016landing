@@ -156,11 +156,11 @@
                             <p>El <strong>voltaje, o diferencia de potencial</strong>, puede ser asimilado como la diferencia de nivel entre dos tanques conectados.</p>
                             <p>Si no hay diferencia de nivel, no puede haber flujo. Lo mismo ocurre con la corriente. Si no hay diferencia de potencial, no hay corriente. Sin embargo, hay otro requisito, y es que el flujo sea permitido por las conexiones entre los tanques. Es decir, mientras nadie le permita el paso, a pesar de tener voltaje, la corriente será 0.</p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.1.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.1.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Ahora bien, contamos con una diferencia de potencial estable. Para que esto ocurra, usamos una fuente de voltaje, que puede ser asemejada a una bomba de agua que mantiene la diferencia de nivel, permitiendo un flujo constante por diferencia de potencial.</p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.2.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.2.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Sin embargo, la cantidad de agua que circula depende de la tubería. Mientras más angosta sea, menos agua podrá circular. Esto se asemeja a las resistencias, que limitan el flujo de la corriente.</p>
                             <p>Es hora de ponerle unidades. La diferencia de potencial (diferencia de nivel) se mide en <strong>voltios (V)</strong>; la intensidad de corriente (flujo de agua), en <strong>amperios (A)</strong> y la resistencia (el ancho de la tubería), en <strong>ohmios (Ω)</strong>.<br/>La relación entre las variables anteriormente mencionadas es descrita por la famosa <strong>ley de Ohm</strong>:</p>
@@ -168,22 +168,22 @@
                             <p>Puesto que un amperio es una unidad bastante grande de corriente, lo normal es trabajar con el <strong>miliamperio (mA).</strong></p>
                             <p>Realizaremos el cálculo correspondiente para el siguiente circuito:</p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.3.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.3.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Puesto que tenemos como datos el voltaje (5V) y la resistencia (1 KΩ), calcularemos la corriente, mediante la ley de ohm. Así de simple, obtenemos la respuesta: <strong>5 mA</strong> (o también 0.005 A, aplicar conversion de unidades, 1A = 1000 mA).</p>
                             <p>Siguiente concepto importante, la resistencia equivalente. Se sigue aplicando la ley de Ohm, pero con una consideración, en este caso:</p>
                             <p><em>La resistencia equivalente de "n" resistencias en <strong>serie</strong> es igual a la suma de dichas resistencias</em></p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.4.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.4.jpg" class="img-responsive"></div>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.5.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.5.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Entonces ambas resistencias pueden ser reemplazadas por su equivalente, es decir, una resistencia de 2KΩ. Realizando nuevamente los cálculos, obtenemos el nuevo valor de la corriente: 2.5 mA</p>
                             <p><em>La resistencia equivalente de "n" resistencias en <strong>paralelo</strong> es igual a la inversa de la suma de sus inversas"</em></p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.6.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.6.jpg" class="img-responsive"></div>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.7.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.7.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Entonces ambas resistencias pueden ser reemplazadas por su equivalente, es decir, una resistencia de 500Ω. Realizando nuevamente los cálculos, obtenemos el nuevo valor de la corriente: 10 mA.</p>
                             <p>Notamos aquí algo curioso, en ambos casos tuvimos la misma cantidad de resistencias, y estas fueron del mismo valor. La unica diferencia fue la manera de conectarlas.</p>
@@ -194,7 +194,7 @@
                             <p>Ambos casos se podrían ilustrar con una escalera. Mientras que a la lectura digital solo almacena si estás abajo o estás arriba (verdadero o falso), la lectura analógica almacena en qué escalón estás (variación).</p>
                             <p>Pasemos al hardware entonces. El arduino tiene <strong>13 pines digitales</strong>, pero puesto que los dos primeros son utilizados para la comunicación serial, normalmente no se usan, así que los pines digitales 0 y 1 no serán usados de momento. Estos pines pueden ser configurados como entradas, o como salidas.</p>
                             <br/>
-                            <div class="text-center"><img src="./../img/ejemplos/electronica1.4.8.jpg" class="img-responsive"></div>
+                            <div class="text-center"><img src="../../img/ejemplos/electronica1.4.8.jpg" class="img-responsive"></div>
                             <br/>
                             <p>Luego están los pines analógicos, del <strong>A0 al A5</strong>. Estos sólo pueden ser usados como entradas. Por otro lado, tenemos una <strong>salida de 5V, una salida de 3.3V, tres conexiones a 0V o GND (tierra)</strong>.</p>
                             <p>Ya conocemos un poco del Arduino, llego la hora de practicar! Dale click al botón de abajo!</p>
