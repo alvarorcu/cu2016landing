@@ -66,12 +66,12 @@
 
                 <ul class="top-nav-list">
                     <li class="prev-course"><a href="ejemplo-1.2.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-                    <li class="next-course"><a href="../../backend.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+                    <li class="next-course"><a href="ejemplo-1.4.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
                     <li class="outline-learn">
                         <a href="#"><i class="icon md-list"></i></a>
                         <div class="list-item-body outline-learn-body">
                             <div class="section-learn-outline">
-                                <h5 class="section-title">Semana 1: Fundamentos, HTML y CSS</h5>
+                                <h5 class="section-title">Semana 1 : Fundamentos, Node y Express</h5>
                                 <ul class="section-list">
                                     <li class="o-view">
                                         <div class="list-body">
@@ -87,7 +87,7 @@
                                         <div class="list-body">
                                             <a href="ejemplo-1.2.html">
                                                 <h6>Ejemplos</h6>
-                                                <p>Ejemplos introductorios para entender los fundamentos de Frontend.</p>
+                                                <p>Ejemplos de introduccion al backend y Node.js.</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -98,6 +98,24 @@
                                             <a href="teoria-1.3.html">
                                                 <h6>Teoría</h6>
                                                 <p>Instalacion de express y nuestro primer servidor web</p>
+                                            </a>
+                                        </div>
+                                        <div class="div-x"><i class="icon md-check-2"></i></div>
+                                    </li>
+                                    <li>
+                                        <div class="list-body">
+                                            <a href="ejemplo-1.4.html">
+                                                <h6>Ejemplos</h6>
+                                                <p>Creando un API en Node.js</p>
+                                            </a>
+                                        </div>
+                                        <div class="div-x"><i class="icon md-check-2"></i></div>
+                                    </li>
+                                    <li>
+                                        <div class="list-body">
+                                            <a href="reto-1.5.html">
+                                                <h6>Reto 1</h6>
+                                                <p>Este es el reto de la semana 1 que será calificado.</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -146,7 +164,7 @@ app.get('/', function (req, res) {
 
 app.listen(3000);
                                     </pre>
-                                    Al ejecutar el script anterior con el comando <code>node miserver.js</code> este inicia un servidor que esta escuchando los pedidos en el puerto 3000, el cual podemos verificar ingresando desde un navegador web a la ruta <a href="http://locahost:3000">http://localhost:3000</a> , para detener el servidor presionamos dos veces el comando Ctr+C en el terminal.
+                                    Al ejecutar el script anterior con el comando <code>node miserver.js</code> este inicia un servidor que esta escuchando los pedidos en el puerto 3000, el cual podemos verificar ingresando desde un navegador web a la ruta <a href="http://localhost:3000" target="_blank">http://localhost:3000</a> , para detener el servidor presionamos dos veces el comando Ctr+C en el terminal.
                                     <br>
                                     <br>
                                     <h3 class="md">Manejando las rutas</h3>
@@ -171,14 +189,16 @@ app.get('/amigos', function (req, res) {
 
 app.listen(3000);
                                     </pre>
-                                    <p>Ahora podemos ver que obtenomos diferentes respuestas al ingresar a rutas como <a href="http://locahost:3000/perfil">http://localhost:3000/perfil</a> </p>
+                                    <p>Ahora podemos ver que obtenemos diferentes respuestas al ingresar a rutas como <a href="http://localhost:3000/perfil">http://localhost:3000/perfil</a> </p>
+
+                                    <div class="text-center" style="margin-top:10px;">
+                                        <a href="ejemplo-1.4.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="text-center" style="margin-top:10px;">
-                            <a href="ejemplo-3.4.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                            </a>
-                        </div>
+                        
 
             </section>
 
@@ -193,5 +213,15 @@ app.listen(3000);
                     <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
                     <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
                     <script type="text/javascript" src="../../js/scripts.js"></script>
+                    <script>
+                      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+                      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+                      ga('create', 'UA-31715493-7', 'auto');
+                      ga('send', 'pageview');
+
+                    </script>
     </body>
 </html>
