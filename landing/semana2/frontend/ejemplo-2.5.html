@@ -65,8 +65,8 @@
         <h4 class="sm black bold">FRONTEND | Semana 2 : Jquery</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="ejemplo-2.5.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="reto2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="ejemplo-2.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="ejercicio-2.6.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
@@ -192,7 +192,7 @@
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
-                            <li class="o-view">
+                            <li>
                                 <div class="list-body">
                                     <a href="ejercicio-2.6.html">
                                         <h6>Ejercicios</h6>
@@ -225,22 +225,258 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Ejercicios</strong>Hora de practicar Jquery.</h3>
+                <h3><strong>Ejemplos</strong>Trabajemos con el contenido de nuestra web.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <p>Pero antes de continuar, reforcemos lo que hemos aprendido en esta primera sección con unos cuántos ejercicios muy simples.</p>
-                            <h3 class="md">Ejercicio 1</h3>
-                            <p>En 5 segundos aumentar de tamaño a un texto <b>"TEST"</b> y luego desaparecerlo al pasar el mouse encima del texto. Esto usando <code>animate()</code> y modificando el css apartir de eso.</p>
+                            <h3 class="md">Obtener contenido y atributos</h3>
+                            
+
+
+
+                            <p><code>text()</code> y <code>html()</code> : Obtener contenidos con los métodos text() y html().</p>
+                            <p><code>attr()</code> : Obtener el valor de un atributo con el método attr().</p>
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $(&quot;#btn1&quot;).click(function(){
+    alert(&quot;Text: &quot; + $(&quot;#test&quot;).text());
+  });
+  $(&quot;#btn2&quot;).click(function(){
+    alert(&quot;HTML: &quot; + $(&quot;#test&quot;).html());
+  });
+  $(&quot;#button&quot;).click(function(){
+    alert($(&quot;#hsla&quot;).attr(&quot;href&quot;));
+    alert(&quot;Valor: &quot; + $(&quot;#test&quot;).val());
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p id=&quot;test&quot;&gt;Esto es letra &lt;b&gt;negrita&lt;/b&gt; en un parrafo.&lt;/p&gt;&lt;br&gt;
+&lt;input input type=&quot;button&quot; id=&quot;btn1&quot; value=&quot;Mostrar texto.&quot; /&gt;&lt;br&gt;
+&lt;input input type=&quot;button&quot; id=&quot;btn2&quot; value=&quot;Mostrar HTML.&quot; /&gt;&lt;br&gt;
+&lt;p&gt;Name: &lt;input type=&quot;text&quot; id=&quot;test&quot; value=&quot;Hackspace&quot;&gt;&lt;/p&gt;&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.hackspace.la&quot; id=&quot;hsla&quot;&gt;hackspace.la&lt;/a&gt;&lt;/p&gt;&lt;br&gt;
+&lt;input input type=&quot;button&quot; id=&quot;button&quot; value=&quot;Mostrar valor&quot; /&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Control de opacidad</h3>
+                            <p>Configurar contenido con los métodos jQuery <code>text()</code>, <code>html()</code> y <code>val()</code>.</p>
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $(&quot;#btn1&quot;).click(function(){
+    $(&quot;#test1&quot;).text(&quot;Hola mundo texto!&quot;);
+  });
+  $(&quot;#btn2&quot;).click(function(){
+    $(&quot;#test2&quot;).html(&quot;&lt;b&gt;Hola mundo html!&lt;/b&gt;&quot;);
+  });
+  $(&quot;#btn3&quot;).click(function(){
+    $(&quot;#test3&quot;).val(&quot;Hola mundo valores!&quot;);
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p id=&quot;test1&quot;&gt;Este es un parrafo.&lt;/p&gt;
+&lt;p id=&quot;test2&quot;&gt;Este es otro parrafo.&lt;/p&gt;
+&lt;p&gt;Campo input: &lt;input type=&quot;text&quot; id=&quot;test3&quot; value=&quot;Hackspace&quot;&gt;&lt;/p&gt;
+&lt;button id=&quot;btn1&quot;&gt;Configurar texto&lt;/button&gt;
+&lt;button id=&quot;btn2&quot;&gt;Configurar HTML&lt;/button&gt;
+&lt;button id=&quot;btn3&quot;&gt;Configurar valores&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>                      
+                            <p>Configurar valores de atributos usando la funcion <code>callback</code> (funcion parametro de otra funcion) dentro del método <code>attr()</code>.</p>
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+                            
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $(&quot;button&quot;).click(function(){
+    $(&quot;#hsla&quot;).attr(&quot;href&quot;, function(i,origValue){
+      return origValue + &quot;/jquery&quot;; 
+    });
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;p&gt;&lt;a href=&quot;http://www.hackspace.la&quot; id=&quot;hsla&quot;&gt;Hackspace Core Upgrade 2015&lt;/a&gt;&lt;/p&gt;
+&lt;button&gt;Cambiar el valor href&lt;/button&gt;
+&lt;p&gt;Mouse sobre el link (o click en el) para ver que el valor del atributo href ha cambiado.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Agregar o Eliminar un elemento HTML</h3>
+                            <p>Usaremos los métodos <code>append()</code> y <code>remove()</code> , para realizar esto.</p>
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+function appendText() {
+    var txt1 = &quot;&lt;p&gt;Text.&lt;/p&gt;&quot;;              // Crear texto con HTML
+    var txt2 = $(&quot;&lt;p&gt;&lt;/p&gt;&quot;).text(&quot;Text.&quot;);  // Crear texto con jQuery
+    var txt3 = document.createElement(&quot;p&quot;);
+    txt3.innerHTML = &quot;Text.&quot;;               // Crear texto con DOM
+    $(&quot;body&quot;).append(txt1, txt2, txt3);     // Agregar txt1,txt2 y txt3
+        $(&quot;#div1&quot;).remove();                // Eliminar div1
+}
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;div id=&quot;div1&quot; style=&quot;height:100px;width:300px;border:1px solid black;background-color:yellow;&quot;&gt;
+
+Texto dentro del div1.
+&lt;p&gt;Dentro del div1.&lt;/p&gt;
+&lt;p&gt;Dentro del div1.&lt;/p&gt;
+
+&lt;/div&gt;
+&lt;p&gt;Fuera del div1.&lt;/p&gt;
+&lt;button onclick=&quot;appendText()&quot;&gt;Append text&lt;/button&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Animar elementos</h3>
+                            <p>Utilizamos <code>animate()</code>.</p>
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt; 
+$(document).ready(function(){
+  $(&quot;button&quot;).click(function(){
+    var div=$(&quot;div&quot;);
+    div.animate({height:&#39;300px&#39;,opacity:&#39;0.4&#39;},&quot;slow&quot;);
+    div.animate({width:&#39;300px&#39;,opacity:&#39;0.8&#39;},&quot;slow&quot;);
+    div.animate({height:&#39;100px&#39;,opacity:&#39;0.4&#39;},&quot;slow&quot;);
+    div.animate({width:&#39;100px&#39;,opacity:&#39;0.8&#39;},&quot;slow&quot;);
+  });
+});
+&lt;/script&gt; 
+&lt;/head&gt;
+
+&lt;body&gt;
+&lt;button&gt;Empezar Animacion&lt;/button&gt;
+&lt;p&gt;Por default, los elementos HTML tienen una posicion estatica, y no pueden ser movidos. Para manipularl la posicion, recuerda primero configurar la propiedad de posicion CSS de un elemento a relativo, fijo o absoluto.&lt;/p&gt;
+&lt;div style=&quot;background:#98bf21;height:100px;width:100px;position:absolute;&quot;&gt;
+&lt;/div&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Configurar CSS</h3>
+                            <p>Para esto usaremos el método <code>css()</code>.</p>
 
                             <br>
-                            <h3 class="md">Ejercicio 2</h3>
-                            <p>Crear un programa con jQuery para obtener un menú, tal que cada vez que el usuario introduce el puntero el item cambia de color.</p>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+  $(&quot;button&quot;).click(function(){
+    $(&quot;p&quot;).css({&quot;background-color&quot;:&quot;yellow&quot;,&quot;font-size&quot;:&quot;200%&quot;});
+  });
+});
+&lt;/script&gt;
+&lt;/head&gt;
 
+&lt;body&gt;
+&lt;h2&gt;Esta es una cabecera&lt;/h2&gt;
+&lt;p style=&quot;background-color:#ff0000&quot;&gt;Este es un parrafo.&lt;/p&gt;
+&lt;p style=&quot;background-color:#00ff00&quot;&gt;Este es un parrafo.&lt;/p&gt;
+&lt;p style=&quot;background-color:#0000ff&quot;&gt;Este es un parrafo.&lt;/p&gt;
+&lt;p&gt;Este es un parrafo.&lt;/p&gt;
+&lt;button&gt;Configurar estilos&lt;/button&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Configurar CSS de elemento padre e hijo</h3>
+                            <p>Para esto usaremos <code>parent()</code> y <code>children()</code>.</p>
+
+                            <br>
+                            <h4 class="sm bold">Ejemplo</h4>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+&lt;style&gt;
+.descendants *
+{ 
+display: block;
+border: 2px solid lightgrey;
+color: lightgrey;
+padding: 5px;
+margin: 15px;
+}
+&lt;/style&gt;
+&lt;script src=&quot;http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js&quot;&gt;&lt;/script&gt;
+&lt;script&gt;
+$(document).ready(function(){
+
+  $(&quot;.descendants&quot;).children().css({&quot;color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px solid red&quot;});
+  $(&quot;p&quot;).parent().css({&quot;color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px solid pink&quot;});
+  $(&quot;p&quot;).children().css({&quot;color&quot;:&quot;red&quot;,&quot;border&quot;:&quot;2px solid green&quot;});
+});
+&lt;/script&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div class=&quot;grandparent&quot; style=&quot;width:800px&quot;&gt;div abuelo
+&lt;div class=&quot;descendants&quot; style=&quot;width:500px;&quot;&gt;div padre 
+  &lt;p&gt;p hijo
+    &lt;span&gt;span nieto&lt;/span&gt;     
+  &lt;/p&gt;
+  &lt;p&gt;p hijo
+    &lt;span&gt;span nieto&lt;/span&gt;
+  &lt;/p&gt; 
+&lt;/div&gt;
+&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
                             <div class="text-center">
-                                <a href="reto2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                <a href="ejercicio-2.6.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                 </a>
                             </div>
                         </div>
