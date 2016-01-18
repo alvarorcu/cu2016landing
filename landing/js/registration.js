@@ -7,6 +7,7 @@
     var searchPath = window.location.search.replace("?next=","").replace(testingPrefix, "");
     searchPath = (searchPath == "")?searchPath:searchPath + ".html";
 
+
     function UserRegistration(data) {
         firebase.createUser({
                 email: data.email,
