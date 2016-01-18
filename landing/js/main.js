@@ -5,6 +5,15 @@ jQuery(function($) {
 	var owlPricing;
 	var ratio = 2;
 
+	function LoginTopMargin(){
+		var loginHeader = document.getElementById("loginHeader");
+
+		if (loginHeader !== null) {
+			var headerHeight = document.getElementsByTagName("nav")[1].clientHeight;
+			loginHeader.style.paddingTop = headerHeight + 32 + "px";
+		}
+	};
+
 	// Window Load
 	$(window).load(function() {
 		// Preloader
@@ -74,6 +83,8 @@ jQuery(function($) {
 			scrollSpeed: 400,
 			filter: ':not(.btn)'
 		});
+
+		LoginTopMargin();
 	});
 
 	// Window Scroll
@@ -179,6 +190,7 @@ jQuery(function($) {
 
 	$(window).on("resize", function() {
 		$('.modal:visible').each(centerModal);
+		LoginTopMargin();
 	});
 
 });

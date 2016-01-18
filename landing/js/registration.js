@@ -1,7 +1,15 @@
+var R2D2 = null;
+
 (function() {
     "use strict";
 
     var firebase = new Firebase("https://cu2016.firebaseio.com");
+    var testingPrefix = "/cu2016";
+    var normalizedPath = window.location.pathname.replace(".html","").replace(testingPrefix, "");
+    var searchPath = window.location.search.replace("?next=","").replace(testingPrefix, "");
+
+    console.log(normalizedPath);
+    console.log(searchPath);
 
     function UserRegistration(data) {
         firebase.createUser({
@@ -72,4 +80,44 @@
         }
         return false;
     });
+
+    $('#cuLogin').submit(function(event) {
+        event.preventDefault();
+        $(this).find('.error').remove();
+        $('.inputError').removeClass('inputError');
+
+        firebase.authWithPassword({
+                email: $("#idEmail").val(),
+                password: $("#idPassword").val()
+            }, function(error, authData) {
+                if (error) {
+                    $("#cuLogin").prepend('<span class="error black"><strong>La combinación de correo eletrónico y contraseña es  inválida. Por favor, revise sus credenciales.</strong></span>');
+                    return false;
+                } else {
+                    window.location.href = "http://" + window.location.hostname + testingPrefix + searchPath;
+                }
+            }, {
+                remember: "sessionOnly"
+            }
+        );
+        return false;
+    });
+
+
+    function CheckLogin(){
+        var authData = firebase.getAuth();
+
+        var freePaths = ["/", "/index", "/detalles", "/nosotros", "/provincias", "/login", "/registro"];
+
+        if (authData) {
+            document.getElementById("login").text = "Entrenamiento"
+            document.getElementById("login").href = "http://" + window.location.hostname + testingPrefix + "/entrenamiento.html";
+        } else {
+            if ( freePaths.indexOf(normalizedPath) == -1 ) {
+              window.location.href = "http://" + window.location.hostname + testingPrefix + "/login.html?next=" + testingPrefix + normalizedPath;
+            }
+        }
+    }
+
+    CheckLogin();
 })();

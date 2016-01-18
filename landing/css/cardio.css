@@ -1274,7 +1274,12 @@ input[type="date"]::-webkit-inner-spin-button{
 	}
 }
 
+.bg-withe {
+  background: none;
+  background-color: #ffffff;
+}
 
 
-
-
+.modal-dialog {
+	max-width: 600px;
+}
