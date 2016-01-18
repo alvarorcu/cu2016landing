@@ -4,7 +4,7 @@ var R2D2 = null;
     "use strict";
 
     var firebase = new Firebase("https://cu2016.firebaseio.com");
-    var testingPrefix = "/cu2016";
+    var testingPrefix = "";
     var normalizedPath = window.location.pathname.replace(".html","").replace(testingPrefix, "");
     var searchPath = window.location.search.replace("?next=","").replace(testingPrefix, "");
 
