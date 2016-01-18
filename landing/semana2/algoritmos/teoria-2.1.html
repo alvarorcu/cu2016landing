@@ -61,110 +61,103 @@
 <div id="page-wrap">
 
     <div class="top-nav">
-        <h4 class="sm black bold">ALGORITMOS | Semana 1 : Introducción, Algoritmos y Pseudocódigo</h4> 
-        <ul class="top-nav-list">
+        <h4 class="sm black bold">ALGORITMOS | Semana 2 : Bucles y C++</h4>  
+         <ul class="top-nav-list">
             <li class="prev-course"><a href="../../algoritmos.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="teoria-1.2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
-
-            <li class="outline-learn">
-                <a href="#"><i class="icon md-list"></i></a>
-                <div class="list-item-body outline-learn-body">
-                    <div class="section-learn-outline">
-                        <h5 class="section-title">Semana 1: Introducción, Algoritmos y Pseudocódigo</h5>
-                        <ul class="section-list">
-                            <li class="o-view">
-                                <div class="list-body">
-                                    <a href="teoria-1.1.html">
-                                        <h6>Slides</h6>
-                                        <p>Conoceremos el mundo de la Programación Competitiva, ya que los algoritmos que aprenderemos son usados en este tipo de concursos.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="teoria-1.2.html">
-                                        <h6>Teoría</h6>
-                                        <p>Qué es un algoritmo, un pseudocódigo y cómo representarlos con la herramienta PSeInt.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="teoria-1.3.html">
-                                        <h6>Teoría</h6>
-                                        <p>Variables, operadores matemáticos, lógicos y de comparación.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                           <li>
-                                <div class="list-body">
-                                    <a href="ejercicio-1.4.html">
-                                        <h6>Ejercicios</h6>
-                                        <p>Ejercicios: uso de variables y operadores.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="teoria-1.5.html">
-                                        <h6>Teoría</h6>
-                                        <p>Estructuras de Control Condicional: simple, doble, anidada y múltiple.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="ejercicio-1.6.html">
-                                        <h6>Ejercicios</h6>
-                                        <p>Uso de estructuras de control condicional.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="reto1.html">
-                                        <h6>Reto 1</h6>
-                                        <p>Este es el reto de la semana 1 que será calificado.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </li>
-
+            <li class="next-course"><a href="#"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="backpage">
                 <a href="../../algoritmos.html"><i class="icon md-close-1"></i></a>
             </li>
-        </ul>      
+        </ul>          
     </div>
 
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Slides</strong> Una presentación que nos permitirá conocer el mundo de la programación competitiva.</h3>
+                <h3><strong>Teoría</strong>Estructuras de Control Repetitiva: mientras, repetir-hasta y para.</h3>
             </div>
-            <div class="abc">
-                <div class="video embed-responsive embed-responsive-16by9">
-                   <iframe src="https://www.slideshare.net/slideshow/embed_code/key/jMsRXVqicLRHA1" width="640" height="360" frameborder="0" allowfullscreen> 
-                   </iframe> 
+            <div class="question-content-wrap">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="question-content">
+                            <h3 class="md">Estructura de Control Repetitiva</h3>
+                            <p>Llamamos así a los denominados bucles, los cuáles nos permiten repetir un conjunto de instrucciones hasta que una condición asociada al mismo se cumpla o deje de cumplirse.</p>
+                            <h3 class="md">Mientras</h3>
+                            <p>Realiza un conjunto de instrucciones mientras una condición sea verdadera, esta estructura evalúa primero la condición antes de ejecutar la acciones, es por ello que las repetirá de 0 a más veces. La sintaxis es la siguiente:</p>
+<pre>
+    Mientras &lt;condicion&gt; Hacer
+        &lt;instrucciones&gt;
+    FinMientras
+</pre>
+                            <p>Ahora veremos un ejemplo, hallaremos el factorial de un número n:</p>
+<pre>
+    Proceso EstRepMientras
+        Definir n, i, fact Como Entero;
+        Leer n;
+        fact = 1;
+        i = 1;
+        Mientras (i<=n) Hacer
+            fact = fact * i;
+            i = i + 1;
+        FinMientras 
+        Escribir "El factorial de ", n, " es: ", fact;
+    Fin Proceso
+</pre>
+                            
+                            <h3 class="md">Repetir - hasta </h3>
+                            <p>Repite un conjunto de instrucciones hasta que una condición sea verdadera; a diferencia de la estructura anterior, esta realizará al menos una repetición, ya que la condición a evaluar se encuentra luego de la ejecución de las instrucciones. La sintaxis es la siguiente:</p>
+<pre>
+    Repetir
+        &lt;instrucciones&gt;
+    Hasta Que &lt;condicion&gt;
+</pre>
+                            <p>Ahora veremos un ejemplo, validaremos el acceso a un sistema sólo comparanado el password y permitiendo como máximo 3 intentos:</p>
+<pre>
+    Proceso EstRepetirHasta
+        Definir pass, clave Como Caracter;
+        Definir  fallas Como Entero;
+        pass = "123";
+        fallas = 0;
+        
+        Repetir
+            Escribir "Ingrese clave: ";
+            Leer clave;
+            Si clave != pass Entonces
+                fallas = fallas + 1;
+            FinSi
+        Hasta Que ( fallas = 3 O clave = pass)
+        
+        Si ( fallas = 3 ) Entonces
+            Escribir "Ha superado el límite de intentos";
+        Sino
+            Escribir "Bienvenido";
+        FinSi
+    Fin Proceso
+</pre>
+                             <h3 class="md">Para</h3>
+                             <p>Principalmente permite ejecutar un conjunto de instrucciones un número determinado de veces (ya sabemos cuántas veces iterar). Opcionalmente se puede comportar como las estructuras anteriormente mostradas ya que itera sobre una variable desde un valor <strong>"inicial"</strong> definido, incrementándose en cada iteración en un valor llamado <strong>"paso"</strong>, mientras la variable sea menor o igual a un valor <strong>"final"</strong>( el campo "paso" es opcional, por defecto incrementa de 1 en 1). La sintaxis es la siguiente: </p>
+<pre>
+    Para &lt;variable&gt; = &lt;inicial&gt; Hasta &lt;final&gt; ( Con Paso &lt;paso&gt; ) Hacer 
+        &lt;instrucciones&gt; 
+    FinPara 
+</pre>
+                             <p>Ahora veremos un ejemplo, mostraremos todos los números pares desde el 1 hasta n. 
+<pre>
+    Proceso EstRepPara
+        Definir n, i  Como Entero;
+        Leer n;
+        Para i = 2 Hasta n Con Paso 2 Hacer
+            Escribir i;
+        FinPara
+    Fin Proceso
+</pre>
+                            <p>Vale destacar que para hacer un bucle podemos usar cualquiera de las estructuras presentadas, se recomienda usar la que más se nos acomode según sea el caso.</p>
+                        </div>
+                    </div>
                 </div>
             </div>
             <div class="text-center" style="margin-top:10px;">
-                <a href="teoria-1.2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                <a href="#" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                 </a>
             </div>
 
