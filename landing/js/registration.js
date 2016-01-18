@@ -1,5 +1,3 @@
-var R2D2 = null;
-
 (function() {
     "use strict";
 
@@ -7,9 +5,7 @@ var R2D2 = null;
     var testingPrefix = "";
     var normalizedPath = window.location.pathname.replace(".html","").replace(testingPrefix, "");
     var searchPath = window.location.search.replace("?next=","").replace(testingPrefix, "");
-
-    console.log(normalizedPath);
-    console.log(searchPath);
+    searchPath = (searchPath == "")?searchPath:searchPath + ".html";
 
     function UserRegistration(data) {
         firebase.createUser({
@@ -94,7 +90,7 @@ var R2D2 = null;
                     $("#cuLogin").prepend('<span class="error black"><strong>La combinación de correo eletrónico y contraseña es  inválida. Por favor, revise sus credenciales.</strong></span>');
                     return false;
                 } else {
-                    window.location.href = "http://" + window.location.hostname + testingPrefix + searchPath + ".html";
+                    window.location.href = "http://" + window.location.hostname + testingPrefix + searchPath;
                 }
             }, {
                 remember: "sessionOnly"

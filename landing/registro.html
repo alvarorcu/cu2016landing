@@ -82,67 +82,69 @@
                     <li><a href="#team">Proceso</a></li>
                     <li><a href="detalles.html">Detalles</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
-					<!-- li><a href="entrenamiento.html" class="btn btn-blue">Entrenamiento</a></li -->
-					<li><a id="login" href="login.html" class="btn btn-blue">Iniciar sesión</a></li>
+                    <!-- li><a href="entrenamiento.html" class="btn btn-blue">Entrenamiento</a></li -->
+                    <li><a id="login" href="login.html" class="btn btn-blue">Iniciar sesión</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
         </div>
         <!-- /.container-fluid -->
     </nav>
-    <header id="loginHeader">
+    <section id="loginHeader" style="background:rgba(28, 36, 65, 0.83);">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-lg-4 col-lg-push-4 text-center">
-                    <h2>Inscríbete</h2>
-					<form id="cuRegistration" name="RegistrationForm" action="." method="GET" class="popup-form">
-						<input type="text"     id="idName"     name="field-fullname" data-content="nombre"               class="form-control" required="required" placeholder="Nombres">
-						<input type="text"     id="idLastname" name="field-fullname" data-content="apellido"             class="form-control" required="required" placeholder="Apellidos">
-						<input type="text"     id="idBirthday" name="field-birthday" data-content="fecha de nacimiento"  class="form-control" required="required" placeholder="Fecha de nacimiento">
-						<input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control" required="required" placeholder="Correo electrónico">
-						<input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control" required="required" placeholder="Contraseña">
-						<div class="checkbox-group form-control">
-							<div class="checkbox-group-title text-left">
-								Áreas de interés
-							</div>
-							<div class="checkbox-holder text-left">
-								<div class="checkbox">
-									<input type="checkbox" id="idFrontend" name="field-frontend" />
-									<label for="idFrontend"><span>Frontend</span></label>
-								</div>
-							</div>
-							<div class="checkbox-holder text-left">
-								<div class="checkbox">
-									<input type="checkbox" id="idBackend" name="field-backend" />
-									<label for="idBackend"><span>Backend</span></label>
-								</div>
-							</div>
-							<div class="checkbox-holder text-left">
-								<div class="checkbox">
-									<input type="checkbox" id="idElectronica" name="field-electrónica" />
-									<label for="idElectronica"><span>Electrónica</span></label>
-								</div>
-							</div>
-							<div class="checkbox-holder text-left">
-								<div class="checkbox">
-									<input type="checkbox" id="idAlgoritmos" name="field-algoritmos" />
-									<label for="idAlgoritmos"><span>Algoritmos</span></label>
-								</div>
-							</div>
-							<div class="checkbox-holder text-left">
-								<div class="checkbox">
-									<input type="checkbox" id="idAndroid" name="field-android" />
-									<label for="idAndroid"><span>Android</span></label>
-								</div>
-							</div>
-						</div>
-						<button id="cuRegistrationSubmit" type="submit" class="btn btn-submit">¡Inscribirme!</button>
-					</form>
-                    <p class="black"><small>¿Tienes una cuenta? <a href="login.html">Ingresa ahora.</a><small></p>
+                <div class="col-xs-12 col-lg-6 col-lg-push-3 text-center">
+                    <h2 class="white">Inscríbete</h2>
+                    <form id="cuRegistration" name="RegistrationForm" action="." method="GET" class="popup-form">
+                        <input type="text"     id="idName"     name="field-fullname" data-content="nombre"               class="form-control form-white" required="required" placeholder="Nombres">
+                        <input type="text"     id="idLastname" name="field-fullname" data-content="apellido"             class="form-control form-white" required="required" placeholder="Apellidos">
+                        <input type="text"     id="idBirthday" name="field-birthday" data-content="fecha de nacimiento"  class="form-control form-white" required="required" placeholder="Fecha de nacimiento">
+                        <input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control form-white" required="required" placeholder="Correo electrónico">
+                        <input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control form-white" required="required" placeholder="Contraseña">
+                        <div class="checkbox-group form-control form-white">
+                            <div class="checkbox-group-title text-left">
+                                Áreas de interés
+                            </div>
+                            <div class="checkbox-holder text-left">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idFrontend" name="field-frontend" />
+                                    <label for="idFrontend"><span>Frontend</span></label>
+                                </div>
+                            </div>
+                            <div class="checkbox-holder text-left">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idBackend" name="field-backend" />
+                                    <label for="idBackend"><span>Backend</span></label>
+                                </div>
+                            </div>
+                            <div class="checkbox-holder text-left">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idElectronica" name="field-electrónica" />
+                                    <label for="idElectronica"><span>Electrónica</span></label>
+                                </div>
+                            </div>
+                            <div class="checkbox-holder text-left">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idAlgoritmos" name="field-algoritmos" />
+                                    <label for="idAlgoritmos"><span>Algoritmos</span></label>
+                                </div>
+                            </div>
+                            <div class="checkbox-holder text-left">
+                                <div class="checkbox">
+                                    <input type="checkbox" id="idAndroid" name="field-android" />
+                                    <label for="idAndroid"><span>Android</span></label>
+                                </div>
+                            </div>
+                        </div>
+                        <button id="cuRegistrationSubmit" type="submit" class="btn btn-submit">¡Inscribirme!</button>
+                    </form>
+                    <p class="white"><small>¿Tienes una cuenta? <a href="login.html">Ingresa ahora.</a><small></p>
                 </div>
             </div>
         </div>
-    </header>
+        <div class="row">
+        </div>
+    </section>
     <footer>
         <div class="container">
             <div id="ayuda" class="row text-center title">
