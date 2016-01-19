@@ -65,7 +65,7 @@
         <h4 class="sm black bold">ALGORITMOS | Semana 2 : Bucles y C++</h4> 
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="#"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="prev-course"><a href="ejercicio-2.5.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
             <li class="next-course"><a href="../../algoritmos.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="backpage">
                 <a href="../../algoritmos.html"><i class="icon md-close-1"></i></a>
@@ -84,28 +84,28 @@
                     <div class="col-md-12">
                         <div class="question-content">
                             <h3 class="md">Reto 2 de Algoritmos</h3>
-                            <p>Se define la función f(n) para un número entero positivo.</p>
-                            <p>f(n) = -1 + 2 - 3 + .. + (-1)<sup>n</sup> n</p>
-                            <p>El reto es calcular f(n).</p>
+                            <p>Toñito está apunto de ingresar a un edificio de n pisos (considerar que está en el piso 0). Se sabe que cada hora el sube A pisos ( dejando una bandera sólo en el último piso al que llegó) y luego desciende B pisos, según él hace esto para realizar mayor ejercicio y estar mejor de salud. Se recalca que no deja banderas en ningún piso intermedio. El Hackspace desea saber si Toñito pudo dejar una bandera en el piso n, teniendo en cuenta que cuando ya no puede seguir con su rutina ( ya no hay los suficientes pisos en el edificio) baja rápidamente y va rumbo a su casa( ver ejemplos).</p>
                             <p><strong>Entrada</strong></p>
-                            <p>Una sola línea que contiene un numero entero n. (1 ≤ n ≤ 10000).</p>
+                            <p>La entrada contiene 3 números enteros n, A y B ( 1 ≤ n, A, B ≤ 10000 ; A>B )</p>
                             <p><strong>Salida</strong></p>
-                            <p>El valor de f(n).</p>
+                            <p>Si existe una bandera en el piso n imprimir "SI", caso contrario mostrar "NO" (sin comillas).</p>
                             <p><strong>Ejemplos</strong></p>
-                            <table width="40%" border="1">
+                            <table width="40%" border="1px">
                                 <tr>
                                     <th><center>Entrada</center></th>
                                     <th><center>Salida</center></th>
                                 </tr>
                                 <tr>
-                                    <td style="padding-left:10px;">4</td>
-                                   <td style="padding-left:10px;">2</td>
+                                    <td style="padding-left:10px;">10 15 7</td>
+                                    <td style="padding-left:10px;">NO</td>
                                 </tr>
                                 <tr>
-                                    <td style="padding-left:10px;">5</td>
-                                    <td style="padding-left:10px;">-3</td>
+                                    <td style="padding-left:10px;">5 3 1</td>
+                                    <td style="padding-left:10px;">SI</td>
                                 </tr>
                             </table>
+                            <p>En el primero caso, el edificio sólo tiene 10 pisos y su rutina le dice que primero tiene que subir 15 pisos, por ello decide irse a su casa.</p>
+                            <p>En el segundo caso, sube hasta el piso 3, baja al piso 2 y luego llega al piso 5 dejando una bandera.</p>
                             <br><br>
                             <div class="text-center">
                                 <a href="#" class="mc-btn btn-large btn-style-1">Entregar reto</a>
