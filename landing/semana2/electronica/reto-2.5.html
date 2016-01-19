@@ -62,32 +62,22 @@
 
     <div class="top-nav">
 
-        <h4 class="sm black bold">ELECTRÓNICA | Semana 1 : Fundamentos de la Electrónica</h4>
+        <h4 class="sm black bold">ELECTRÓNICA | Semana 2 : Un Nuevo Aliado: El Arduino</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="teoria-1.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="reto1.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="practica-1.5.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="#"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
                     <div class="section-learn-outline">
-                        <h5 class="section-title">Semana 1: Fundamentos de la Electrónica</h5>
+                        <h5 class="section-title">Semana 2 : Un Nuevo Aliado: El Arduino</h5>
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="video-1.1.html">
-                                        <h6>Video</h6>
-                                        <p>Un corto video para introducirnos al mundo de la Electrónica y entender mejor los conceptos necesarios para empezar.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li class="o-view">
-                                <div class="list-body">
-                                    <a href="teoria-1.2.html">
+                                    <a href="teoria-2.1.html">
                                         <h6>Teoría</h6>
-                                        <p>Introducción al mundo de la Electrónica.</p>
+                                        <p>Un Nuevo Aliado: El Arduino</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -95,9 +85,19 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="practica-1.3.html">
+                                    <a href="teoria-2.2.html">
+                                        <h6>Programación en Arduino</h6>
+                                        <p>Entendiendo el reto pasado</p>
+                                    </a>
+                                </div>
+                                <div class="div-x"><i class="icon md-check-2"></i></div>
+                            </li>
+
+                            <li class="o-view">
+                                <div class="list-body">
+                                    <a href="practica-2.3.html">
                                         <h6>Practica</h6>
-                                        <p>Conociendo un Nuevo Entorno: 123D Circuits.</p>
+                                        <p>Hora de codear!</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -105,9 +105,9 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-1.4.html">
-                                        <h6>Teoría</h6>
-                                        <p>Conceptos Básicos de la Electrónica.</p>
+                                    <a href="video-2.4.html">
+                                        <h6>Video</h6>
+                                        <p>Resumen de lo que hemos visto hasta ahora</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -115,19 +115,9 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="practica-1.5.html">
-                                        <h6>Práctica</h6>
-                                        <p>Y... Manos a la obra!</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="reto1.html">
+                                    <a href="reto-2.5.html">
                                         <h6>Reto</h6>
-                                        <p>Nuestro Reto N°1. <br/>PD: Será calificado.</p>
+                                        <p>Reto de la semana 2</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -146,36 +136,27 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Practica</strong>Manos a la obra!</h3>
+                <h3><strong>Reto 2</strong>Segundo reto del entrenamiento de Electrónica</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <h3 class="md">Por fin algo de acción</h3>
-                            <p>Como ya hemos mencionado, el Arduino puede leer datos de dos maneras, digital y analógica. Empezaremos con lo digital. <strong>¿Cuál es la manera correcta de darle un 1 o un 0?</strong> Si pensaste en botones y switchs, tienes el 50% de la respuesta correcta. El otro 50% radica en la forma de conectarlos. Tenemos entonces 2 formas (efectivamente, ponerle un cable directo también funciona, pero significaría tener que mover cables para cambiar el valor, y es riesgoso):</p>
-                            <p>Tenemos entonces 2 configuraciones para los pulsadores: <strong>pull-up y pull-down</strong></p> 
-                            <pre>Consideraciones: En los siguientes ejemplos emplearemos una especie de "pantallita" conocida técnicamente como multímetro. Esta nos permite observar valores como la corriente, el voltaje, y la resistencia. Cuando empecemos a usar el Arduino, la usaremos con menos frecuencia. Por el momento usamos el Arduino solo como una fuente de voltaje, no tiene nada programado.</pre>
-                            <p>Pull-up entrega constantemente al pin un "0" lógico, y cuando se presiona el pulsador, entrega un "1". Las conexiones son como se muestran:</p>
-                            <br/>
-                            <div class="text-center"><img src="../../img/ejemplos/electronica1.5.1.jpg" class="img-responsive"></div>
-                            <br/>
-                            <p>Pull-down entrega constantemente al pin un "1" lógico, y al presionar el pulsador, entrega un "0". Las conexiones son las siguientes:</p>
-                            <br/>
-                            <div class="text-center"><img src="../../img/ejemplos/electronica1.5.2.jpg" class="img-responsive"></div>
-                            <br/>
-                            <p>Y, <strong>¿Cómo entregamos un valor analógico?</strong> La respuesta está en el siguiente diagrama de conexión: se emplea un <strong>potenciómetro.</strong></p>
-                            <br/>
-                            <div class="text-center"><img src="../../img/ejemplos/electronica1.5.3.jpg" class="img-responsive"></div>
-                            <br/>
-                            <p>Con esto ya estamos listos para un pequeño reto! Clickea en el botón de abajo.</p>
-
+                            <h3 class="md"><strong>Reto N°2 de Electrónica</strong></h3>
+                            <p>Para el segundo reto tendrán que hacer un conjunto de luces secuenciales.</p>
+                            <p>Para que lo entiendan más fácil, los leds tendrán que prender secuencialmente. Pueden googlear, pero será mejor que ustedes creen el código.</p>
+                            <p>Aqui les dejo una imágen de un esquemático. <strong>Ready, Set, Go!</strong></p>
+                            <img src="../../img/ejemplos/hqdefault.jpg" alt="" class="center-block img-responsive">
                             <div class="text-center">
-                                <a href="reto1.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                                </a>
+                                <!--
+                                <a href="https://hackspaceper.typeform.com/to/EgOJQb" target="_blank" class="mc-btn btn-large btn-style-1">Entregar reto</a>
+                                -->
+                                <br>
                             </div>
+                             <div class="limit-ct">
+                                <h3><strong>Fecha límite de entrega</strong> Domingo 17 de Enero</h3>
                             </div>
-
+                        </div>
                     </div>
                 </div>
             </div>
@@ -193,15 +174,5 @@
 <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
 <script type="text/javascript" src="../../js/scripts.js"></script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-31715493-7', 'auto');
-  ga('send', 'pageview');
-
-</script>
 </body>
 </html>
