@@ -65,19 +65,19 @@
                 <h4 class="sm black bold">BACKEND | Semana 2 : Fundamentos, Node y HapiJs</h4>
 
                 <ul class="top-nav-list">
-                    <li class="prev-course"><a href="ejemplo-1.2.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-                    <li class="next-course"><a href="ejemplo-1.4.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+                    <li class="prev-course"><a href="video-2.1.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+                    <li class="next-course"><a href="teoria-2.3.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
                     <li class="outline-learn">
                         <a href="#"><i class="icon md-list"></i></a>
                         <div class="list-item-body outline-learn-body">
                             <div class="section-learn-outline">
-                                <h5 class="section-title">Semana 2 : Fundamentos, Node y HapiJs</h5>
+                               <h5 class="section-title">Semana 2 : Fundamentos, Node y HapiJS</h5>
                                 <ul class="section-list">
                                     <li class="o-view">
                                         <div class="list-body">
-                                            <a href="video-1.1-html">
+                                            <a href="/semana2/backend/video-2.1-html">
                                                 <h6>Video</h6>
-                                                <p>Un corto video para introducirnos al mundo de Frontend y entender mejor los conceptos necesarios para empezar.</p>
+                                                <p>Un video para conocer algunas de las funcionalidades que se pueden hacer desde el backend con Hapi.js.</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -85,7 +85,7 @@
 
                                     <li class="o-view">
                                         <div class="list-body">
-                                            <a href="ejemplo-1.2.html">
+                                            <a href="ejemplo-2.2.html">
                                                 <h6>Ejemplos</h6>
                                                 <p>Introduccion a HapiJs, Routes y Handling</p>
                                             </a>
@@ -93,9 +93,9 @@
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
                                     </li>
 
-                                    <li class="o-view">
+                                    <li>
                                         <div class="list-body">
-                                            <a href="teoria-1.3.html">
+                                            <a href="teoria-2.3.html">
                                                 <h6>Teoría</h6>
                                                 <p>Directorios, Views & Proxy's en HapiJs.</p>
                                             </a>
@@ -104,14 +104,13 @@
                                     </li>
                                     <li>
                                         <div class="list-body">
-                                            <a href="reto-1.5.html">
+                                            <a href="reto-2.html">
                                                 <h6>Reto 2</h6>
                                                 <p>Este es el reto de la semana 2 que será calificado.</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
                                     </li>
-
                                 </ul>
                             </div>
 
@@ -127,21 +126,113 @@
             <section id="learning-section" class="learning-section learn-section">
                 <div class="container">
                     <div class="title-ct">
-                        <h3><strong>Ejemplos</strong>Directorios, Viewss & Proxy's en HapiJs</h3>
+                        <h3><strong>Ejemplos</strong>Introduccion al backend y Hapi.js</h3>
                     </div>
                     <div class="question-content-wrap">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="question-content">
-                                    <h3 class="md">Directories</h3>
-                                    <p>Imaginemos que en nuestro sitio website necesitamos identificar un área que contenga archivos para hacer testing</p>
-                                    <p>Lo primero que se nos ocurre es <code>http://hackspace.la/testing/files/namefile.extension</code>. Donde podemos observar que dentro del root tenemos una carpeta testing y una subcarpeta files que contiene todos los archivos que pasarán por testing.</p>
-                                    <p>Esto por el lado del usuario, se ve ordenado, sin embargo, para el área de desarrollo genera symbolic links muy largos. Para optimizar esto, utilizamos Directories para minificar el tamaño del PATH o ruta de archivo.</p>
+                                    <h3 class="md">Nociones sobre HapiJs</h3>
+                                    <p>"Why Use HapiJs", “A rich framework for building applications and services hapi enables developers to focus on writing reusable application logic instead of spending time building infrastructure.”</p>
+
+                                    <p>HapiJs ha sido diseñado y desarrollado para crear de forma rápida servicios API REST a través de Javascript. Es muy simple y fácil de usar ya que tiene una sintaxis clara y una curva de aprendizaje rápida.</p>
+
+                                    <p>HapiJs ha demostrado ser sólido y estable a la hora de montarse en producción. Sitios Web como Walmart, han optimizado HapiJs en etapas de alto requerimiento de solicitudes por segundo (como el Black Friday). Este framework ha sido creado para funcionar en entornos empresariales donde varios equipos de trabajo utilizan piezas de código que se conectan entre diversos proyectos. Esta característica hace que utilizar HapiJs sea fácil de aplicar para la escritura y reutilización de código modular.</p>
+
+                                    <h3 class="md">Iniciando con Hapi.js</h3>
+                                    <p>
+                                        Para iniciar con Hapi.Js debemos tener instalado Node y NPM.
+                                    </p>
+                                    <p>Si aún no tienes instalado, revisa este <a href="http://hackspace.la/semana1/backend/ejemplo-1.2.html">Link</a></p>
+                                    <p>Revisar este <a href="http://hapijs.com" target="_blank">link</a> para conocer mas sobre el desarrollo de HapiJs</p>
+
+                                    <h3 class="md">Instalacion de Hapi.js y creando nuestro primer servidor</h3>
+                                    <p>Si Ud. cuenta con NodeJs y NPM, procederemos a instalar el framework HapiJs a traves de la ejecucion de los siguientes comandos  : </p>
+                                    <pre>$ sudo npm install --save hapi</pre>
+                                    En caso de no tener Node instalado descargar el <a href="https://nodejs.org/en/download/">instalador de Node.js para su sistema operativo</a> y seguir las instrucciones, otra alternativa para instalar Node.js si usa Linux o Mac es usar un manejador de versiones (<a href="https://github.com/creationix/nvm">nvm</a>) el cual nos da una ventaja de poder usar diferentes versiones de node y ademas no necesitamos permisos de superusario para instalar librerias de node.
+                                    <br>
+                                    <br>
                                     <pre>
-El usuario puede ver http://hackspace.la/testing/files/namefile.extension
-Pero en nuestro servidor solo podemos tener /public/namefile.extension
+# Instalar nvm
+  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
+
+# Actualizar el bash_profile
+  source ~/.bash_profile
+
+# Instalar la version estable de node y npm
+  nvm install stable
+
+# Verificar que node y npm se instalaron correctamente
+  node --version
+  npm --version
+                                    </pre>
+                                    <br>
+                                    <h3 class="md">Ejemplo 1</h3>
+                                    <p>Iniciamos un nuevo proyecto y en "entry point" colocamos server.js</p>
+                                    <pre>
+$ npm init
+                                    </pre>
+                                    <p>Luego de instalar Hapi.Js empezamos a escribir nuestro código para crear nuestro primer servidor, guardamos este código como server.js</p>
+                                    <pre>
+var Hapi = require('hapi');
+var server = new Hapi.Server();
+
+server.connection({
+    host: 'localhost',
+    port: Number(process.argv[2] || 8080)
+});
+
+server.route({
+    method: 'GET',
+    path: '/',
+    handler: function (request, reply) {
+        reply('Hola! Amiguito');
+    }
+});
+
+server.start(() => {
+    console.log('Servidor corriendo :', server.info.uri);
+});
 </pre>
-                                    <p>Creamos un nuevo archivo server.js y utilizamos el siguiente código</p>
+                                    <p>Y para ejecutar el programa en el terminal ejecutamos el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
+                                    <div class="asciicast">
+                                        <script type="text/javascript" src="https://asciinema.org/a/34048.js" id="asciicast-34048" async></script>
+                                    </div>
+
+                                    <h3 class="md">Ejemplo 2</h3>
+                                    <p>¿Recuerdan el manejo de Rutas con Node & Express?</p>
+                                    <p>Esta ves realizaremos el mismo ejercicio, pero utilizando Node & HapiJs, así que utilizaremos el siguiente código para responder las consultas de forma específica según la ruta que se le pide a través de una llamada al servidor.</p>
+                                    <p>Hacemos el backup del archivo server.js anterior y creamos uno nuevo con el siguiente código y lo guardamos nuevamente como <code>server.js</code></p>
+                                    <pre>
+
+var Hapi = require('hapi');
+var server = new Hapi.Server();
+
+server.connection({
+    host: 'localhost',
+    port: Number(process.argv[2] || 8080)
+});
+
+server.route({
+    method: 'GET',
+    path: '/{name}',
+    handler: function (request, reply) {
+        reply('Hello ' + request.params.name);
+    }
+});
+
+server.start(function () {});</pre>
+                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
+
+<div class="asciicast">
+<script type="text/javascript" src="https://asciinema.org/a/34049.js" id="asciicast-34049" async></script>
+</div>
+
+
+                                <h3 class="md">Ejemplo 3</h3>
+                                <p>Sirviendo archivos estáticos</p>
+                                    <p>Utilizaremos el plugin Inert para HapiJs que nos permitirá servir archivos estáticos en nuestro servidor.</p>
+                                    <p>Hacemos el backup del archivo server.js anterior y creamos uno nuevo con el siguiente código y lo guardamos nuevamente como <code>server.js</code></p>
                                     <pre>
 var Hapi = require('hapi');
 var Inert = require('inert');
@@ -158,131 +249,25 @@ server.register(Inert, function () {});
 
 server.route({
     method: 'GET',
-    path: '/testing/files/{filename}',
-    handler: {
-        directory: {
-            path: Path.join(__dirname, 'public')
-        }
-    }
-});
-
-server.start(() =>{
-    console.log('Servidor corriendo en:', server.info.uri);
-});
-                                    </pre>
-
-                                    <p>Creamos un nuevo archivo index.html dentro de la carpeta public y utilizamos el siguiente código o el código que desees. PD: quitar el "#".</p>
-                                    <pre>
-<#html>
-    <#head><#title>Hola Hackspace<#/title><#/head>
-    <#body>
-        Run or feed
-    <#/body>
-<#/html>
-                                    </pre>
-
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/34056.js" id="asciicast-34056" async></script>
-</div>
-
-
-                                    <h3 class="md">Views</h3>
-                                    <p>
-                                    Una forma rápida y sencilla de crear un servidor que responda solicitudes a /?name=Key a través de plantillas es utilizando Views con el módulo Vision en HapiJs. <br>
-                                    Instalamos el paquete Vision a través del siguiente comando en la terminal
-                                    </p>
-                                    <pre>sudo npm install --save vision</pre>
-                                    <br>
-                                    <pre>
-
-var Hapi = require('hapi');
-var Vision = require('vision');
-var Path = require('path');
-
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(Vision, function () {});
-
-server.views({
-    engines: {
-        html: require('handlebars')
-    },
-    path: Path.join(__dirname, 'templates')
-});
-
-server.route({
-    method: 'GET',
     path: '/',
     handler: {
-        view: 'index.html'
-    }
-});
-
-server.start(() => {
-    console.log('Servidor corriendo en:', server.info.uri);
-});
-                                    </pre>
-
-                                    <p>Creamos un nuevo archivo index.html dentro de la carpeta templates y utilizamos el siguiente código o el código que desees. PD: quitar el "#".</p>
-
-                                    <pre>
-<#html>
-    <#head><#title>Hola! {{query.name}}<#/title><#/head>
-    <#body>
-        Hola! {{query.name}}
-    <#/body>
-<#/html>
-                                    </pre>
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/bkv2g47a6hzzlo64melw8qo8r.js" id="asciicast-bkv2g47a6hzzlo64melw8qo8r" async></script>
-</div>
-
-                                    <br>
-                                    <h3 class="md">Proxy</h3>
-                                    <p>Los proxies nos permiten retransmitir solicitudes de un servidor y/o servicio a otro. Esto es muy potente, ya que podemos manejar múltiples servicios como  aplicaciones web y construcciones RestAPI. <br>
-                                    Para este caso utilizaremos el paquete H2o2 instalándolo a través de:   </p>
-                                    <pre>sudo npm install --save h2o2</pre>
-                                    <p>Creamos un archivo server.js e introducimos el siguiente código</p>
-                                    <pre>
-var Hapi = require('hapi');
-var H2o2 = require('h2o2');
-
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(H2o2, function () {});
-server.route({
-    method: 'GET',
-    path: '/proxy',
-    handler: {
-        proxy: {
-            host: '127.0.0.1',
-            port: 65535
-        }
+        file: Path.join(__dirname, 'public/index.html')
     }
 });
 
 server.start(function () {});
-                                    </pre>
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/b1vkgutqf80vc7835r1ldak78.js" id="asciicast-b1vkgutqf80vc7835r1ldak78" async></script>
-</div>
+</pre>
+                                    <p>Creamos una carpeta "Public" con el comando <code>mkdir Public</code> donde colocaremos nuestro archivo <code>index.html</code>y ademas no olvidemos instalar <code>inert</code> & <code>path</code>. <br>
 
-<span>Todos los ejemplos han sido tomados y adaptados del Módulo <a href="https://github.com/hapijs/makemehapi">MakeMeHapi</a></span>
+                                  Guardamos y ejecutamos el comando <code>npm start</code></p>
+
+<div class="asciicast">
+<script type="text/javascript" src="https://asciinema.org/a/34052.js" id="asciicast-34052" async></script>
+</div>
+    
+
                                     <div class="text-center" style="margin-top:10px;">
-                                        <a href="ejemplo-1.4.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                        <a href="teoria-1.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                         </a>
                                     </div>
                                 </div>
@@ -307,7 +292,7 @@ server.start(function () {});
                       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
                       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
                       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+                      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
                       ga('create', 'UA-31715493-7', 'auto');
                       ga('send', 'pageview');
