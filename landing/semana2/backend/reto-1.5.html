@@ -104,15 +104,6 @@
                             </li>
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="ejemplo-1.4.html">
-                                        <h6>Ejemplos</h6>
-                                        <p>Construyendo un API en HapiJs</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-                            <li class="o-view">
-                                <div class="list-body">
                                     <a href="reto-1.5.html">
                                         <h6>Reto 2</h6>
                                         <p>Este es el reto de la semana 2 que será calificado.</p>
@@ -142,7 +133,25 @@
                     <div class="col-md-12">
                         <div class="question-content">
                             <h3 class="md">Reto 2 de Backend</h3>
-                            <p>Continuará</p>
+                            <p>En la semana 1, realizaron la creación de 1 API con Express y modelaron los datos con faker.js</p>
+                            <p>Esta segunda semana el reto será consumir los datos de una API</p>
+                            <p>
+                                <pre>
+                                    https://developer.valvesoftware.com/wiki/Steam_Web_API/Feedback
+                                </pre>
+                             </p>
+                            <p>Tendrán que crear 1 enpoint <code>/{username}/</code><br>
+                            que pueda convertir y mostrar los nombres de usuarios de steam en ID's <br>No, necesito que hagan todo un frontend para ello, solo quiero que la respuesta sea el ID en una página sin tanto código.
+                            </p>
+                            <pre><#div>Su ID es {{query.name}}<#/div></pre>
+                            <p>Por ejemplo mi nombre de usuario en steam es <code>mizhac_</code> y mi steam ID es: <code>STEAM_0:1:42388192</code></p>
+                            <p>Este es un ejemplo de website que hace esta funcion
+                            <pre>www.steamcommunity.com</pre></p>
+                            <p>Y el url que nos permite convertir los nombres de usuarios a ID's es</p>
+                            <pre>http://api.steampowered.com/ISteamUser/ResolveNickname/v0001/?nickname=XXXXXXXXX</pre>
+                            <p>Suban sus archivos a sus cuentas de Github una vez finalizado el reto, y nos envían el url a contacto@hackspace.pe con Asunto: "Solución Reto 2 Backend".
+                            <br>
+                            PD: No se aceptará recibir el reto de otra forma que no sea el repositorio de github.</p>
                             <!--<p>El primer reto es crear un api en express como se detalla en la imagenes</p>
                             <img src="/img/ejemplos/retoback1.png">
                             <p>Para poder ver el resultado del api en un formato como se muestra en la imagen pueden descargar la extension de chrome <a href="https://chrome.google.com/webstore/detail/postman/fhbjgbiflinjbdggehcddcbncdddomop">Postman</a> que sirve para hacer consultas http</p>
