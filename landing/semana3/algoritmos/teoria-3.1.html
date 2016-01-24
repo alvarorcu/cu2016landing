@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -61,84 +61,55 @@
 <div id="page-wrap">
 
     <div class="top-nav">
-
-        <h4 class="sm black bold">ALGORITMOS | Semana 2 : Bucles y C++</h4> 
-        <ul class="top-nav-list">
-            <li class="prev-course"><a href="ejemplo-2.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="reto2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+        <h4 class="sm black bold">ALGORITMOS | Semana 3 : Complejidad de un algoritmo y más problemas.</h4>  
+         <ul class="top-nav-list">
+            <li class="prev-course"><a href="../../algoritmos.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="#"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="backpage">
                 <a href="../../algoritmos.html"><i class="icon md-close-1"></i></a>
             </li>
-        </ul>   
-        
+        </ul>          
     </div>
 
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Ejercicios</strong>aplicación de todo lo aprendido.</h3>
+                <h3><strong>Teoría</strong>Análisis de la complejidad de un algoritmo.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <br>
-                            <h3 class="md">Ejercicio 1</h3>
-                            <p>Denominaremos a un número como cuadrado perfecto si es igual a un número entero positivo elevado al cuadrado. Se le pide a usted dado un número n, indicar cuántos cuadrados perfectos existen menores o iguales a n.</p>
-                            <p><strong>Entrada</strong></p>
-                            <p>La entrada contiene un número entero n ( 1 ≤ n ≤ 100000 )</p>
-                            <p><strong>Salida</strong></p>
-                            <p>La cantidad de números cuadrados perfectos menores o iguales a n</p>
-                            <p><strong>Ejemplos</strong></p>
-                            <table width="40%" border="1px">
-                                <tr>
-                                    <th><center>Entrada</center></th>
-                                    <th><center>Salida</center></th>
-                                </tr>
-                                <tr>
-                                    <td style="padding-left:10px;">5</td>
-                                    <td style="padding-left:10px;">2</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-left:10px;">39</td>
-                                    <td style="padding-left:10px;">6</td>
-                                </tr>
-                            </table>
+                            <p>Hasta el momento hemos resuelto varios problemas omitiendo un análisis que es necesario. Generalmente cuando intentamos dar solución a un problema se nos viene a la mente varias posibilidades y escogemos la que se nos hace más fácil, pero no estamos analizando si quizá es demasidado lenta, puede que en lugar de segundos tome minutos en ejecutarse.</p>
 
-                            <br>
-                            <h3 class="md">Ejercicio 2</h3>
-                            <p>Se define la función f(n) para un número entero positivo.</p>
-                            <p>f(n) = -1 + 2 - 3 + .. + (-1)<sup>n</sup> n</p>
-                            <p>El reto es calcular f(n).</p>
-                            <p><strong>Entrada</strong></p>
-                            <p>Una sola línea que contiene un numero entero n. (1 ≤ n ≤ 10000).</p>
-                            <p><strong>Salida</strong></p>
-                            <p>El valor de f(n).</p>
-                            <p><strong>Ejemplos</strong></p>
-                            <table width="40%" border="1">
-                                <tr>
-                                    <th><center>Entrada</center></th>
-                                    <th><center>Salida</center></th>
-                                </tr>
-                                <tr>
-                                    <td style="padding-left:10px;">4</td>
-                                   <td style="padding-left:10px;">2</td>
-                                </tr>
-                                <tr>
-                                    <td style="padding-left:10px;">5</td>
-                                    <td style="padding-left:10px;">-3</td>
-                                </tr>
-                            </table>
-                           
-                            <div class="text-center">
-                                <a href="reto2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                                </a>
-                            </div>
+                            <p>Ahora, ¿cómo sabemos el tiempo de ejecución de un algoritmo?, fácil es igual al número de operaciones (pasos) que realiza el mismo; por ejemplo: asignación, suma, resta, multiplicación, división, una iteración, evaluar una condición, etc.</p>
+
+                            <p>Pero si nos damos cuenta, este tiempo varía de acuerdo a como varía el tamaño y orden de los datos de entrada (no es lo mismo leer 100 números a leer 100000 números). Ante esto surge el término <b>worst-case runtime</b> (el peor de los casos), el cual representa el tiempo de ejecución más largo que encontremos para una entrada dada según las restricciones previamente definidas de la misma (los problemas detallan las restricciones generalmente para el valor que puede tomar algún dato).</p>      
+
+                            <p>Formalmente, si tenemos una función f(n) ,  donde n representa el tamaño de la entrada y f(n) nos indica el tiempo de ejecución del algoritmo para esa entrada, podemos definir la notación <b>O grande</b>, la cuál nos permitirá encontra otra función g(n) que es cota superior de nuestro función f cuando n tiene al infinito.</p>
+
+                            <p> Podemos denotarlo de la siguiente manera <b>f(n) = O(g(n))</b>.</p> 
+                            <p>Por ejemplo, si tenemos una función cuyo worst-case runtime es 2n<sup>2</sup>, entonces nuestra cota superior puede ser un 3n<sup>2</sup>, pero podemos omitir la constante y decir que <b>f(n) = O(n<sup>2</sup>)</b>.</p>
+
+                            <p>En los concursos de programación generalmente se espera que un algoritmo no realice más de 10<sup>8</sup> operaciones, que demoran aproximadamente 1 segundo, es por ello que los límites aproximados en la entrada para las complejidad más comunes son los siguientes:</p>
+
+                            <p>O(N) : N hasta 10<sup>8</sup> </p>
+                            <p>O(N<sup>2</sup>) : N hasta 10<sup>4</sup></p>
+                            <p>O(N<sup>3</sup>) : N hasta 400.</p>
+                            <p>O(log N) : número muy grande.</p>
+                            <p>O(2<sup>N</sup>) : N hasta 24.</p>
+
+                            <p>Para mucho mayor información en el tema, se recomienda leer sólo la sección 1 del siguiente tutorial de Topcoder: ver <a href="https://www.topcoder.com/community/data-science/data-science-tutorials/computational-complexity-section-1/" target="_blank">aquí</a></p>
                         </div>
                     </div>
                 </div>
             </div>
+            <div class="text-center" style="margin-top:10px;">
+                <a href="#" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                </a>
+            </div>
 
+        </div>
     </section>
 
 </div>
@@ -162,5 +133,6 @@
   ga('send', 'pageview');
 
 </script>
+
 </body>
 </html>
