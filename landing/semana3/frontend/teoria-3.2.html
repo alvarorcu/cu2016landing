@@ -87,7 +87,7 @@
                                 <div class="list-body">
                                     <a href="teoria-3.2.html">
                                         <h6>Teoría</h6>
-                                        <p>Empecemos con Materialize,uno de los frameworks de frontend más conocidos que utiliza Material Design.</p>
+                                        <p>Empecemos a trabajar con Materialize.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -95,9 +95,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="teoria-1.3.html">
-                                        <h6>Teoría</h6>
-                                        <p>HTML: Empezando un documento HTML y conociendo las etiquetas.</p>
+                                    <a href="ejemplo-3.3.html">
+                                        <h6>Ejemplo</h6>
+                                        <p>Conociendo el Grid System de Materialize.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -157,23 +157,67 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Teoría</strong>Conozcamos al Material Design.</h3>
+                <h3><strong>Teoría</strong>Empecemos a trabajar con Materialize.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
-                            <h3 class="md">¿Qué es el Material Design?</h3>
-                            <p>Material Design es un concepto, una filosofía, unas pautas enfocadas al diseño utilizado en Android, pero también en la web y en cualquier plataforma.</p>
-                            <p>Creado y diseñado por Google, Material Design combina los principios clásicos del diseño exitoso junto con la innovación y la tecnología. El objetivo de Google consiste en desarrollar un sistema de diseño que permite una experiencia de usuario unificada a través de todos sus productos en cualquier plataforma.</p>
-                            <p>Puedes encontrar más ifnormación sobre Material Design en el siguiente link: <a href="http://www.elandroidelibre.com/2014/11/que-es-material-design.html" target="_blank">http://www.elandroidelibre.com/2014/11/que-es-material-design.html</a></p>
-                            <p>A continuación un ejemplo gráfico de lo que es un ejemplo de lo que es Material Design:</p>
-                            <div class="video embed-responsive embed-responsive-16by9">
-                                <iframe width="640" height="360" src="https://www.youtube.com/embed/U3CGMyjzlvM?showinfo=0&iv_load_policy=3" frameborder="0" allowfullscreen></iframe>
-                            </div>
+                            <h3 class="md">¿Qué es un Framework para Frontend?</h3>
+                            <p>Un framework frontend es un conjunto de recursos y lineamientos para maquetear y diseñar una web. Normalmente comprende una serie de estilos css, íconos, fuentes, colores, animaciones y funciones javascript para hacernos la vida más fácil en lo que se refiere a maquetear y diseñar una web rápidamente.</p>
+                            <br>
+                            <h3 class="md">Empezando con Materialize</h3>
+                            <p>Materialize es uno de los frameworks de frontend más conocidos que utiliza Material Design. Antes de empezar, debemos descargarnos los archivos necesarios. Estos los podemos encontrar en la misma página de Materialize, el link es el siguiente:</p>
+                            <p><a href="http://materializecss.com/getting-started.html" target="_blank">http://materializecss.com/getting-started.html</a></p>
+                            <div class="text-center"><img src="http://hackspace.la/img/ejemplos/frontend3.2.1.png"></div>
+                            <p>Al extraer el archivo encontrarás un directorio como el siguiente:</p>
+<pre>
+materialize/
+  |--css/
+  |  |--materialize.css
+  |  |--materialize.min.css
+  |
+  |--font/
+  |  |--material-design-icons/
+  |  |--roboto/
+  |
+  |--js/
+  |  |--materialize.js
+  |  |--materialize.min.js
+  |
+  |--index.html
+  </pre>
+                            <h4 class="sm bold">Configurando el HTML</h4>
+                            <p>A continuación, hay que crear el archivo <code>index.html</code> dentro de la carpeta <code>materialize</code> y nos aseguramos de enlazar los archivos correctamente. Generalmente es aconsejable importar archivos de javascript al final de la etiqueta body para reducir tiempos de carga. Sigue el siguiente ejemplo sobre cómo importar Materialize en una página web.</p>
+                            <p>¡Una última cosa a tener en cuenta es que tiene que importar jQuery antes de importar materialize.js!</p>
+<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;!--Importa la Fuente de Google Icons--&gt;
+  &lt;link href=&quot;http://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;
+  &lt;!--Importa materialize.css--&gt;
+  &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/materialize.min.css&quot;  media=&quot;screen,projection&quot;/&gt;
 
+  &lt;!--Haz saberle al navegador que la página está optimizada para móviles--&gt;
+  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
+&lt;/head&gt;
+
+&lt;body&gt;
+  &lt;!--Importa jQuery antes de materialize.js--&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
+  &lt;script type=&quot;text/javascript&quot; src=&quot;js/materialize.min.js&quot;&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</pre>
+                            <br>
+                            <h3 class="md">Documentación</h3>
+                            <p>Todo lo que vamos a necesitar para aprender Materialize lo encontraremos en su página web:   <a href="http://materializecss.com/" target="_blank">http://materializecss.com/</a></p>
+                            <p>Sin embargo, no todo está traducido, así que realizaremos algunos ejemplos con las secciones más importantes que necesitas aprender de ella.</p>
+
+                            
                             <div class="text-center">
-                                <a href="teoria-3.2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                <a href="ejemplo-3.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                 </a>
                             </div>
                         </div>
