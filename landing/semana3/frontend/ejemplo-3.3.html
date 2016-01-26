@@ -105,9 +105,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="ejercicio-1.4.html">
-                                        <h6>Ejercicios</h6>
-                                        <p>Hora de practicar HTML.</p>
+                                    <a href="ejemplo-3.4.html">
+                                        <h6>Ejemplo</h6>
+                                        <p>Unos cuantos ejemplos de uso de Materialize.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -115,29 +115,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="teoria-1.5.html">
-                                        <h6>Teoría</h6>
-                                        <p>CSS: Empezando a trabajar con CSS.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="ejercicio-1.6.html">
-                                        <h6>Ejercicios</h6>
-                                        <p>Hora de practicar CSS.</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="reto1.html">
-                                        <h6>Reto 1</h6>
-                                        <p>Este es el reto de la semana 1 que será calificado.</p>
+                                    <a href="reto3.html">
+                                        <h6>Reto 3</h6>
+                                        <p>Este es el reto de la semana 3 que será calificado.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -173,14 +153,14 @@
 &lt;body&gt;
   &lt;div class=&quot;container&quot;&gt;
     &lt;div class=&quot;row&quot;&gt;
-        &lt;div class=&quot;col s12&quot;&gt;&lt;/div&gt;
+        Acá van las columnas, dentro de row.
     &lt;/div&gt;
   &lt;/div&gt;
 &lt;/body&gt;
 </pre>
                             <p>Si revisas el link de la documentación del grid system encontrarás que tenemos dos opciones para empezar a trabajar con este:</p>
                             <div class="row">
-                                <div class="col-sm6">
+                                <div class="col-sm-6">
                                     <p>Este es una columna sin <code>.container</code> dentro del div inicial:</p>
                                     <div class="text-center"><img src="http://hackspace.la/img/ejemplos/frontend3.3.1.png"></div>
 <pre>
@@ -193,7 +173,7 @@
 &lt;/body&gt;
 </pre>
                                 </div>
-                                <div class="col-sm6">
+                                <div class="col-sm-6">
                                     <p>Este es una columna con <code>.container</code> dentro del div inicial</p>
                                     <div class="text-center"><img src="http://hackspace.la/img/ejemplos/frontend3.3.2.png"></div>
                                 </div>
@@ -207,7 +187,9 @@
 &lt;/body&gt;
 </pre>
                             </div>
-                            <p></p>
+                            <br>
+                            <h4 class="sm bold">Creando Columnas</h4>
+                            <p>Para crear una columna y definir su tamaño en un <code>div</code>, debemos utilizar uno de los siguiente <b>Prefijos de Clases</b> junto con el número de columnas que deseemos utilizar:</p>
                             <div class="table-responsive">
                                 <table class="table">
                                     <thead>
@@ -241,51 +223,69 @@
                                 </table>
                             </div>
 
-                            <div class="text-center"><img src="http://hackspace.la/img/ejemplos/frontend3.2.1.png"></div>
-                            <p>Al extraer el archivo encontrarás un directorio como el siguiente:</p>
-<pre>
-materialize/
-  |--css/
-  |  |--materialize.css
-  |  |--materialize.min.css
-  |
-  |--font/
-  |  |--material-design-icons/
-  |  |--roboto/
-  |
-  |--js/
-  |  |--materialize.js
-  |  |--materialize.min.js
-  |
-  |--index.html
-  </pre>
-                            <h4 class="sm bold">Configurando el HTML</h4>
-                            <p>A continuación, hay que crear el archivo <code>index.html</code> dentro de la carpeta <code>materialize</code> y nos aseguramos de enlazar los archivos correctamente. Generalmente es aconsejable importar archivos de javascript al final de la etiqueta body para reducir tiempos de carga. Sigue el siguiente ejemplo sobre cómo importar Materialize en una página web.</p>
-                            <p>¡Una última cosa a tener en cuenta es que tiene que importar jQuery antes de importar materialize.js!</p>
-<pre>
-&lt;!DOCTYPE html&gt;
-&lt;html&gt;
-&lt;head&gt;
-  &lt;!--Importa la Fuente de Google Icons--&gt;
-  &lt;link href=&quot;http://fonts.googleapis.com/icon?family=Material+Icons&quot; rel=&quot;stylesheet&quot;&gt;
-  &lt;!--Importa materialize.css--&gt;
-  &lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;css/materialize.min.css&quot;  media=&quot;screen,projection&quot;/&gt;
+                            <p>Descarga el ejemplo aquí:</p>
+                            <div class="attachments">
+                                <a href="http://hackspace.la/assets/ejemplos/F-Ejemplo-3.1.zip"><i class="icon md-paperclip"></i>F-Ejemplo-3.1.zip ( 1,347 KB )</a>
+                            </div>
 
-  &lt;!--Haz saberle al navegador que la página está optimizada para móviles--&gt;
-  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;/&gt;
-&lt;/head&gt;
+                            <p>Dentro de la <b>Sección Central</b> del <code>index.htmk</code> del ejemplo que te acabas de descargar encontrarás el siguiente código:</p>
+<pre>
+&lt;!--   Secci&#243;n Central   --&gt;
+&lt;div class=&quot;container&quot;&gt;
+&lt;div class=&quot;row&quot;&gt;
+  &lt;div class=&quot;col s12 m4&quot;&gt;
+    &lt;div class=&quot;icon-block&quot;&gt;
+      &lt;h2 class=&quot;center light-blue-text&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;flash_on&lt;/i&gt;&lt;/h2&gt;
+      &lt;h5 class=&quot;center&quot;&gt;Agiliza el Desarrollo&lt;/h5&gt;
 
-&lt;body&gt;
-  &lt;!--Importa jQuery antes de materialize.js--&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;https://code.jquery.com/jquery-2.1.1.min.js&quot;&gt;&lt;/script&gt;
-  &lt;script type=&quot;text/javascript&quot; src=&quot;js/materialize.min.js&quot;&gt;&lt;/script&gt;
-&lt;/body&gt;
-&lt;/html&gt;
+      &lt;p class=&quot;light&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col s12 m4&quot;&gt;
+    &lt;div class=&quot;icon-block&quot;&gt;
+      &lt;h2 class=&quot;center light-blue-text&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;group&lt;/i&gt;&lt;/h2&gt;
+      &lt;h5 class=&quot;center&quot;&gt;Experiencia Enfocada en el Usuario&lt;/h5&gt;
+
+      &lt;p class=&quot;light&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;col s12 m4&quot;&gt;
+    &lt;div class=&quot;icon-block&quot;&gt;
+      &lt;h2 class=&quot;center light-blue-text&quot;&gt;&lt;i class=&quot;material-icons&quot;&gt;settings&lt;/i&gt;&lt;/h2&gt;
+      &lt;h5 class=&quot;center&quot;&gt;F&#225;cil Para Trabajar&lt;/h5&gt;
+
+      &lt;p class=&quot;light&quot;&gt;Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+&lt;/div&gt;
 </pre>
+
+                            <p>Verás que los <code>&lt;div class=&quot;col s12 m4&quot;&gt;</code> las clases <b>s12</b> y <b>m4</b> indican que cuando la pantalla es pequeña o <em><b>s</b>mall</em> (&lt;= 600px) el <code>div</code> ocupará las 12 columnas de la pantalla. Pero, si la pantalla es <em><b>m</b>ediana</em> (&lt;= 992px), el <code>div</code> ocupará únicamente 4 columnas. Además, como no se está usando ninguna propiedad para pantallas grandes o <em><b>l</b>arge</em>, para pantallas de un tamaño &gt; 992px, se seguirán utilizando las propiedades para pantallas <em><b>m</b>edianas</em></p>.
+
+                            <p>Este es un primer ejemplo bastante simple para que puedas ir entendiendo cómo se usa el Grid System de 12 columnas de Materialize.</p>
 
                             
                             <div class="text-center">
-                                <a href="teoria-3.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                <a href="reto3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                 </a>
                             </div>
                         </div>
