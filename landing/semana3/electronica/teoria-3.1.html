@@ -60,44 +60,24 @@
 <!-- PAGE WRAP -->
 <div id="page-wrap">
 
-    <div class="top-nav">
+<div class="top-nav">
 
-        <h4 class="sm black bold">ELECTRÓNICA | Semana 2 : Un Nuevo Aliado: El Arduino</h4>
+        <h4 class="sm black bold">ELECTRÓNICA | Semana 3 : Arduino II</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="teoria-2.2.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="video-2.4.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="../../electronica.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="teoria-3.2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
                     <div class="section-learn-outline">
-                        <h5 class="section-title">Semana 2 : Un Nuevo Aliado: El Arduino</h5>
+                        <h5 class="section-title">Semana 3 : Arduino II</h5>
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-2.1.html">
+                                    <a href="teoria-3.1.html">
                                         <h6>Teoría</h6>
-                                        <p>Un Nuevo Aliado: El Arduino</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li class="o-view">
-                                <div class="list-body">
-                                    <a href="teoria-2.2.html">
-                                        <h6>Programación en Arduino</h6>
-                                        <p>Entendiendo el reto pasado</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li class="o-view">
-                                <div class="list-body">
-                                    <a href="practica-2.3.html">
-                                        <h6>Practica</h6>
-                                        <p>Hora de codear!</p>
+                                        <p>Recordando un poco.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -105,9 +85,29 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="video-2.4.html">
+                                    <a href="teoria-3.2.html">
+                                        <h6>Teoría</h6>
+                                        <p>Programación en Arduino.</p>
+                                    </a>
+                                </div>
+                                <div class="div-x"><i class="icon md-check-2"></i></div>
+                            </li>
+
+                            <li>
+                                <div class="list-body">
+                                    <a href="practica-3.3.html">
+                                        <h6>Práctica</h6>
+                                        <p>¡Hora de codear!</p>
+                                    </a>
+                                </div>
+                                <div class="div-x"><i class="icon md-check-2"></i></div>
+                            </li>
+
+                            <li>
+                                <div class="list-body">
+                                    <a href="video-3.4.html">
                                         <h6>Video</h6>
-                                        <p>Resumen de lo que hemos visto hasta ahora</p>
+                                        <p>Resumen de lo que hemos visto hasta ahora.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -115,9 +115,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="reto-2.5.html">
+                                    <a href="reto-3.html">
                                         <h6>Reto</h6>
-                                        <p>Reto de la semana 2</p>
+                                        <p>Reto Final de Electrónica</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -127,87 +127,117 @@
                 </div>
             </li>
             <li class="backpage">
-                <a href="../../electronica.html"><i class="icon md-close-1"></i></a>
+                <a href=""><i class="icon md-close-1"></i></a>
             </li>
         </ul>
-    </div>
+    </div>    
 
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Practica</strong>Hora de aprender a codear!</h3>
+                <h3><strong>Teoría</strong>Arduino II.</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
                             <div class="col-md-12">
-                                <h3 class="md"><strong>Entendiendo un poco más de código</strong></h3>
+                                <h3 class="md"><strong>Recordemos un poco.</strong></h3>
                             </div>
+                            <div class="col-md-12">
+                                <p>A pedido del público haremos un refresh de todo lo que hemos visto de Arduino hasta ahora y agregaremos código nuevo, esquemáticos nuevos, entre otros.<br/><strong>COMENCEMOS!</strong></p>
+                            </div>
+                            <br/>
                             <div class="col-md-6">
-                                <pre>
-/*
-Encender LED con un pulsador
-Código para que al presionar
-el pulsadorel led se encenderá 
-*/ 
-
-//------------------------------------
-//Declara puertos de entradas y salidas
-//------------------------------------
-
-int pulsador=2;        //Pin donde se encuentra el pulsador, entrada    
-int led=13;            //Pin donde se encuentra el LED, salida
-
-
-//------------------------------------
-//Configuración
-//------------------------------------
-void setup() // Se ejecuta cada vez que el Arduino se inicia
-{
- pinMode(pulsador, INPUT); //Configurar el pulsador como una entrada
- pinMode(led,OUTPUT);      //Configurar el LED como una salida
+                                <h3 class="md">Para la Estructura del código:</h3>
+<pre>
+void setup() {
+    /* Recordando: Aquí colocamos nuestras configuraciones.
+    Pines de Entrada, Pines de salida, Pre-lectura de datos, 
+    etc */
 }
- 
 
-//------------------------------------
-//Loop
-//------------------------------------
-void loop() // Esta funcion se mantiene ejecutando
-{           //  cuando este energizado el Arduino
- 
-   //Condicional para saber estado del pulsador
-   if (digitalRead(pulsador)==HIGH)
-   {
-     //Pulsador oprimido
-     digitalWrite(led,HIGH); //Enciende el LED
-   }
-   else
-   {
-     //Pulsador NO oprimido
-     digitalWrite(led,LOW);  //Apaga el LED
-   }
+void loop() {
+    /* Y aquí colocamos la parte funcional del código.
+    Secuencias, activación o desactivación de pines, envio y 
+    recepción de datos, etc */
 }
-//Fin programa
-                                </pre>
+</pre>
                             </div>
                             <div class="col-md-6">
                                 <br/>
-                                <p>Te dejamos un código totalmente comentado para que entiendas un poco más de como declarar variables y el orden que debes llevar para codear en Arduino.</p>
-                                <p>Los comentarios (lo que está despues de // o entre /* */ ) son textos que no son leídos por el Arduino, pero nos permite dejar palabras clave o frases en partes de código que podemos olvidar para qué son.</p>
+                                <img src="http://www.tr3sdland.com/wp-content/uploads/2012/06/bootloader_arduino.png" alt="" class="img-responsive">
                             </div>
-                            <div class="col-md-6">
-                                <br/>
-                                <img src="../../img/practica2.3.1.png" alt="" class="img-responsive">
+                            <br/>
+                            <div class="col-md-12">
+                                <h3 class="md">Variables:</h3>
+                                <p>Como en todo lenguaje de programación, en el Arduino tambien declaramos variables para un mejor orden en nuestro código. La idea de programar no es hacer mucho código, es que con poco código hagamos mucho sin tener que estar dando vueltas, redundando y estresandonos por luego intentar entender nuestro código.</p>
+                                <p>Aquí te dejare tres tipos de variables del Arduino, a mi parecer los principales y los que más se usan:</p>
                             </div>
-                            <div class="col-md-6">
-                                <p>Ahora sí, tú mismo eres. Aqui arriba tienes el esquemático del circuito con todas las conexiones correspondientes al código planteado. Tú mismo eres, simúlalo en 123D Circuits :D
-                                </p>
-                                <p>En la siguiente sección te dejaré un video con un resumen de lo visto hasta ahora.</p>
-                            </div>    
+                            <div class="col-md-4">
+<pre>
+/* Declarando valores enteros:
+Usualmente usados para darle un nombre
+determinado a un pin del Arduino */
+
+int led = 13;
+
+void setup() {
+    ...
+}    
+
+void loop () {
+    ...
+}
+</pre>
+                            </div>
+                            <div class="col-md-4">
+<pre>
+/* Declarando caracteres:
+Usualmente usado para almacenar 
+estados */
+
+char estado = a;
+
+void setup() {
+    ...
+}    
+
+void loop () {
+    ...
+}     
+</pre>                               
+                            </div>
+                            <div class="col-md-4">
+<pre>
+/* Declarando booleanos
+Dos posibles estados: True (Verdad o 1 
+lógico) o False (Falsedad o 0 lógico) */
+
+Boolean encendido = true;
+
+void setup() {
+    ...
+}    
+
+void loop () {
+    ...
+}    
+</pre>                                
+                            </div>
+                            <div class="col-md-12">
+                                <h3 class="md">Estructuras de Control:</h3>
+                                <p>Esto usaremos para hacer condiciones en nuestra programación o tambien para hacer nuestros sensuales bucles.Entre los más usados tenemos:</p>
+                                <ul>
+                                    <li>if</li>
+                                    <li>Switch/case</li>
+                                    <li>For</li>
+                                    <li>While</li>
+                                </ul>
+                            </div>
                             <div class="col-md-12">   
                                 <div class="text-center">
-                                    <a href="video-2.4.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                    <a href="teoria-3.2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                     </a>
                                 </div>
                             </div>

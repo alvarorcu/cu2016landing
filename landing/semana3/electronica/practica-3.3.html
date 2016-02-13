@@ -62,22 +62,22 @@
 
     <div class="top-nav">
 
-        <h4 class="sm black bold">ELECTRÓNICA | Semana 2 : Un Nuevo Aliado: El Arduino</h4>
+        <h4 class="sm black bold">ELECTRÓNICA | Semana 3 : Arduino II</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="teoria-2.1.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="practica-2.3.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="teoria-3.2.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="video-3.4.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
                     <div class="section-learn-outline">
-                        <h5 class="section-title">Semana 2 : Un Nuevo Aliado: El Arduino</h5>
+                        <h5 class="section-title">Semana 3 : Arduino II</h5>
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-2.1.html">
+                                    <a href="teoria-3.1.html">
                                         <h6>Teoría</h6>
-                                        <p>Un Nuevo Aliado: El Arduino</p>
+                                        <p>Recordando un poco.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -85,9 +85,19 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-2.2.html">
-                                        <h6>Programación en Arduino</h6>
-                                        <p>Entendiendo el reto pasado</p>
+                                    <a href="teoria-3.2.html">
+                                        <h6>Teoría</h6>
+                                        <p>Programación en Arduino.</p>
+                                    </a>
+                                </div>
+                                <div class="div-x"><i class="icon md-check-2"></i></div>
+                            </li>
+
+                            <li class="o-view">
+                                <div class="list-body">
+                                    <a href="practica-3.3.html">
+                                        <h6>Práctica</h6>
+                                        <p>¡Hora de codear!</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -95,19 +105,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="practica-2.3.html">
-                                        <h6>Practica</h6>
-                                        <p>Hora de codear!</p>
-                                    </a>
-                                </div>
-                                <div class="div-x"><i class="icon md-check-2"></i></div>
-                            </li>
-
-                            <li>
-                                <div class="list-body">
-                                    <a href="video-2.4.html">
+                                    <a href="video-3.4.html">
                                         <h6>Video</h6>
-                                        <p>Resumen de lo que hemos visto hasta ahora</p>
+                                        <p>Resumen de lo que hemos visto hasta ahora.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -115,9 +115,9 @@
 
                             <li>
                                 <div class="list-body">
-                                    <a href="reto-2.5.html">
+                                    <a href="reto-3.html">
                                         <h6>Reto</h6>
-                                        <p>Reto de la semana 2</p>
+                                        <p>Reto Final de Electrónica</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -135,75 +135,120 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Teoría</strong>Programación en Arduino.</h3>
+                <h3><strong>Practica</strong>¡Hora de aprender a codear!</h3>
             </div>
             <div class="question-content-wrap">
                 <div class="row">
                     <div class="col-md-12">
                         <div class="question-content">
                             <div class="col-md-12">
-                                <h3 class="md"><strong>Revisando el Reto Anterior...</strong></h3>
+                                <h3 class="md"><strong>A Terminar con la Teoría</strong></h3>
+                                <p>Pasaremos a revisar dos tipos de funciones.</p>
                             </div>
-                            <div class="col-md-7">
-                                <p class="text-justify">El reto anteriormente planteado fue colocado para ver si podían entender cómo usar el 123D Circuits. Como sé que lo lograron y les pareció fácil, pasaré a explicarles el código que colocamos y luego revisaremos la estructura de cómo hacer un algoritmo para el Arduino.</p>
-                                <p>Ahora si pasemos a revisar el código del reto anterior, que fue un "Blink" (parpadeo en español), el <em>HOLA MUNDO</em> de todo electrónico.</p>
-                                <br/>
-                                <pre>
+                            <div class="col-md-12">
+                                <h3 class="md">Funciones Digitales</h3>
+                                <div class="col-md-4">
+<pre>
+/* Función pinMode: Configura el modo
+ del Pin como entrada o salida 
+ (Input o Output) */
+
+int led = 13;
+
+void setup {
+    pinMode(led,OUTPUT);
+    // El pin 13 configurado como 
+    salida
+}
+
+void loop {
+    ...    
+} 
+</pre>
+                                </div>
+                                <div class="col-md-4">
+<pre>
+/* Función digitalRead: Nos permite 
+la lectura digital de un pin 
+(lee un '0' o un '1') */
+
+int val_entrada;
+
+void setup {
+    ...
+}
+
+void loop {
+    val_entrada = digitalRead (13);
+    // Leera el estado digital ingresante
+    en el pin 13     
+} 
+</pre>
+                                </div>
+                                <div class="col-md-4">
+<pre>
+/* Función digitalWrite: Le otorga un 
+estado  de '0' y '1' al pin asignado 
+ (Encendido o Apagado, HIGH o LOW) */
+
+int led = 13;
+
+void setup {
+    ...
+}
+
+void loop {
+    digitalWrite(led,HIGH);
+    // Emite un pulso ALTO al pin 13
+    // HIGH: Encendido, LOW: Apagado   
+} 
+</pre>
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                <h3 class="md">Funciones Analógicas</h3>
+                                <div class="col-md-6">
+<pre>
+/* Función analogRead: Lee un valor entre 0 
+a 1023 en uno de los pines analógicos */
+
+int a;
 
 void setup() {
-  pinMode(9, OUTPUT);
+    ...
 }
 
 void loop() {
-  digitalWrite(9, HIGH);   
-  delay(1000);              
-  digitalWrite(9, LOW);    
-  delay(1000);               
-}                               
-                                </pre><br/>
-                            </div>    
-                            <div class="col-md-5">
-                                <img src="../../img/ejemplos/Arduino1.jpg" class="img-responsive"/>
+    int a = analogRead(A0);   
+}
+</pre>
+                                </div>
+                                <div class="col-md-6">
+<pre>
+/* Función analogWrite: Escribe un valor de 0
+a 255 en uno de los pines analógicos.
+Usado usualmente para control de motores */
+
+void setup() {
+    ...
+}
+
+void loop() {
+    analogWrite(9,134);
+    //9 es el Pin, 134 es el valor Analogo escrito   
+}
+</pre>                                   
+                                </div>
                             </div>
                             <div class="col-md-12">
-                                <h3 class="md"><strong>Vayamos por partes!</strong></h3>
-                                <p>Partes principales del Sketch:</p>
+                                <br/>
+                                Te hemos brindado varias estructuras de código para que se nos haga más facil entender códigos más grandes, librerias, aportes de otras personas, etc.
+                                Para la parte practica empezaremos a revisar códigos que nos ayudara en el funcionamiento de diversas cosas electrónicas. Puedes dare click en el botón de abajo para pasar a la parte practica del curso.
                             </div>
                             <br/>
-                            <div class="col-md-6">    
-                                <pre>
- void setup() {
-/* Aquí colocaremos todas nuestras configuraciones
-Cuáles seran nuestros pines de entrada, cuáles seran
-los de salida, configuraciones iniciales, etc.
-Se ejecuta una sola vez */
-}                               </pre>
-                            </div>
-                            <div class="col-md-6">    
-                                <pre>
- void loop() {
-/* Esta función se ejecuta luego del void setup().
-Contiene la secuencia de pasos que sigue el Arduino.
-No se detiene hasta que se desconecte la fuente de
-alimentación del Arduino.  */
-}                               </pre>
-                            </div>
-                            <div class="col-md-12">
-                                <p>Como ya mencionamos, en el <em>void setup()</em> vamos a colocar las configuraciones que necesitaremos en nuestro código. En este caso para prender el led necesitabamos la siguiente línea: 
-                                <pre><strong>pinMode(9, OUTPUT);</strong></pre>
-                                Con esto le estamos diciendo que el Pin 9 sea una OUTPUT (o salida, en español).En otras palabras este pin emitirá el pulso cuando se lo ordenemos.</p>
-                                <p>Dentro del <em>void loop()</em> tenemos las 4 siguientes líneas:</p>
-                                <pre><strong>digitalWrite(9, HIGH);   
-delay(1000);              
-digitalWrite(9, LOW);    
-delay(1000);</strong></pre>
-                                <p><strong>Explicación:</strong></p>
-                                <p>Con el 'digitalWrite(9,HIGH);' le estamos diciendo al Pin 9 que emita un '1' lógico, y por ende prenda el led. El 'delay(1000)' se refiere a tiempo de ejecución, en este caso 1000 microsegundos (medida por defecto del arduino). Lo mismo ocurre con las dos siguiente líneas, a excepcion que en lugar de dar un pulso de '1' lógico, nos da uno de un '0', lo cual apagaría el led por otros 1000 microsegundos, equivalente a 1 segundo. Como todo esto está en la función loop, no se detendrá salvo que desconectes el Arduino.</p>
-                            </div>
-                            <br/><br/>
                             <div class="col-md-12">   
                                 <div class="text-center">
-                                    <a href="practica-2.3.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                                    <a href="video-3.4.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
                                     </a>
                                 </div>
                             </div>

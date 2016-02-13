@@ -62,22 +62,22 @@
 
     <div class="top-nav">
 
-        <h4 class="sm black bold">ELECTRÓNICA | Semana 2 : Un Nuevo Aliado: El Arduino</h4>
+        <h4 class="sm black bold">ELECTRÓNICA | Semana 3 : Arduino II</h4>
 
         <ul class="top-nav-list">
-            <li class="prev-course"><a href="practica-2.3.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-            <li class="next-course"><a href="reto-2.5.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+            <li class="prev-course"><a href="video-3.4.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+            <li class="next-course"><a href="../../electronica.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
             <li class="outline-learn">
                 <a href="#"><i class="icon md-list"></i></a>
                 <div class="list-item-body outline-learn-body">
                     <div class="section-learn-outline">
-                        <h5 class="section-title">Semana 2 : Un Nuevo Aliado: El Arduino</h5>
+                        <h5 class="section-title">Semana 3 : Arduino II</h5>
                         <ul class="section-list">
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-2.1.html">
+                                    <a href="teoria-3.1.html">
                                         <h6>Teoría</h6>
-                                        <p>Un Nuevo Aliado: El Arduino</p>
+                                        <p>Recordando un poco.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -85,9 +85,9 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="teoria-2.2.html">
-                                        <h6>Programación en Arduino</h6>
-                                        <p>Entendiendo el reto pasado</p>
+                                    <a href="teoria-3.2.html">
+                                        <h6>Teoría</h6>
+                                        <p>Programación en Arduino.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -95,9 +95,9 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="practica-2.3.html">
-                                        <h6>Practica</h6>
-                                        <p>Hora de codear!</p>
+                                    <a href="practica-3.3.html">
+                                        <h6>Práctica</h6>
+                                        <p>¡Hora de codear!</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -105,19 +105,19 @@
 
                             <li class="o-view">
                                 <div class="list-body">
-                                    <a href="video-2.4.html">
+                                    <a href="video-3.4.html">
                                         <h6>Video</h6>
-                                        <p>Resumen de lo que hemos visto hasta ahora</p>
+                                        <p>Resumen de lo que hemos visto hasta ahora.</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
                             </li>
 
-                            <li>
+                            <li class="o-view">
                                 <div class="list-body">
-                                    <a href="reto-2.5.html">
+                                    <a href="reto-3.html">
                                         <h6>Reto</h6>
-                                        <p>Reto de la semana 2</p>
+                                        <p>Reto Final de Electrónica</p>
                                     </a>
                                 </div>
                                 <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -127,7 +127,7 @@
                 </div>
             </li>
             <li class="backpage">
-                <a href="../../electronica.html"><i class="icon md-close-1"></i></a>
+                <a href=""><i class="icon md-close-1"></i></a>
             </li>
         </ul>
     </div>
@@ -135,19 +135,42 @@
     <section id="learning-section" class="learning-section learn-section">
         <div class="container">
             <div class="title-ct">
-                <h3><strong>Video</strong>¿Arduino?¿Qué es eso?</h3>
+                <h3><strong>Reto 2</strong>Reto Final del entrenamiento de Electrónica</h3>
             </div>
-            <div class="abc">
-                <div class="video embed-responsive embed-responsive-16by9">
-                    <iframe width="640" height="360" src="https://www.youtube.com/embed/61SsrACTHD0?showinfo=0&iv_load_policy=3&controls=0" frameborder="0" allowfullscreen></iframe>
+            <div class="question-content-wrap">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="question-content">
+                            <h3 class="md"><strong>Reto Final de Electrónica</strong></h3>
+                            <p>Es hora de un verdadero reto.</p>
+                            <p>Permítenos hablarte de dos funciones:</p>
+                            <p><code>Serial.begin(9600);</code> que se ubica en el void Setup (solo lo necesitamos 1 vez).<br>
+                            <code>Serial.read();</code> lee un dato y lo almacena en una variable. (va en el void loop).</p>
+                            <p><em>Ejemplo:</em><br>
+                            char dato;<br>
+                            dato = Serial.read();</p>
+
+                            <p>El reto de esta semana es: Usando un RGB, variar el color usando solo <b>UN</b> potenciómetro.</p>
+                            <p>Esto se hace de la siguiente manera:</p>
+                            <ol class="list-disc">
+                                <li>Lee un valor analógico por el pin A0.</li>
+                                <li>Cuando envías una letra 'r' por el monitor serial, almacena ese valor, y lo escribe (<code>analogWrite()</code>)en un pin que maneja el color rojo en el led RGB 3) Si escribo la letra 'g' lo imprime en el 2do pin que maneja el color verde 4) Si escribo la letra 'b' lo imprime en el 3er pin que maneja el color azul/li>
+                            </ol>
+                            <p>Recuerda poner una resistencia por cada pin del led, y que un RGB funciona como 3 leds en uno. Al variar la intensidad en cada uno, se pueden obtener combinaciones de colores. Este ejercicio no es particularmente complicado, pero es un reto que les enseñará a trabajar con el puerto serial.</p>
+
+                            <p>Puedes entregar el reto tomandole fotos a tu proyecto hecho y además a tu código utilizado.</p>
+
+                            <div class="text-center">
+                                <a href="https://hackspaceper.typeform.com/to/WkllrZ" target="_blank" class="mc-btn btn-large btn-style-1">Entregar reto</a>
+                            </div>
+                             <div class="limit-ct">
+                                <h3><strong>Fecha límite de entrega</strong> Sábado 20 de Febrero</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="text-center" style="margin-top:10px;">
-                <a href="reto-2.5.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                </a>
-            </div>
 
-        </div>
     </section>
 
 </div>
@@ -161,6 +184,5 @@
 <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
 <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
 <script type="text/javascript" src="../../js/scripts.js"></script>
-
 </body>
 </html>
