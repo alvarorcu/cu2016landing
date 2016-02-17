@@ -62,22 +62,22 @@
 
             <div class="top-nav">
 
-                <h4 class="sm black bold">BACKEND | Semana 2 : Fundamentos, Node y HapiJs</h4>
+                <h4 class="sm black bold">BACKEND | Reto final : Jade + Gulp + Browserify</h4>
 
                 <ul class="top-nav-list">
-                    <li class="prev-course"><a href="ejemplo-2.2.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
-                    <li class="next-course"><a href="reto-2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
+                    <li class="prev-course"><a href="../../backend.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
+                    <li class="next-course"><a href="ejemplo-2.2.html"><i class="icon md-angle-right"></i><span class="tooltip">Siguiente</span></a></li>
                     <li class="outline-learn">
                         <a href="#"><i class="icon md-list"></i></a>
-                        <div class="list-item-body outline-learn-body">
+<div class="list-item-body outline-learn-body">
                             <div class="section-learn-outline">
-                                <h5 class="section-title">Semana 2 : Fundamentos, Node y HapiJs</h5>
+                               <h5 class="section-title">Reto Final: Ordenando y automatizando nuestras tareas</h5>
                                 <ul class="section-list">
                                     <li class="o-view">
                                         <div class="list-body">
-                                            <a href="video-2.1-html">
+                                            <a href="/semana4/backend/video-2.1-html">
                                                 <h6>Video</h6>
-                                                <p>Un corto video para introducirnos al mundo de Frontend y entender mejor los conceptos necesarios para empezar.</p>
+                                                <p>Un video para conocer acerca de Gulp y su dinámica de automatizar tareas</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -86,32 +86,31 @@
                                     <li class="o-view">
                                         <div class="list-body">
                                             <a href="ejemplo-2.2.html">
-                                                <h6>Ejemplos</h6>
-                                                <p>Introduccion a HapiJs, Routes y Handling</p>
+                                                <h6>Acerca del reto Final</h6>
+                                                <p>Una introducción al reto final</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
                                     </li>
 
-                                    <li class="o-view">
+                                    <li>
                                         <div class="list-body">
                                             <a href="teoria-2.3.html">
-                                                <h6>Teoría</h6>
-                                                <p>Directorios, Views & Proxy's en HapiJs.</p>
+                                                <h6>Vídeo</h6>
+                                                <p>Aprendiendo sobre Browserify y su potencial</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
                                     </li>
                                     <li>
                                         <div class="list-body">
-                                            <a href="reto-2.5.html">
-                                                <h6>Reto 2</h6>
+                                            <a href="reto-2.html">
+                                                <h6>Reto Final 2</h6>
                                                 <p>Este es el reto de la semana 2 que será calificado.</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
                                     </li>
-
                                 </ul>
                             </div>
 
@@ -127,191 +126,43 @@
             <section id="learning-section" class="learning-section learn-section">
                 <div class="container">
                     <div class="title-ct">
-                        <h3><strong>Ejemplos</strong>Directorios, Viewss & Proxy's en HapiJs</h3>
+                        <h3><strong>Video</strong>Un video para conocer algunas de las cosas que se pueden hacer con Browserify</h3>
                     </div>
-                    <div class="question-content-wrap">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <div class="question-content">
-                                    <h3 class="md">Directories</h3>
-                                    <p>Imaginemos que en nuestro sitio website necesitamos identificar un área que contenga archivos para hacer testing</p>
-                                    <p>Lo primero que se nos ocurre es <code>http://hackspace.la/testing/files/namefile.extension</code>. Donde podemos observar que dentro del root tenemos una carpeta testing y una subcarpeta files que contiene todos los archivos que pasarán por testing.</p>
-                                    <p>Esto por el lado del usuario, se ve ordenado, sin embargo, para el área de desarrollo genera symbolic links muy largos. Para optimizar esto, utilizamos Directories para minificar el tamaño del PATH o ruta de archivo.</p>
-                                    <pre>
-El usuario puede ver http://hackspace.la/testing/files/namefile.extension
-Pero en nuestro servidor solo podemos tener /public/namefile.extension
-</pre>
-                                    <p>Creamos un nuevo archivo server.js y utilizamos el siguiente código</p>
-                                    <pre>
-var Hapi = require('hapi');
-var Inert = require('inert');
-var Path = require('path');
+                    <div class="abc">
 
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(Inert, function () {});
-
-server.route({
-    method: 'GET',
-    path: '/testing/files/{filename}',
-    handler: {
-        directory: {
-            path: Path.join(__dirname, 'public')
-        }
-    }
-});
-
-server.start(() =>{
-    console.log('Servidor corriendo en:', server.info.uri);
-});
-                                    </pre>
-
-                                    <p>Creamos un nuevo archivo index.html dentro de la carpeta public y utilizamos el siguiente código o el código que desees. PD: quitar el "#".</p>
-                                    <pre>
-<#html>
-    <#head><#title>Hola Hackspace<#/title><#/head>
-    <#body>
-        Run or feed
-    <#/body>
-<#/html>
-                                    </pre>
-
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/34056.js" id="asciicast-34056" async></script>
-</div>
-
-
-                                    <h3 class="md">Views</h3>
-                                    <p>
-                                    Una forma rápida y sencilla de crear un servidor que responda solicitudes a /?name=Key a través de plantillas es utilizando Views con el módulo Vision en HapiJs. <br>
-                                    Instalamos el paquete Vision a través del siguiente comando en la terminal
-                                    </p>
-                                    <pre>sudo npm install --save vision</pre>
-                                    <br>
-                                    <pre>
-
-var Hapi = require('hapi');
-var Vision = require('vision');
-var Path = require('path');
-
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(Vision, function () {});
-
-server.views({
-    engines: {
-        html: require('handlebars')
-    },
-    path: Path.join(__dirname, 'templates')
-});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: {
-        view: 'index.html'
-    }
-});
-
-server.start(() => {
-    console.log('Servidor corriendo en:', server.info.uri);
-});
-                                    </pre>
-
-                                    <p>Creamos un nuevo archivo index.html dentro de la carpeta templates y utilizamos el siguiente código o el código que desees. PD: quitar el "#".</p>
-
-                                    <pre>
-<#html>
-    <#head><#title>Hola! {{query.name}}<#/title><#/head>
-    <#body>
-        Hola! {{query.name}}
-    <#/body>
-<#/html>
-                                    </pre>
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/bkv2g47a6hzzlo64melw8qo8r.js" id="asciicast-bkv2g47a6hzzlo64melw8qo8r" async></script>
-</div>
-
-                                    <br>
-                                    <h3 class="md">Proxy</h3>
-                                    <p>Los proxies nos permiten retransmitir solicitudes de un servidor y/o servicio a otro. Esto es muy potente, ya que podemos manejar múltiples servicios como  aplicaciones web y construcciones RestAPI. <br>
-                                    Para este caso utilizaremos el paquete H2o2 instalándolo a través de:   </p>
-                                    <pre>sudo npm install --save h2o2</pre>
-                                    <p>Creamos un archivo server.js e introducimos el siguiente código</p>
-                                    <pre>
-var Hapi = require('hapi');
-var H2o2 = require('h2o2');
-
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(H2o2, function () {});
-server.route({
-    method: 'GET',
-    path: '/proxy',
-    handler: {
-        proxy: {
-            host: '127.0.0.1',
-            port: 65535
-        }
-    }
-});
-
-server.start(function () {});
-                                    </pre>
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/b1vkgutqf80vc7835r1ldak78.js" id="asciicast-b1vkgutqf80vc7835r1ldak78" async></script>
-</div>
-
-<span>Todos los ejemplos han sido tomados y adaptados del Módulo <a href="https://github.com/hapijs/makemehapi">MakeMeHapi</a></span>
-                                    <div class="text-center" style="margin-top:10px;">
-                                        <a href="reto-2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="video embed-responsive embed-responsive-16by9">
+                            <iframe width="640" height="360" src="https://www.youtube.com/embed/uZ_1_fddWns" frameborder="0" allowfullscreen></iframe>
                         </div>
-                        
+                    </div>
+                    <div class="text-center" style="margin-top:10px;">
+                        <a href="ejemplo-2.2.html" class="mc-btn btn-large btn-style-1">Siguiente <i class="icon md-arrow-right" style="margin-left:8px;"></i>
+                        </a>
+                    </div>
 
+                </div>
             </section>
 
-                    </div>
-                    <!-- END / PAGE WRAP -->
+        </div>
+        <!-- END / PAGE WRAP -->
 
-                    <!-- Load jQuery -->
-                    <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
-                    <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
-                    <script type="text/javascript" src="../../js/owl.carousel.min.js"></script>
-                    <script type="text/javascript" src="../../js/library/jquery.appear.min.js"></script>
-                    <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
-                    <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
-                    <script type="text/javascript" src="../../js/scripts.js"></script>
-                    <script>
-                      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-                      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-                      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-                      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        <!-- Load jQuery -->
+        <script type="text/javascript" src="../../js/jquery-1.11.1.min.js"></script>
+        <script type="text/javascript" src="../../js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="../../js/owl.carousel.min.js"></script>
+        <script type="text/javascript" src="../../js/library/jquery.appear.min.js"></script>
+        <script type="text/javascript" src="../../js/library/perfect-scrollbar.min.js"></script>
+        <script type="text/javascript" src="../../js/library/jquery.easing.min.js"></script>
+        <script type="text/javascript" src="../../js/scripts.js"></script>
+        <script>
+          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-                      ga('create', 'UA-31715493-7', 'auto');
-                      ga('send', 'pageview');
+          ga('create', 'UA-31715493-7', 'auto');
+          ga('send', 'pageview');
 
-                    </script>
+        </script>
+
     </body>
 </html>

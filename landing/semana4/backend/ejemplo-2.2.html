@@ -62,7 +62,7 @@
 
             <div class="top-nav">
 
-                <h4 class="sm black bold">BACKEND | Semana 2 : Fundamentos, Node y HapiJs</h4>
+                <h4 class="sm black bold">BACKEND | Reto final : Jade + Gulp + Browserify</h4>
 
                 <ul class="top-nav-list">
                     <li class="prev-course"><a href="video-2.1.html"><i class="icon md-angle-left"></i><span class="tooltip">Anterior</span></a></li>
@@ -71,13 +71,13 @@
                         <a href="#"><i class="icon md-list"></i></a>
                         <div class="list-item-body outline-learn-body">
                             <div class="section-learn-outline">
-                               <h5 class="section-title">Semana 2 : Fundamentos, Node y HapiJS</h5>
+                               <h5 class="section-title">Reto Final: Ordenando y automatizando nuestras tareas</h5>
                                 <ul class="section-list">
                                     <li class="o-view">
                                         <div class="list-body">
-                                            <a href="/semana2/backend/video-2.1-html">
+                                            <a href="/semana4/backend/video-2.1-html">
                                                 <h6>Video</h6>
-                                                <p>Un video para conocer algunas de las funcionalidades que se pueden hacer desde el backend con Hapi.js.</p>
+                                                <p>Un video para conocer acerca de Gulp y su dinámica de automatizar tareas</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -86,8 +86,8 @@
                                     <li class="o-view">
                                         <div class="list-body">
                                             <a href="ejemplo-2.2.html">
-                                                <h6>Ejemplos</h6>
-                                                <p>Introduccion a HapiJs, Routes y Handling</p>
+                                                <h6>Acerca del reto Final</h6>
+                                                <p>Una introducción al reto final</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -96,8 +96,8 @@
                                     <li>
                                         <div class="list-body">
                                             <a href="teoria-2.3.html">
-                                                <h6>Teoría</h6>
-                                                <p>Directorios, Views & Proxy's en HapiJs.</p>
+                                                <h6>Vídeo</h6>
+                                                <p>Aprendiendo sobre Browserify y su potencial</p>
                                             </a>
                                         </div>
                                         <div class="div-x"><i class="icon md-check-2"></i></div>
@@ -105,7 +105,7 @@
                                     <li>
                                         <div class="list-body">
                                             <a href="reto-2.html">
-                                                <h6>Reto 2</h6>
+                                                <h6>Reto Final 2</h6>
                                                 <p>Este es el reto de la semana 2 que será calificado.</p>
                                             </a>
                                         </div>
@@ -126,144 +126,57 @@
             <section id="learning-section" class="learning-section learn-section">
                 <div class="container">
                     <div class="title-ct">
-                        <h3><strong>Ejemplos</strong>Introduccion al backend y Hapi.js</h3>
+                        <h3><strong>RETO FINAL</strong>Ordenando y automatizando nuestras tareas</h3>
                     </div>
                     <div class="question-content-wrap">
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="question-content">
-                                    <h3 class="md">Nociones sobre HapiJs</h3>
-                                    <p>"Why Use HapiJs", “A rich framework for building applications and services hapi enables developers to focus on writing reusable application logic instead of spending time building infrastructure.”</p>
-
-                                    <p>HapiJs ha sido diseñado y desarrollado para crear de forma rápida servicios API REST a través de Javascript. Es muy simple y fácil de usar ya que tiene una sintaxis clara y una curva de aprendizaje rápida.</p>
-
-                                    <p>HapiJs ha demostrado ser sólido y estable a la hora de montarse en producción. Sitios Web como Walmart, han optimizado HapiJs en etapas de alto requerimiento de solicitudes por segundo (como el Black Friday). Este framework ha sido creado para funcionar en entornos empresariales donde varios equipos de trabajo utilizan piezas de código que se conectan entre diversos proyectos. Esta característica hace que utilizar HapiJs sea fácil de aplicar para la escritura y reutilización de código modular.</p>
-
-                                    <h3 class="md">Iniciando con Hapi.js</h3>
-                                    <p>
-                                        Para iniciar con Hapi.Js debemos tener instalado Node y NPM.
-                                    </p>
-                                    <p>Si aún no tienes instalado, revisa este <a href="http://hackspace.la/semana1/backend/ejemplo-1.2.html">Link</a></p>
-                                    <p>Revisar este <a href="http://hapijs.com" target="_blank">link</a> para conocer mas sobre el desarrollo de HapiJs</p>
-
-                                    <h3 class="md">Instalacion de Hapi.js y creando nuestro primer servidor</h3>
-                                    <p>Si Ud. cuenta con NodeJs y NPM, procederemos a instalar el framework HapiJs a traves de la ejecucion de los siguientes comandos  : </p>
-                                    <pre>$ sudo npm install --save hapi</pre>
-                                    En caso de no tener Node instalado descargar el <a href="https://nodejs.org/en/download/">instalador de Node.js para su sistema operativo</a> y seguir las instrucciones, otra alternativa para instalar Node.js si usa Linux o Mac es usar un manejador de versiones (<a href="https://github.com/creationix/nvm">nvm</a>) el cual nos da una ventaja de poder usar diferentes versiones de node y ademas no necesitamos permisos de superusario para instalar librerias de node.
-                                    <br>
-                                    <br>
+                                    <h3 class="md">Reto Final</h3>
+                                    <p>El reto final consiste en utilizar Gulp + Jade + Browserify</p>
+                                    <p>Para ello tendrán que crear una website con 4 elementos: Index, About, Blog, Contacto</p>
+                                    <p>Cada una de estas tendrán un template base.jade con los elementos del HEAD incluidos</p>
+                                    <p>La estructura del directorio quedará de esta forma</p>
                                     <pre>
-# Instalar nvm
-  curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.30.1/install.sh | bash
-
-# Actualizar el bash_profile
-  source ~/.bash_profile
-
-# Instalar la version estable de node y npm
-  nvm install stable
-
-# Verificar que node y npm se instalaron correctamente
-  node --version
-  npm --version
+                                        Source
+                                        |Builds
+                                        --| development
+                                        ----|css
+                                        ----|fonts
+                                        ----|images
+                                        ----|js
+                                        ----|views
+                                        ------|partials
+                                        --------|base.html
+                                        ------|index.html
+                                        ------|about.html
+                                        ------|blog.html
+                                        ------|contacto.html
+                                        --| production
+                                        |node_modules
+                                        --|src
+                                        ----|files
+                                        ------|fonts
+                                        ------|images
+                                        ----|js
+                                        ------|collections
+                                        ------|controllers
+                                        ----|sass
+                                        ------|modules
+                                        ----|templates
+                                        ------|partials
+                                        ---------|base.jade
+                                        ------|index.jade
+                                        ------|about.jade
+                                        ------|blog.jade
+                                        ------|contacto.jade
+                                        |gulpfile.js
+                                        |package.json
                                     </pre>
-                                    <br>
-                                    <h3 class="md">Ejemplo 1</h3>
-                                    <p>Iniciamos un nuevo proyecto y en "entry point" colocamos server.js</p>
-                                    <pre>
-$ npm init
-                                    </pre>
-                                    <p>Luego de instalar Hapi.Js empezamos a escribir nuestro código para crear nuestro primer servidor, guardamos este código como server.js</p>
-                                    <pre>
-var Hapi = require('hapi');
-var server = new Hapi.Server();
+                                    <p>Para realizar todo esto deberán configurar su gulpfile con gulp-jade y browserify</p>
 
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: function (request, reply) {
-        reply('Hola! Amiguito');
-    }
-});
-
-server.start(() => {
-    console.log('Servidor corriendo :', server.info.uri);
-});
-</pre>
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-                                    <div class="asciicast">
-                                        <script type="text/javascript" src="https://asciinema.org/a/34048.js" id="asciicast-34048" async></script>
-                                    </div>
-
-                                    <h3 class="md">Ejemplo 2</h3>
-                                    <p>¿Recuerdan el manejo de Rutas con Node & Express?</p>
-                                    <p>Esta ves realizaremos el mismo ejercicio, pero utilizando Node & HapiJs, así que utilizaremos el siguiente código para responder las consultas de forma específica según la ruta que se le pide a través de una llamada al servidor.</p>
-                                    <p>Hacemos el backup del archivo server.js anterior y creamos uno nuevo con el siguiente código y lo guardamos nuevamente como <code>server.js</code></p>
-                                    <pre>
-
-var Hapi = require('hapi');
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.route({
-    method: 'GET',
-    path: '/{name}',
-    handler: function (request, reply) {
-        reply('Hello ' + request.params.name);
-    }
-});
-
-server.start(function () {});</pre>
-                                    <p>Y para ejecutar el programa en el terminal ejecutamos nuevamente el comando <code>npm start</code> desde la carpeta donde guardamos el archivo </p>
-
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/34049.js" id="asciicast-34049" async></script>
-</div>
-
-
-                                <h3 class="md">Ejemplo 3</h3>
-                                <p>Sirviendo archivos estáticos</p>
-                                    <p>Utilizaremos el plugin Inert para HapiJs que nos permitirá servir archivos estáticos en nuestro servidor.</p>
-                                    <p>Hacemos el backup del archivo server.js anterior y creamos uno nuevo con el siguiente código y lo guardamos nuevamente como <code>server.js</code></p>
-                                    <pre>
-var Hapi = require('hapi');
-var Inert = require('inert');
-var Path = require('path');
-
-var server = new Hapi.Server();
-
-server.connection({
-    host: 'localhost',
-    port: Number(process.argv[2] || 8080)
-});
-
-server.register(Inert, function () {});
-
-server.route({
-    method: 'GET',
-    path: '/',
-    handler: {
-        file: Path.join(__dirname, 'public/index.html')
-    }
-});
-
-server.start(function () {});
-</pre>
-                                    <p>Creamos una carpeta "Public" con el comando <code>mkdir Public</code> donde colocaremos nuestro archivo <code>index.html</code>y ademas no olvidemos instalar <code>inert</code> & <code>path</code>. <br>
-
-                                  Guardamos y ejecutamos el comando <code>npm start</code></p>
-
-<div class="asciicast">
-<script type="text/javascript" src="https://asciinema.org/a/34052.js" id="asciicast-34052" async></script>
-</div>
+                                    <p>Ejecutando las tareas gulp jade y gulp js tendrán que convertirse los archivos jade y js a archivos estáticos</p>
+                                    <p>Suerte!</p>
     
 
                                     <div class="text-center" style="margin-top:10px;">
