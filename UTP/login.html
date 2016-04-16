@@ -83,6 +83,7 @@
                     <li><a href="detalles.html">Detalles</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
 					<!-- li><a href="entrenamiento.html" class="btn btn-blue">Entrenamiento</a></li -->
+                    <li><a id="login" href="login.html?next=/entrenamiento" class="btn btn-blue">Iniciar sesión</a></li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -93,7 +94,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-xs-12 col-lg-4 col-lg-push-4 text-center">
-                    <h2>El entrenamiento ha terminado.</h2>
+                    <h2>Iniciar sesión</h2>
+                    <form id="cuLogin" name="LoginForm" action="." method="GET" class="popup-form">
+                        <input type="email"    id="idEmail"    name="field-email"    data-content="e-mail"               class="form-control" required="required" placeholder="Correo electrónico">
+                        <input type="password" id="idPassword" name="field-password" data-content="password"             class="form-control" required="required" placeholder="Contraseña">
+                        <button id="cuLoginSubmit" type="submit" class="btn btn-submit">Iniciar sesión</button>
+                    </form>
+                    <p class="black"><small>¿No tienes una cuenta aún? <a href="registro.html">Únete a nosotros.</a><small></p>
+                    <p class="black"><small><a href="mailto:contacto@hackspace.pe?Subject=Recuperar%20%contraseña" target="_top">¿Olvidaste tu contraseña?</a></small></p>
                 </div>
             </div>
         </div>
